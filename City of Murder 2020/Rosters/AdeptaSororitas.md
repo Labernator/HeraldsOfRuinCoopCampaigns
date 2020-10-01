@@ -27,13 +27,13 @@
 **Equipment**
 > Boltgun / Bolt Pistol / Frag Grenade / Krag Grenade
 
-#### 2x Celestian (10+14 * 2 = 48)
+#### 2x Celestian (10+6 * 2 = 32)
 
 **Rules**
 > Acts of Faith / Shield of Faith / Sacred Rites / Bodyguard / Sworn Protectors
 
 **Equipment**
-> Heavy Flamer / Bolt Pistol / Frag Grenade / Krag Grenade
+> Flamer / Bolt Pistol / Frag Grenade / Krag Grenade
 
 #### 2x Ministorum Crusader (9+4 = 13)
 
@@ -77,8 +77,8 @@
 **Equipment**
 > Bolt Pistol / Dialogus Staff
 
-### Total Points (246)
-=> 56 + 20 + 48 + 26 + 22 + 26 + 30 + 18 = 246
+### Total Points (230)
+=> 56 + 20 + 32 + 26 + 22 + 26 + 30 + 18 = 230
 
 ### Keywords (13)
 Imperium, Adepta Sororitas, <Order>, Infantry, Imagifier, Jump, Fly, Seraphim, Adeptus Ministorum, Crusader, Character, Canoness Regular, Celestian
