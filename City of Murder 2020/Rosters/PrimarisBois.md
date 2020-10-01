@@ -9,7 +9,7 @@ If a modell is in range of an objective marker it controls the marker even if th
 **And They Shall Know No Fear**  
 Re-roll failed Morale tests.
 
-### Initial Kill Team  
+### Roster  
 <details>
 <summary>Initial Kill Team</summary>
 
