@@ -95,8 +95,8 @@ Re-roll failed Morale tests.
 |6"|3+|3+|4|4|2|2|7|3+|
 
 <ins>*Special Rules*</ins>  
-**1 Smoke Grenade** - **One use only** Instead of Shooting choose a point within 8". Until the start of your next turn, enemy models subtract 1 from their shooting hit rolls when targeting friendly units within 3” of this point. Models can draw line of sight into and out of the affected area, but not through it.
-**Helix Adept** - At the end of any of your Movement phases, select a friendly **INFANTRY** or **BIKER** model within 3" that died the previous turn. On a 5+ this model is returned with 1 wound remaining. Otherwise the Adept can do nothing else for the remainder of the turn. You can instead choose a wounded model: it immediately regains 1 lost wounds.
+**1 Smoke Grenade** - **One use only** Instead of Shooting choose a point within 8". Until the start of your next turn, enemy models subtract 1 from their shooting hit rolls when targeting friendly units within 3” of this point. Models can draw line of sight into and out of the affected area, but not through it.  
+**Helix Adept** - At the end of any of your Movement phases, select a friendly **INFANTRY** or **BIKER** model within 3" that died the previous turn. On a 5+ this model is returned with 1 wound remaining. Otherwise the Adept can do nothing else for the remainder of the turn. You can instead choose a wounded model: it immediately regains 1 lost wounds.  
 
 <ins>*Equipment*</ins>  
 
