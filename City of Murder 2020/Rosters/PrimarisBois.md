@@ -12,6 +12,7 @@ Re-roll failed Morale tests.
 ### Initial Kill Team  
 <details>
 <summary>Initial Kill Team</summary>
+
 <ins>**Leader**</ins>  
 **Hellblaster Sergeant** (57)  
 
