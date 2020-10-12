@@ -68,20 +68,27 @@
 **Equipment**
 > Bolt Pistol / Frag Grenade / Krag Grenade 
 
-#### Longina - Dialogus (18)
+#### Ambrosia - Dialogus (18)
 
 **Rules**
-> Acts of Faith / Shield of Faith / Sacred Rites / Stirring Rhetoric /  Laud Hailer / Spiritual Fortitude /  Hero
- 
+> Acts of Faith / Shield of Faith / Sacred Rites / Stirring Rhetoric / Laud Hailer / Spiritual Fortitude /  Hero
  
 **Equipment**
 > Bolt Pistol / Dialogus Staff
 
+#### Kosma - Hospitaller (18)
+
+**Rules**
+> Acts of Faith / Shield of Faith / Sacred Rites / Medicus Ministorum
+ 
+**Equipment**
+> Bolt Pistol / Chirugeon's Tools
+
 ### Total Points (230)
-=> 56 + 20 + 32 + 26 + 22 + 26 + 30 + 18 = 230
+=> 56 + 20 + 32 + 26 + 22 + 26 + 30 + 18 + 20 = 250
 
 ### Keywords (13)
-Imperium, Adepta Sororitas, <Order>, Infantry, Imagifier, Jump, Fly, Seraphim, Adeptus Ministorum, Crusader, Character, Canoness Regular, Celestian
+Imperium, Adepta Sororitas, <Order>, Infantry, Imagifier, Jump, Fly, Seraphim, Adeptus Ministorum, Crusader, Character, Canoness Regular, Celestian, Hospitaller, Dialogus
 
 ### Tactical Points (6)
 + World on Fire:Every model that can take a flame weapon has a flame weapon (flamer, combi-flamer, hand flamer, heavy flamer and the Widowmaker are flame weapons) (+2) [PHILOSOPHY]
