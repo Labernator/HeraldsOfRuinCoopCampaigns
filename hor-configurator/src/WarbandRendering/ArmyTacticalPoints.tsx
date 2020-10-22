@@ -24,5 +24,5 @@ export const ArmyTacticalPointsRenderer = ({ stratagems, philosophy }: { stratag
             {stratagems.map((stratagem) => <div key={`stratagem_${stratagem?.name}`} className="global-rules-container">
                 <div className="global-rules-name">{`${stratagem.name} (${stratagem.amount})`}</div><div className="global-rules-text">{stratagem.text}</div></div>)}
         </div>
-    </div>
+    </div>;
 };
