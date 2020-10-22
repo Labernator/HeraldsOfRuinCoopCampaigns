@@ -13,3 +13,4 @@ You can find the warband interface definition here:
 [Types definition](https://github.com/Labernator/HeraldsOfRuinCoopCampaigns/blob/master/hor-configurator/src/types.ts)
 
 You can find the sample warband JSON files here:
+[Folder with warband JSONs](https://github.com/Labernator/HeraldsOfRuinCoopCampaigns/tree/master/hor-configurator/src/data)
