@@ -2,7 +2,7 @@
 
 To use this, follow these simple steps:
 
-1. Download and install Node.js: https://nodejs.org/dist/v11.13.0/node-v11.13.0-x86.msi
+1. Download and install Node.js: https://nodejs.org/en/
 
 2. Run execute.bat (on first execution this will install some node modules so it might take a bit longer)
 
