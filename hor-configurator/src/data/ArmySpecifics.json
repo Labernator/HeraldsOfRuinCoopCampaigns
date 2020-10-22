@@ -1,0 +1,75 @@
+{
+    "PriceList": {
+        "DarkAngels": [
+            {
+                "name": "Heavy Bolter",
+                "price": 10
+            },
+            {
+                "name": "Auto Boltstorm Gauntlets",
+                "price": 12
+            },
+            {
+                "name": "Fragstorm Grenade Launcher",
+                "price": 4
+            },
+            {
+                "name": "Plasma Incinerator",
+                "price": 15
+            },
+            {
+                "name": "Scoped Tsunami",
+                "price": 20
+            },
+            {
+                "name": "Bike with Twin Boltgun",
+                "price": 2
+            },
+            {
+                "name": "Auto Bolt Rifle",
+                "price": 2
+            }
+        ],
+        "Primaris": [
+            {
+                "name": "Heavy Bolter",
+                "price": 10
+            },
+            {
+                "name": "Auto Boltstorm Gauntlets",
+                "price": 14
+            },
+            {
+                "name": "Fragstorm Grenade Launcher",
+                "price": 4
+            },
+            {
+                "name": "Plasma Incinerator",
+                "price": 15
+            }
+        ],
+        "Tau": [
+            {
+                "name": "Burst Cannon",
+                "price": 8
+            }
+        ]
+    },
+    "ModelAllowance": {
+        "DarkAngels": {
+            "Core": 20,
+            "Special": 3,
+            "Leader": 1
+        },
+        "Primaris": {
+            "Core": 20,
+            "Special": 3,
+            "Leader": 1
+        },
+        "Tau": {
+            "Core": 20,
+            "Special": 3,
+            "Leader": 1
+        }
+    }
+}

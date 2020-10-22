@@ -1,0 +1,99 @@
+{
+    "rules": [
+        {
+            "name": "Fire Storm",
+            "effect": "This Model can fire twice if it remained stationary during its turn (including Overwatch)."
+        },
+        {
+            "name": "Relentless Advance",
+            "effect": "This Model does not suffer any penalty to its hit rolls for Advancing and firing Assault weapons."
+        },
+        {
+            "name": "Rites of War",
+            "effect": "Friendly modells within 6” may re-roll hit rolls of 1."
+        },
+        {
+            "name": "Jink",
+            "effect": "Gain a 4+ invulnerable save against shooting attacks if you advanced (lasts until the next movement phase)"
+        },
+        {
+            "name": "Turbo-boost",
+            "effect": "When this model Advances, add 6” to its Move instead of rolling a dice."
+        },
+        {
+            "name": "Helix Adept Amendment",
+            "effect": "At the end of any of your Movement phases, select a friendly INFANTRY or BIKER model within 3” that died the previous turn. On a 5+ this model is returned with 1 wound remaining. Otherwise the Adept can do nothing else for the remainder of the turn. You can instead choose a wounded model: it immediately regains 1 lost wounds."
+        },
+        {
+            "name": "Smoke Grenade",
+            "effect": "One use only Instead of Shooting choose a point within 8”. Until the start of your next turn, enemy models subtract 1 from their shooting hit rolls when targeting friendly units within 3” of this point. Models can draw line of sight into and out of the affected area, but not through it."
+        },
+        {
+            "name": "Bonding Knife Ritual",
+            "effect": "If you roll a 6 when taking a Morale test, the test is automatically passed."
+        },
+        {
+            "name": "Damaged Jetpack",
+            "effect": "When this model has 1 or 2 wounds remaining, it loses the Fly and Jet Pack Keywords."
+        },
+        {
+            "name": "Field Amplifier Relay",
+            "effect": "Replace STRIKE TEAM with BREACHER TEAM keyword"
+        },
+        {
+            "name": "Damaged Generator",
+            "effect": "When this model has 1 or 2 wounds remaining, all natural 1’s to hit made with a ranged weapon by this model result in a single automatic AP -2 with a damage of 1."
+        },
+        {
+            "name": "Saviour Protocols",
+            "effect": "If an INFANTRY or BATTLESUIT model within 3” of this model is wounded roll a D6. On a 2+ you can allocate that wound to this model instead. If you do, this model suffers a mortal wound instead of the normal damage."
+        },
+        {
+            "name": "Threat Identification Protocols",
+            "effect": "In the Shooting phase, this model can only target the nearest visible enemy model (choose which one if two or more models are equally close)."
+        },
+        {
+            "name": "Shield Generator",
+            "effect": "Gains a 4+ invulnerable save. Roll a D6 each time this model loses a wound; on a 5+ ignore that wound."
+        }
+    ],
+    "ArmyRules": [
+        {
+            "name": "Grim Resolve",
+            "effect": "Re-roll hit rolls of 1 for this model whenever it shoots (including Overwatch) as long as it remains stationary."
+        },
+        {
+            "name": "And They Shall Know No Fear",
+            "effect": "Re-roll failed Morale tests for this unit."
+        },
+        {
+            "name": "Chapter Tactics: Novamarines",
+            "effect": "Re-roll failed wound rolls of 1 when attacking a model that do not have the IMPERIUM or CHAOS keyword."
+        },
+        {
+            "name": "Defenders of Humanity",
+            "effect": "If a modell is in range of an objective marker it controls the marker even if there are more enemy models within range."
+        },
+        {
+            "name": "For the Greater Good",
+            "effect": "Increase the range for firing Overwatch to 6”."
+        }
+    ],
+    "Philosophies": [
+        {
+            "name": "Unwavering Zeal",
+            "tp": 2,
+            "text": "If you are the first player to fail a Morale test including Nerve test, you lose 2 TP."
+        },
+        {
+            "name": "Quick Reaction Force",
+            "tp": 1,
+            "text": "No model on your team may be equipped with Heavy weapons."
+        },
+        {
+            "name": "One Track Mind",
+            "tp": 1,
+            "text": "Before the game, you choose a single Tactical Action available to you. You may only use that Tactical Action in the game. You may choose different Tactical Actions for each game"
+        }
+    ]
+}

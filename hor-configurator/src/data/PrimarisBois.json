@@ -1,0 +1,227 @@
+{
+    "Title": "Primaris Bois",
+    "Faction": "Primaris",
+    "ArmyRules": [
+        "Chapter Tactics: Novamarines",
+        "Defenders of Humanity",
+        "And They Shall Know No Fear"
+    ],
+    "Philosophy": "Quick Reaction Force",
+    "NthScenario": 2,
+    "Roster": [
+        {
+            "name": "Hellblaster Sergeant",
+            "type": "Leader",
+            "price": 42,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 4,
+                "Attacks": 3,
+                "Leadership": 8,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Plasma Incinerator"
+                    },
+                    {
+                        "name": "Bolt Pistol"
+                    },
+                    {
+                        "name": "Frag Grenade"
+                    },
+                    {
+                        "name": "Krag Grenade"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Hellblasters",
+                "Sergeant",
+                "Infantry",
+                "Primaris"
+            ],
+            "rules": [
+                "Rites of War"
+            ]
+        },
+        {
+            "name": "Hellblaster",
+            "type": "Core",
+            "amount": 3,
+            "price": 18,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 2,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Bolt Pistol"
+                    },
+                    {
+                        "name": "Frag Grenade"
+                    },
+                    {
+                        "name": "Krag Grenade"
+                    },
+                    {
+                        "name": "Plasma Incinerator"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Hellblasters",
+                "Infantry",
+                "Primaris"
+            ]
+        },
+        {
+            "name": "Primaris Intercessor",
+            "type": "Core",
+            "amount": 2,
+            "price": 17,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 2,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Bolt Rifle"
+                    },
+                    {
+                        "name": "Bolt Pistol"
+                    },
+                    {
+                        "name": "Frag Grenade"
+                    },
+                    {
+                        "name": "Krag Grenade"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Intercessors",
+                "Infantry",
+                "Primaris"
+            ]
+        },
+        {
+            "name": "Aggressor",
+            "type": "Special",
+            "amount": 2,
+            "price": 21,
+            "stats": {
+                "Movement": 5,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 5,
+                "Wounds": 2,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Fragstorm Grenade Launcher"
+                    },
+                    {
+                        "name": "Auto Boltstorm Gauntlets"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Aggressors",
+                "MK X Gravis",
+                "Infantry",
+                "Primaris"
+            ],
+            "rules": [
+                "Fire Storm",
+                "Relentless Advance"
+            ]
+        },
+        {
+            "name": "Infiltrator Helix Adept",
+            "type": "Special",
+            "price": 32,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 2,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Bolt Pistol"
+                    },
+                    {
+                        "name": "Frag Grenade"
+                    },
+                    {
+                        "name": "Krag Grenade"
+                    },
+                    {
+                        "name": "Marksman Bolt Carbine"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Apothecary",
+                "Character"
+            ],
+            "rules": [
+                "Helix Adept Amendment",
+                "Smoke Grenade"
+            ]
+        }
+    ]
+}

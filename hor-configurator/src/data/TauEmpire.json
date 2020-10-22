@@ -1,0 +1,297 @@
+{
+    "Title": "头",
+    "Faction": "Tau Empire",
+    "ArmyRules": [
+        "For the Greater Good"
+    ],
+    "Philosophy": "One Track Mind",
+    "NthScenario": 2,
+    "Roster": [
+        {
+            "name": "Crisis Shas'vre",
+            "type": "Leader",
+            "price": 35,
+            "stats": [
+                {
+                    "Movement": 8,
+                    "WeaponSkill": "5+",
+                    "BallisticSkill": "4+",
+                    "Strength": 5,
+                    "Toughness": 5,
+                    "Wounds": "3-5",
+                    "Attacks": 3,
+                    "Leadership": 8,
+                    "Save": "3+",
+                    "InvulnerableSave": "-"
+                },
+                {
+                    "Movement": 5,
+                    "WeaponSkill": "5+",
+                    "BallisticSkill": "4+",
+                    "Strength": 5,
+                    "Toughness": 5,
+                    "Wounds": "1-2",
+                    "Attacks": 2,
+                    "Leadership": 7,
+                    "Save": "3+",
+                    "InvulnerableSave": "-"
+                }
+            ],
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Burst Cannon"
+                    }
+                ],
+                "otherEquipment": [
+                    "Sniper Training"
+                ]
+            },
+            "keywords": [
+                "T'au Empire",
+                "Sept",
+                "Battlesuit",
+                "Jet Pack",
+                "Fly",
+                "XV8 Crisis Battlesuits"
+            ],
+            "rules": [
+                "Bonding Knife Ritual",
+                "Damaged Jetpack"
+            ]
+        },
+        {
+            "name": "Fire Warrior",
+            "type": "Core",
+            "amount": 7,
+            "price": 7,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "5+",
+                "BallisticSkill": "4+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 1,
+                "Attacks": 1,
+                "Leadership": 6,
+                "Save": "4+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Pulse Rifle"
+                    },
+                    {
+                        "name": "Photon grenade"
+                    }
+                ]
+            },
+            "keywords": [
+                "T'au Empire",
+                "Sept",
+                "Infantry",
+                "Breacher Team"
+            ]
+        },
+        {
+            "name": "Pathfinder",
+            "type": "Core",
+            "amount": 6,
+            "price": 9,
+            "stats": {
+                "Movement": 7,
+                "WeaponSkill": "5+",
+                "BallisticSkill": "4+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 1,
+                "Attacks": 1,
+                "Leadership": 6,
+                "Save": "5+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Pulse Carbine"
+                    },
+                    {
+                        "name": "Markerlight"
+                    },
+                    {
+                        "name": "Photon grenade"
+                    }
+                ]
+            },
+            "keywords": [
+                "T'au Empire",
+                "Sept",
+                "Infantry",
+                "Pathfinder Team"
+            ]
+        },
+        {
+            "name": "Crisis Shas'ui",
+            "type": "Special",
+            "price": 35,
+            "amount": 2,
+            "stats": {
+                "Movement": 8,
+                "WeaponSkill": "5+",
+                "BallisticSkill": "4+",
+                "Strength": 5,
+                "Toughness": 5,
+                "Wounds": "3",
+                "Attacks": 2,
+                "Leadership": 8,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Burst Cannon"
+                    }
+                ],
+                "otherEquipment": [
+                    "Stabilizing Jet"
+                ]
+            },
+            "keywords": [
+                "T'au Empire",
+                "Sept",
+                "Battlesuit",
+                "Jet Pack",
+                "Fly",
+                "XV8 Crisis Battlesuits"
+            ],
+            "rules": [
+                "Bonding Knife Ritual"
+            ]
+        },
+        {
+            "name": "Broadside Shas'ui",
+            "type": "Special",
+            "price": 35,
+            "stats": [
+                {
+                    "Movement": 5,
+                    "WeaponSkill": "5+",
+                    "BallisticSkill": "4+",
+                    "Strength": 5,
+                    "Toughness": 5,
+                    "Wounds": "3-6",
+                    "Attacks": 2,
+                    "Leadership": 7,
+                    "Save": "2+",
+                    "InvulnerableSave": "-"
+                },
+                {
+                    "Movement": 5,
+                    "WeaponSkill": "6+",
+                    "BallisticSkill": "4+",
+                    "Strength": 5,
+                    "Toughness": 5,
+                    "Wounds": "1-2",
+                    "Attacks": 1,
+                    "Leadership": 6,
+                    "Save": "2+",
+                    "InvulnerableSave": "-"
+                }
+            ],
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Heavy Rail Rifle"
+                    }
+                ]
+            },
+            "keywords": [
+                "T'au Empire",
+                "Sept",
+                "Battlesuit",
+                "Jet Pack",
+                "Fly",
+                "XV88 Broadside Battlesuits"
+            ],
+            "rules": [
+                "Bonding Knife Ritual",
+                "Damaged Generator"
+            ]
+        },
+        {
+            "name": "MV4 Shield Drone [Tactical Drone]",
+            "type": "Core",
+            "amount": 3,
+            "price": 10,
+            "stats": {
+                "Movement": 8,
+                "WeaponSkill": "5+",
+                "BallisticSkill": "5+",
+                "Strength": 3,
+                "Toughness": 4,
+                "Wounds": "1",
+                "Attacks": 1,
+                "Leadership": 6,
+                "Save": "4+",
+                "InvulnerableSave": "4+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Pulse Carbine",
+                        "amount": 2
+                    }
+                ]
+            },
+            "keywords": [
+                "T'au Empire",
+                "Sept",
+                "Drone",
+                "Fly",
+                "Tactical Drones"
+            ],
+            "rules": [
+                "Saviour Protocols",
+                "Shield Generator"
+            ]
+        },
+        {
+            "name": "MV1 Gun Drone [Tactical Drone]",
+            "type": "Core",
+            "price": 12,
+            "stats": {
+                "Movement": 8,
+                "WeaponSkill": "5+",
+                "BallisticSkill": "5+",
+                "Strength": 3,
+                "Toughness": 4,
+                "Wounds": "1",
+                "Attacks": 1,
+                "Leadership": 6,
+                "Save": "4+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Pulse Carbine",
+                        "amount": 2
+                    }
+                ]
+            },
+            "keywords": [
+                "T'au Empire",
+                "Sept",
+                "Drone",
+                "Fly",
+                "Tactical Drones"
+            ],
+            "rules": [
+                "Saviour Protocols",
+                "Threat Identification Protocols"
+            ]
+        }
+    ]
+}
