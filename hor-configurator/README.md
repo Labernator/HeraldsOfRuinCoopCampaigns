@@ -14,3 +14,5 @@ You can find the warband interface definition here:
 
 You can find the sample warband JSON files here:
 [Folder with warband JSONs](https://github.com/Labernator/HeraldsOfRuinCoopCampaigns/tree/master/hor-configurator/src/data)
+
+If you want to use other/new units you might need to add new weapons/rules etc. to the respective jsons. I will add stuff there over time.
