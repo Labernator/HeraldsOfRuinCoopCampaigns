@@ -1,5 +1,53 @@
 {
     "weapons": [
+		{
+            "name": "Absolvor Bolt Pistol",
+            "type": "Pistol 1",
+            "strength": 5,
+            "damage": "1",
+            "ap": 1,
+            "range": 16
+		},
+		{
+            "name": "Assault Bolter",
+            "type": "Assault 3",
+            "strength": 5,
+            "damage": "1",
+            "ap": 1,
+            "range": 18
+		},
+		{
+            "name": "Bolt Sniper Rifle",
+            "multiProfiles": [
+                {
+                    "name": "Executioner Round",
+                    "type": "Heavy 1",
+                    "strength": 5,
+                    "damage": 1,
+                    "ap": 1,
+					"range": 36,
+					"rule": "This weapon can target a CHARACTER model even it is not the closest enemy model and can target models that are not visible to the bearer. Targets saving throws do not benefit from cover. Add +2 to hit when firing this weapon"
+                },
+                {
+                    "name": "Hyperfrag Round",
+                    "type": "Heavy D3",
+                    "strength": 5,
+                    "damage": 1,
+                    "ap": 0,
+                    "range": 36,
+                    "rule": "This weapon can target a CHARACTER model even it is not the closest enemy model."
+				},
+				{
+                    "name": "Mortis Round",
+                    "type": "Heavy 1",
+                    "strength": 5,
+                    "damage": "D3",
+                    "ap": 2,
+                    "range": 36,
+					"rule": "This weapon can target a CHARACTER model even it is not the closest enemy model. Wound rolls of 6+ inflict an additional mortal wound to the target."
+                }
+            ]
+        },
         {
             "name": "Bolt Pistol",
             "type": "Pistol 1",
@@ -31,6 +79,56 @@
             "damage": "1",
             "ap": 1,
             "rule": "Each wound roll of 6+ causes D3 damage."
+		},
+		{
+            "name": "Crozius Arcanum",
+            "type": "Melee",
+            "strength": "+1",
+            "damage": 2,
+            "ap": 1
+		},
+		{
+            "name": "Power Axe",
+            "type": "Melee",
+            "strength": "+1",
+            "damage": 1,
+            "ap": 2
+		},
+		{
+            "name": "Power Maul",
+            "type": "Melee",
+            "strength": "+2",
+            "damage": 1,
+            "ap": 1
+		},
+		{
+            "name": "Chainsword",
+            "type": "Melee",
+            "strength": "user",
+            "damage": "1",
+			"ap": 0,
+			"rule": "Gain +1 attack with this weapon."
+        },
+		{
+            "name": "Force Sword",
+            "type": "Melee",
+            "strength": "user",
+            "damage": "D3",
+            "ap": 3
+        },
+		{
+            "name": "Force Stave",
+            "type": "Melee",
+            "strength": "+2",
+            "damage": "D3",
+            "ap": 1
+        },
+		{
+            "name": "Power Sword",
+            "type": "Melee",
+            "strength": "user",
+            "damage": 1,
+            "ap": 3
         },
         {
             "name": "Heavy Bolter",
