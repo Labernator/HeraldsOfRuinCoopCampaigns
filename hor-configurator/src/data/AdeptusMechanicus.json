@@ -1,0 +1,184 @@
+{
+    "Title": "Skynet",
+    "Faction": "Adeptus Mechanicus",
+    "ArmyRules": [
+        "Agripinaa – Staunch Defenders",
+        "Soldiers of the Machine God"
+    ],
+    "Philosophy": "A More Subtle Touch",
+    "NthScenario": 2,
+    "Roster": [
+        {
+            "name": "Tech Priest Procurator",
+            "type": "Leader",
+            "price": 55,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "4+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 4,
+                "Attacks": 3,
+                "Leadership": 8,
+                "Save": "3+",
+                "InvulnerableSave": "5+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Omnissian Axe"
+                    },
+					{
+						"name": "Volkite blaster",
+						"amount": 2
+					},
+					{
+						"name": "Combi-Plasma"
+					}
+                ]
+            },
+            "keywords": [
+                "Imperium",
+				"Character",
+				"Infantry",
+                "Techpriest",
+                "Procurator",
+				"Cult Mechanicus",
+				"Magos Retiarus"
+            ],
+            "rules": [
+                "Advanced Bionics",
+				"Master of Machines",
+				"Noospheric Fulcrum",
+				"Magos Retiarius",
+				"Heavy Armature Legs",
+				"Medicae Mechadendrite",
+				"Canticles of the Omnissiah"
+            ]
+        },
+        {
+            "name": "Kataphron Battle Servitor",
+            "type": "Core",
+            "amount": 2,
+            "price": 15,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "4+",
+                "BallisticSkill": "4+",
+                "Strength": 5,
+                "Toughness": 5,
+                "Wounds": 3,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "6+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Heavy Arc Rifle"
+                    },
+                    {
+                        "name": "Arc Claw"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Infantry",
+				"Cult Mechanicus",
+                "Kataphron Servitor",
+                "Servitor"
+            ],
+            "rules": [
+                "Canticles of the Omnissiah",
+				"Bionics",
+				"Heavy Battle Servitor",
+				"Thermal Shed",
+				"Heavy Tracks"
+            ]
+        },
+		{
+            "name": "Kataphron Battle Servitor",
+            "type": "Core",
+            "price": 15,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "4+",
+                "BallisticSkill": "4+",
+                "Strength": 5,
+                "Toughness": 5,
+                "Wounds": 3,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "6+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Heavy Arc Rifle"
+                    },
+                    {
+                        "name": "Cognis Flamer"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Infantry",
+				"Cult Mechanicus",
+                "Kataphron Servitor",
+                "Servitor"
+            ],
+            "rules": [
+                "Canticles of the Omnissiah",
+				"Bionics",
+				"Heavy Battle Servitor",
+				"Thermal Shed",
+				"Heavy Tracks"
+            ]
+		},
+		{
+            "name": "Tech Priest Auctoris",
+            "type": "Special",
+            "price": 30,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "4+",
+                "BallisticSkill": "4+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 2,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "6+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Omnissian Axe"
+                    },
+                    {
+                        "name": "Laspistol"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Infantry",
+				"Cult Mechanicus",
+                "Techpriest",
+				"Auctoris",
+				"Magos Biologis"
+            ],
+            "rules": [
+                "Canticles of the Omnissiah",
+				"Bionics",
+				"Magos Biologis"
+            ]
+        }
+    ]
+}
