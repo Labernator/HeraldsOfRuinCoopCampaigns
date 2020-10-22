@@ -55,6 +55,46 @@
         {
             "name": "Shield Generator",
             "effect": "Gains a 4+ invulnerable save. Roll a D6 each time this model loses a wound; on a 5+ ignore that wound."
+        },
+        {
+            "name": "Advanced Bionics",
+            "effect": "Gains a 5+ invulnerable save."
+        },
+        {
+            "name": "Bionics",
+            "effect": "Gains a 6+ invulnerable save."
+        },
+        {
+            "name": "Master of Machines",
+            "effect": "At the end of your Movement you may repair another single friendly <FORGE WORLD> model within 3”. It regains D3 lost wounds. A model may not be the target of the Master of Machines ability more than once per turn."
+        },
+        {
+            "name": "Noospheric Fulcrum",
+            "effect": "Friendly <FORGE WORLD> Units within 6” may re-roll hit rolls of 1 in the Shooting phase."
+        },
+        {
+            "name": "Magos Retiarius",
+            "effect": "Gain +1 BS. This model gains Two Ballistic mechadendrites which ignore their -1 to BS rule. In addition, this model may take a Volkite blaster or an eradication ray."
+        },
+        {
+            "name": "Canticles of the Omnissiah",
+            "effect": "Gains a 6+ invulnerable save."
+        },
+        {
+            "name": "Heavy Battle Servitor",
+            "effect": "Gains a 6+ invulnerable save."
+        },
+        {
+            "name": "Thermal Shed",
+            "effect": "Gains a 6+ invulnerable save."
+        },
+        {
+            "name": "Heavy Tracks",
+            "effect": "Gains a 6+ invulnerable save."
+        },
+        {
+            "name": "Magos Biologis",
+            "effect": "Gains a 6+ invulnerable save."
         }
     ],
     "ArmyRules": [
@@ -72,11 +112,19 @@
         },
         {
             "name": "Defenders of Humanity",
-            "effect": "If a modell is in range of an objective marker it controls the marker even if there are more enemy models within range."
+            "effect": "If a model is in range of an objective marker it controls the marker even if there are more enemy models within range."
         },
         {
             "name": "For the Greater Good",
             "effect": "Increase the range for firing Overwatch to 6”."
+        },
+        {
+            "name": "Agripinaa – Staunch Defenders",
+            "effect": "When firing Overwatch, hit on a roll of 5+."
+        },
+        {
+            "name": "Soldiers of the Machine God",
+            "effect": "If a model is in range of an objective marker it controls the marker even if there are more enemy models within range."
         }
     ],
     "Philosophies": [
@@ -94,6 +142,11 @@
             "name": "One Track Mind",
             "tp": 1,
             "text": "Before the game, you choose a single Tactical Action available to you. You may only use that Tactical Action in the game. You may choose different Tactical Actions for each game"
+        },
+        {
+            "name": "A More Subtle Touch",
+            "tp": 2,
+            "text": "Your team contains no units with the SKITARII keyword."
         }
     ]
 }

@@ -31,10 +31,22 @@ export const ModelStatsRenderer = ({ name, stats }: { name: string; stats: Model
             <col style={{ width: "80px" }} />
         </colgroup>
         <thead>
-            {renderStats()}
+            <tr>
+                <td>Name</td>
+                <td>M</td>
+                <td>WS</td>
+                <td>BS</td>
+                <td>S</td>
+                <td>T</td>
+                <td>W</td>
+                <td>A</td>
+                <td>LD</td>
+                <td>Sv</td>
+                <td>Is</td>
+            </tr>
         </thead>
         <tbody>
-
+            {renderStats()}
         </tbody>
     </table>;
 };

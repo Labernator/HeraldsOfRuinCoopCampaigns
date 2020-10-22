@@ -7,8 +7,8 @@ import { ModelSheetRenderer } from "./ModelSheet";
 
 export const WarbandRenderer = ({ state, page, rosterPrice, stratagems, keywords, fullRender }: { state: Warband; page: number; rosterPrice: number; stratagems: TacticalPoints[]; keywords: string[]; fullRender?: boolean }) =>
     <div id={`quick-ref-roster-container${page}`} className={`quick-reference-enemies-top-container ${fullRender ? "a4-container" : "pdf-container"}`}>
-        <div className="quick-ref-title">{`${state.Title} - ${state.Faction} (${rosterPrice} pts) - ${page !== 2 ? "Roster" : "Roster Page 2"}`}</div>
-        {page !== 2 ?
+        <div className="quick-ref-title">{`${state.Title} - ${state.Faction} (${rosterPrice} pts) - ${page === 1 ? "Roster" : "Roster Page 2"}`}</div>
+        {page === 1 ?
             <div>
                 <ArmyRulesHeaderRenderer armyRules={state.ArmyRules} />
                 <ArmyKeywordsRenderer keywords={keywords} />

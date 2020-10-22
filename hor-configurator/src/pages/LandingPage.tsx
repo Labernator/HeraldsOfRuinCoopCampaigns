@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import * as DarkAngelsJson from "../data/DarkAngels.json";
-import * as PrimarisJson from "../data/PrimarisBois.json";
-import * as TauJson from "../data/TauEmpire.json";
+import * as DarkAngelsJson from "../data/samples/DarkAngels.json";
+import * as PrimarisJson from "../data/samples/PrimarisBois.json";
+import * as TauJson from "../data/samples/TauEmpire.json";
 import { DarkAngelsCover, PrimarisCover, TauEmpireCover } from "../icons";
 import { Warband } from "../types";
 import { FileUploader } from "../utility/index";

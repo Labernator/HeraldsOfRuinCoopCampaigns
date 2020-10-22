@@ -10,7 +10,7 @@ import { ModelStatsRenderer } from "./ModelStats";
 export const ModelSheetRenderer = ({ model, faction, skipKeywords }: { model: Model; faction: FactionEnum; skipKeywords?: boolean }) => <div id={`modelsheet_${model.name}`} className="quick-ref-enemies-container model-container">
     <ModelHeaderRenderer model={model} faction={faction} />
     <ModelStatsRenderer name={model.name} stats={model.stats} />
-    <ModelEquipmentRenderer equipment={model.equipment} />
+    <ModelEquipmentRenderer equipment={model.equipment} faction={faction} />
     {model.rules ? <ModelRulesRenderer rules={model.rules.map(getRule)} /> : undefined}
     {skipKeywords ? undefined : <ModelKeywordRenderer keywords={model.keywords} />}
 </div>;

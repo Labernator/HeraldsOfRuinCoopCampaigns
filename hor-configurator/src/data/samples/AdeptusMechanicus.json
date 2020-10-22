@@ -29,32 +29,37 @@
                     {
                         "name": "Omnissian Axe"
                     },
-					{
-						"name": "Volkite blaster",
-						"amount": 2
-					},
-					{
-						"name": "Combi-Plasma"
-					}
+                    {
+                        "name": "Volkite Blaster",
+                        "amount": 2
+                    },
+                    {
+                        "name": "Combi-Plasma"
+                    }
+                ],
+                "otherEquipment": [
+                    "Medicae Mechadendrite",
+                    "Ballistic Mechadendrite",
+                    "Heavy Armature Legs"
                 ]
             },
             "keywords": [
                 "Imperium",
-				"Character",
-				"Infantry",
+                "Adeptus Mechanicus",
+                "Forge World",
+                "Character",
+                "Infantry",
                 "Techpriest",
                 "Procurator",
-				"Cult Mechanicus",
-				"Magos Retiarus"
+                "Cult Mechanicus",
+                "Magos Retiarus"
             ],
             "rules": [
                 "Advanced Bionics",
-				"Master of Machines",
-				"Noospheric Fulcrum",
-				"Magos Retiarius",
-				"Heavy Armature Legs",
-				"Medicae Mechadendrite",
-				"Canticles of the Omnissiah"
+                "Master of Machines",
+                "Noospheric Fulcrum",
+                "Magos Retiarius",
+                "Canticles of the Omnissiah"
             ]
         },
         {
@@ -86,20 +91,22 @@
             },
             "keywords": [
                 "Imperium",
+                "Adeptus Mechanicus",
+                "Forge World",
                 "Infantry",
-				"Cult Mechanicus",
+                "Cult Mechanicus",
                 "Kataphron Servitor",
                 "Servitor"
             ],
             "rules": [
                 "Canticles of the Omnissiah",
-				"Bionics",
-				"Heavy Battle Servitor",
-				"Thermal Shed",
-				"Heavy Tracks"
+                "Bionics",
+                "Heavy Battle Servitor",
+                "Thermal Shed",
+                "Heavy Tracks"
             ]
         },
-		{
+        {
             "name": "Kataphron Battle Servitor",
             "type": "Core",
             "price": 15,
@@ -127,20 +134,22 @@
             },
             "keywords": [
                 "Imperium",
+                "Adeptus Mechanicus",
+                "Forge World",
                 "Infantry",
-				"Cult Mechanicus",
+                "Cult Mechanicus",
                 "Kataphron Servitor",
                 "Servitor"
             ],
             "rules": [
                 "Canticles of the Omnissiah",
-				"Bionics",
-				"Heavy Battle Servitor",
-				"Thermal Shed",
-				"Heavy Tracks"
+                "Bionics",
+                "Heavy Battle Servitor",
+                "Thermal Shed",
+                "Heavy Tracks"
             ]
-		},
-		{
+        },
+        {
             "name": "Tech Priest Auctoris",
             "type": "Special",
             "price": 30,
@@ -168,16 +177,18 @@
             },
             "keywords": [
                 "Imperium",
+                "Adeptus Mechanicus",
+                "Forge World",
                 "Infantry",
-				"Cult Mechanicus",
+                "Cult Mechanicus",
                 "Techpriest",
-				"Auctoris",
-				"Magos Biologis"
+                "Auctoris",
+                "Magos Biologis"
             ],
             "rules": [
                 "Canticles of the Omnissiah",
-				"Bionics",
-				"Magos Biologis"
+                "Bionics",
+                "Magos Biologis"
             ]
         }
     ]

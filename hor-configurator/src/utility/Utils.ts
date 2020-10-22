@@ -15,6 +15,7 @@ export const getWeaponPrice = (weaponName: string, faction: FactionEnum) => {
         case FactionEnum.Primaris: return priceList.Primaris.find((weapon) => weapon.name === weaponName)?.price || 0;
         case FactionEnum.DarkAngels: return priceList.DarkAngels.find((weapon) => weapon.name === weaponName)?.price || 0;
         case FactionEnum.Tau: return priceList.Tau.find((weapon) => weapon.name === weaponName)?.price || 0;
+        case FactionEnum.AdeptusMechanicus: return priceList.AdeptusMechanicus.find((weapon) => weapon.name === weaponName)?.price || 0;
         default: return 0;
     }
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { ImportWarbandIcon } from "../icons";
 
-export const FileUploader = ({ setStateCallback }: { setStateCallback(json: any): void; }) => {
+export const FileUploader = ({ setStateCallback }: { setStateCallback(json: any): void }) => {
     const onChange = () => {
         const reader = new FileReader();
         reader.onload = (ev: ProgressEvent<FileReader>) => {

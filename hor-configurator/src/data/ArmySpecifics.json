@@ -18,7 +18,7 @@
                 "price": 15
             },
             {
-                "name": "Scoped Tsunami",
+                "name": "Scoped Heretics Bane",
                 "price": 20
             },
             {
@@ -53,6 +53,28 @@
                 "name": "Burst Cannon",
                 "price": 8
             }
+        ],
+        "AdeptusMechanicus": [
+            {
+                "name": "Cognis Flamer",
+                "price": 10
+            },
+            {
+                "name": "Volkite Blaster",
+                "price": 8
+            },
+            {
+                "name": "Combi-Plasma",
+                "price": 11
+            },
+            {
+                "name": "Heavy Arc Rifle",
+                "price": 8
+            },
+            {
+                "name": "Arc Claw",
+                "price": 4
+            }
         ]
     },
     "ModelAllowance": {
@@ -69,6 +91,11 @@
         "Tau": {
             "Core": 20,
             "Special": 3,
+            "Leader": 1
+        },
+        "AdeptusMechanicus": {
+            "Core": 20,
+            "Special": 5,
             "Leader": 1
         }
     }

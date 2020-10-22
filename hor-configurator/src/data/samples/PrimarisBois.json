@@ -55,48 +55,6 @@
             ]
         },
         {
-            "name": "Hellblaster",
-            "type": "Core",
-            "amount": 3,
-            "price": 18,
-            "stats": {
-                "Movement": 6,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 4,
-                "Wounds": 2,
-                "Attacks": 2,
-                "Leadership": 7,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
-            "equipment": {
-                "weapons": [
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenade"
-                    },
-                    {
-                        "name": "Krag Grenade"
-                    },
-                    {
-                        "name": "Plasma Incinerator"
-                    }
-                ]
-            },
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Hellblasters",
-                "Infantry",
-                "Primaris"
-            ]
-        },
-        {
             "name": "Primaris Intercessor",
             "type": "Core",
             "amount": 2,
@@ -134,6 +92,48 @@
                 "Adeptus Astartes",
                 "Novamarines",
                 "Intercessors",
+                "Infantry",
+                "Primaris"
+            ]
+        },
+        {
+            "name": "Hellblaster",
+            "type": "Core",
+            "amount": 3,
+            "price": 18,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 2,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Bolt Pistol"
+                    },
+                    {
+                        "name": "Frag Grenade"
+                    },
+                    {
+                        "name": "Krag Grenade"
+                    },
+                    {
+                        "name": "Plasma Incinerator"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Hellblasters",
                 "Infantry",
                 "Primaris"
             ]

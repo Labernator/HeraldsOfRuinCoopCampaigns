@@ -1,337 +1,432 @@
 {
-	"weapons": [
-		{
-			"name": "Absolvor Bolt Pistol",
-			"type": "Pistol 1",
-			"strength": 5,
-			"damage": "1",
-			"ap": 1,
-			"range": 16
-		},
-		{
-			"name": "Assault Bolter",
-			"type": "Assault 3",
-			"strength": 5,
-			"damage": "1",
-			"ap": 1,
-			"range": 18
-		},
-		{
-			"name": "Bolt Sniper Rifle",
-			"multiProfiles": [
-				{
-					"name": "Executioner Round",
-					"type": "Heavy 1",
-					"strength": 5,
-					"damage": 1,
-					"ap": 1,
-					"range": 36,
-					"rule": "This weapon can target a CHARACTER model even it is not the closest enemy model and can target models that are not visible to the bearer. Targets saving throws do not benefit from cover. Add +2 to hit when firing this weapon"
-				},
-				{
-					"name": "Hyperfrag Round",
-					"type": "Heavy D3",
-					"strength": 5,
-					"damage": 1,
-					"ap": 0,
-					"range": 36,
-					"rule": "This weapon can target a CHARACTER model even it is not the closest enemy model."
-				},
-				{
-					"name": "Mortis Round",
-					"type": "Heavy 1",
-					"strength": 5,
-					"damage": "D3",
-					"ap": 2,
-					"range": 36,
-					"rule": "This weapon can target a CHARACTER model even it is not the closest enemy model. Wound rolls of 6+ inflict an additional mortal wound to the target."
-				}
-			]
-		},
-		{
-			"name": "Bolt Pistol",
-			"type": "Pistol 1",
-			"strength": 4,
-			"damage": "1",
-			"ap": 0,
-			"range": 12
-		},
-		{
-			"name": "Frag Grenade",
-			"type": "Grenade D6",
-			"strength": 3,
-			"damage": 1,
-			"ap": 0,
-			"range": 6
-		},
-		{
-			"name": "Krag Grenade",
-			"type": "Grenade 1",
-			"strength": 6,
-			"damage": "D3",
-			"range": 6,
-			"ap": 1
-		},
-		{
-			"name": "Corvus Hammer",
-			"type": "Melee",
-			"strength": "+1",
-			"damage": "1",
-			"ap": 1,
-			"rule": "Each wound roll of 6+ causes D3 damage."
-		},
-		{
-			"name": "Crozius Arcanum",
-			"type": "Melee",
-			"strength": "+1",
-			"damage": 2,
-			"ap": 1
-		},
-		{
-			"name": "Power Axe",
-			"type": "Melee",
-			"strength": "+1",
-			"damage": 1,
-			"ap": 2
-		},
-		{
-			"name": "Power Maul",
-			"type": "Melee",
-			"strength": "+2",
-			"damage": 1,
-			"ap": 1
-		},
-		{
-			"name": "Chainsword",
-			"type": "Melee",
-			"strength": "user",
-			"damage": "1",
-			"ap": 0,
-			"rule": "Gain +1 attack with this weapon."
-		},
-		{
-			"name": "Force Sword",
-			"type": "Melee",
-			"strength": "user",
-			"damage": "D3",
-			"ap": 3
-		},
-		{
-			"name": "Force Stave",
-			"type": "Melee",
-			"strength": "+2",
-			"damage": "D3",
-			"ap": 1
-		},
-		{
-			"name": "Power Sword",
-			"type": "Melee",
-			"strength": "user",
-			"damage": 1,
-			"ap": 3
-		},
-		{
-			"name": "Heavy Bolter",
-			"type": "Heavy 3",
-			"strength": 5,
-			"damage": 1,
-			"ap": 1,
-			"range": 36,
-			"price": 10
-		},
-		{
-			"name": "Bike with Plasma Talon",
-			"multiProfiles": [
-				{
-					"name": "Standard",
-					"type": "Assault 2",
-					"strength": 7,
-					"damage": 1,
-					"ap": 3,
-					"range": 18
-				},
-				{
-					"name": "Supercharge",
-					"type": "Assault 2",
-					"strength": 8,
-					"damage": 2,
-					"ap": 3,
-					"range": 18,
-					"rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
-				}
-			]
-		},
-		{
-			"name": "Auto Boltstorm Gauntlets",
-			"price": 12,
-			"multiProfiles": [
-				{
-					"name": "Shooting",
-					"type": "Assault 6",
-					"strength": 4,
-					"damage": 1,
-					"ap": 0,
-					"range": 18
-				},
-				{
-					"name": "Melee",
-					"type": "Melee",
-					"strength": "x2",
-					"damage": "D3",
-					"ap": 3,
-					"rule": "Subtract 1 from the to hit roll when attacking with this."
-				}
-			]
-		},
-		{
-			"name": "Fragstorm Grenade Launcher",
-			"type": "Assault D6",
-			"strength": 4,
-			"damage": 1,
-			"ap": 0,
-			"range": 18,
-			"price": 4
-		},
-		{
-			"name": "Plasma Incinerator",
-			"price": 15,
-			"multiProfiles": [
-				{
-					"name": "Standard",
-					"type": "Rapid Fire 1",
-					"strength": 7,
-					"damage": 1,
-					"ap": 4,
-					"range": 30
-				},
-				{
-					"name": "Supercharge",
-					"type": "Rapid Fire 1",
-					"strength": 8,
-					"damage": 2,
-					"ap": 4,
-					"range": 30,
-					"rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
-				}
-			]
-		},
-		{
-			"name": "Scoped Heretics Bane",
-			"type": "Assault 3",
-			"strength": 6,
-			"damage": 1,
-			"ap": 1,
-			"range": 18,
-			"price": 20,
-			"rule": "Add 1 to hit when firing this weapon stationary."
-		},
-		{
-			"name": "Bike with Twin Boltgun",
-			"type": "Rapid Fire 2",
-			"strength": 4,
-			"damage": 1,
-			"ap": 0,
-			"range": 24,
-			"price": 2
-		},
-		{
-			"name": "Auto Bolt Rifle",
-			"type": "Assault 2",
-			"strength": 4,
-			"damage": 1,
-			"ap": 0,
-			"range": 24,
-			"price": 2
-		},
-		{
-			"name": "Bolt Rifle",
-			"type": "Rapid Fire 1",
-			"strength": 4,
-			"damage": 1,
-			"ap": 1,
-			"range": 30
-		},
-		{
-			"name": "Marksman Bolt Carbine",
-			"type": "Rapid Fire 1",
-			"strength": 4,
-			"damage": 1,
-			"ap": 0,
-			"range": 24,
-			"rule": "On a hit roll of 6, the weapon automatically wounds the target"
-		},
-		{
-			"name": "Burst Cannon",
-			"type": "Assault 4",
-			"strength": 5,
-			"damage": 1,
-			"ap": 0,
-			"range": 18
-		},
-		{
-			"name": "Pulse Rifle",
-			"type": "Rapid Fire 1",
-			"strength": 5,
-			"damage": 1,
-			"ap": 0,
-			"range": 30
-		},
-		{
-			"name": "Pulse Carbine",
-			"type": "Assault 1",
-			"strength": 5,
-			"damage": 1,
-			"ap": 0,
-			"range": 18
-		},
-		{
-			"name": "Markerlight",
-			"type": "Heavy 1",
-			"strength": "-",
-			"damage": "-",
-			"ap": "-",
-			"range": 36,
-			"rule": "See Markerlight table"
-		},
-		{
-			"name": "Photon grenade",
-			"type": "Grenade D6",
-			"strength": "-",
-			"damage": "-",
-			"ap": "-",
-			"range": 12,
-			"rule": "Your opponent must subtract 1 from any hit rolls made for INFANTRY units that were hit by this weapon until the end of the turn."
-		},
-		{
-			"name": "Heavy Rail Rifle",
-			"type": "Heavy 2",
-			"strength": 8,
-			"damage": "D6",
-			"ap": 4,
-			"range": 60,
-			"rule": "Each time you make a wound roll of 6+ for this weapon, the target unit suffers a mortal wound in addition to the normal damage."
-		}
-	],
-	"otherEquipment": [
-		{
-			"name": "Tartaros Armour",
-			"effect": "This model has a 5+ invulnerable save."
-		},
-		{
-			"name": "Sniper Training",
-			"effect": "When this model remained stationary, re-roll 'To Hit' rolls of 1.",
-			"price": 5,
-			"isArmouryItem": true
-		},
-		{
-			"name": "Stabilizing Jet",
-			"effect": "+2” when advancing",
-			"price": 5,
-			"isArmouryItem": true
-		},
-		{
-			"name": "Tartaros Armour",
-			"effect": "This model has a 5+ invulnerable save."
-		}
-	]
+    "weapons": [
+        {
+            "name": "Absolvor Bolt Pistol",
+            "type": "Pistol 1",
+            "strength": 5,
+            "damage": "1",
+            "ap": 1,
+            "range": 16
+        },
+        {
+            "name": "Assault Bolter",
+            "type": "Assault 3",
+            "strength": 5,
+            "damage": "1",
+            "ap": 1,
+            "range": 18
+        },
+        {
+            "name": "Bolt Sniper Rifle",
+            "multiProfiles": [
+                {
+                    "name": "Executioner Round",
+                    "type": "Heavy 1",
+                    "strength": 5,
+                    "damage": 1,
+                    "ap": 1,
+                    "range": 36,
+                    "rule": "This weapon can target a CHARACTER model even it is not the closest enemy model and can target models that are not visible to the bearer. Targets saving throws do not benefit from cover. Add +2 to hit when firing this weapon"
+                },
+                {
+                    "name": "Hyperfrag Round",
+                    "type": "Heavy D3",
+                    "strength": 5,
+                    "damage": 1,
+                    "ap": 0,
+                    "range": 36,
+                    "rule": "This weapon can target a CHARACTER model even it is not the closest enemy model."
+                },
+                {
+                    "name": "Mortis Round",
+                    "type": "Heavy 1",
+                    "strength": 5,
+                    "damage": "D3",
+                    "ap": 2,
+                    "range": 36,
+                    "rule": "This weapon can target a CHARACTER model even it is not the closest enemy model. Wound rolls of 6+ inflict an additional mortal wound to the target."
+                }
+            ]
+        },
+        {
+            "name": "Bolt Pistol",
+            "type": "Pistol 1",
+            "strength": 4,
+            "damage": "1",
+            "ap": 0,
+            "range": 12
+        },
+        {
+            "name": "Frag Grenade",
+            "type": "Grenade D6",
+            "strength": 3,
+            "damage": 1,
+            "ap": 0,
+            "range": 6
+        },
+        {
+            "name": "Volkite Blaster",
+            "type": "Heavy 3",
+            "strength": 6,
+            "damage": 1,
+            "ap": 0,
+            "range": 24,
+            "rule": "For each wound roll of 6+, the target suffers an additional mortal wound."
+        },
+        {
+            "name": "Krag Grenade",
+            "type": "Grenade 1",
+            "strength": 6,
+            "damage": "D3",
+            "range": 6,
+            "ap": 1
+        },
+        {
+            "name": "Corvus Hammer",
+            "type": "Melee",
+            "strength": "+1",
+            "damage": "1",
+            "ap": 1,
+            "rule": "Each wound roll of 6+ causes D3 damage."
+        },
+        {
+            "name": "Omnissian Axe",
+            "type": "Melee",
+            "strength": "+1",
+            "damage": "2",
+            "ap": 2
+        },
+        {
+            "name": "Arc Claw",
+            "type": "Melee",
+            "strength": "+1",
+            "damage": "1",
+            "ap": 1,
+            "rule": "When attacking a VEHICLE, this weapon has a Damage of D3."
+        },
+        {
+            "name": "Crozius Arcanum",
+            "type": "Melee",
+            "strength": "+1",
+            "damage": 2,
+            "ap": 1
+        },
+        {
+            "name": "Power Axe",
+            "type": "Melee",
+            "strength": "+1",
+            "damage": 1,
+            "ap": 2
+        },
+        {
+            "name": "Power Maul",
+            "type": "Melee",
+            "strength": "+2",
+            "damage": 1,
+            "ap": 1
+        },
+        {
+            "name": "Chainsword",
+            "type": "Melee",
+            "strength": "user",
+            "damage": "1",
+            "ap": 0,
+            "rule": "Gain +1 attack with this weapon."
+        },
+        {
+            "name": "Force Sword",
+            "type": "Melee",
+            "strength": "user",
+            "damage": "D3",
+            "ap": 3
+        },
+        {
+            "name": "Force Stave",
+            "type": "Melee",
+            "strength": "+2",
+            "damage": "D3",
+            "ap": 1
+        },
+        {
+            "name": "Power Sword",
+            "type": "Melee",
+            "strength": "user",
+            "damage": 1,
+            "ap": 3
+        },
+        {
+            "name": "Heavy Bolter",
+            "type": "Heavy 3",
+            "strength": 5,
+            "damage": 1,
+            "ap": 1,
+            "range": 36
+        },
+        {
+            "name": "Cognis Flamer",
+            "type": "Assault D6",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 8,
+            "rule": "This weapon  hits automatically. When firing Overwatch, roll two dice for the amount of attacks and discard the lowest."
+        },
+        {
+            "name": "Laspistol",
+            "type": "Pistol 1",
+            "strength": 3,
+            "damage": 1,
+            "ap": 0,
+            "range": 12
+        },
+        {
+            "name": "Heavy Arc Rifle",
+            "type": "Heavy 2",
+            "strength": 6,
+            "damage": "D3",
+            "ap": 2,
+            "range": 36,
+            "rule": "When attacking a VEHICLE, this weapon has a Damage of D6."
+        },
+        {
+            "name": "Bike with Plasma Talon",
+            "multiProfiles": [
+                {
+                    "name": "Standard",
+                    "type": "Assault 2",
+                    "strength": 7,
+                    "damage": 1,
+                    "ap": 3,
+                    "range": 18
+                },
+                {
+                    "name": "Supercharge",
+                    "type": "Assault 2",
+                    "strength": 8,
+                    "damage": 2,
+                    "ap": 3,
+                    "range": 18,
+                    "rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
+                }
+            ]
+        },
+        {
+            "name": "Combi-Plasma",
+            "rule": "Choose one or two of the profiles below. If you choose both, subtract 1 from all hit rolls for this weapon.",
+            "multiProfiles": [
+                {
+                    "name": "Boltgun",
+                    "type": "Rapid Fire 1",
+                    "strength": 4,
+                    "damage": 1,
+                    "ap": 0,
+                    "range": 24
+                },
+                {
+                    "name": "Plasma Gun",
+                    "multiProfiles": [
+                        {
+                            "name": "Standard",
+                            "type": "Rapid Fire 1",
+                            "strength": 7,
+                            "damage": 1,
+                            "ap": 3,
+                            "range": 24
+                        },
+                        {
+                            "name": "Supercharge",
+                            "type": "Rapid Fire 1",
+                            "strength": 8,
+                            "damage": 2,
+                            "ap": 3,
+                            "range": 24,
+                            "rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Auto Boltstorm Gauntlets",
+            "multiProfiles": [
+                {
+                    "name": "Shooting",
+                    "type": "Assault 6",
+                    "strength": 4,
+                    "damage": 1,
+                    "ap": 0,
+                    "range": 18
+                },
+                {
+                    "name": "Melee",
+                    "type": "Melee",
+                    "strength": "x2",
+                    "damage": "D3",
+                    "ap": 3,
+                    "rule": "Subtract 1 from the to hit roll when attacking with this."
+                }
+            ]
+        },
+        {
+            "name": "Fragstorm Grenade Launcher",
+            "type": "Assault D6",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 18
+        },
+        {
+            "name": "Plasma Incinerator",
+            "multiProfiles": [
+                {
+                    "name": "Standard",
+                    "type": "Rapid Fire 1",
+                    "strength": 7,
+                    "damage": 1,
+                    "ap": 4,
+                    "range": 30
+                },
+                {
+                    "name": "Supercharge",
+                    "type": "Rapid Fire 1",
+                    "strength": 8,
+                    "damage": 2,
+                    "ap": 4,
+                    "range": 30,
+                    "rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
+                }
+            ]
+        },
+        {
+            "name": "Scoped Heretics Bane",
+            "type": "Assault 3",
+            "strength": 6,
+            "damage": 1,
+            "ap": 1,
+            "range": 18,
+            "rule": "Add 1 to hit when firing this weapon stationary."
+        },
+        {
+            "name": "Bike with Twin Boltgun",
+            "type": "Rapid Fire 2",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 24
+        },
+        {
+            "name": "Auto Bolt Rifle",
+            "type": "Assault 2",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 24
+        },
+        {
+            "name": "Bolt Rifle",
+            "type": "Rapid Fire 1",
+            "strength": 4,
+            "damage": 1,
+            "ap": 1,
+            "range": 30
+        },
+        {
+            "name": "Marksman Bolt Carbine",
+            "type": "Rapid Fire 1",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 24,
+            "rule": "On a hit roll of 6, the weapon automatically wounds the target"
+        },
+        {
+            "name": "Burst Cannon",
+            "type": "Assault 4",
+            "strength": 5,
+            "damage": 1,
+            "ap": 0,
+            "range": 18
+        },
+        {
+            "name": "Pulse Rifle",
+            "type": "Rapid Fire 1",
+            "strength": 5,
+            "damage": 1,
+            "ap": 0,
+            "range": 30
+        },
+        {
+            "name": "Pulse Carbine",
+            "type": "Assault 1",
+            "strength": 5,
+            "damage": 1,
+            "ap": 0,
+            "range": 18
+        },
+        {
+            "name": "Markerlight",
+            "type": "Heavy 1",
+            "strength": "-",
+            "damage": "-",
+            "ap": "-",
+            "range": 36,
+            "rule": "See Markerlight table"
+        },
+        {
+            "name": "Photon grenade",
+            "type": "Grenade D6",
+            "strength": "-",
+            "damage": "-",
+            "ap": "-",
+            "range": 12,
+            "rule": "Your opponent must subtract 1 from any hit rolls made for INFANTRY units that were hit by this weapon until the end of the turn."
+        },
+        {
+            "name": "Heavy Rail Rifle",
+            "type": "Heavy 2",
+            "strength": 8,
+            "damage": "D6",
+            "ap": 4,
+            "range": 60,
+            "rule": "Each time you make a wound roll of 6+ for this weapon, the target unit suffers a mortal wound in addition to the normal damage."
+        }
+    ],
+    "otherEquipment": [
+        {
+            "name": "Tartaros Armour",
+            "effect": "This model has a 5+ invulnerable save."
+        },
+        {
+            "name": "Sniper Training",
+            "effect": "When this model remained stationary, re-roll 'To Hit' rolls of 1.",
+            "price": 5,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Stabilizing Jet",
+            "effect": "+2” when advancing",
+            "price": 5,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Tartaros Armour",
+            "effect": "This model has a 5+ invulnerable save."
+        },
+        {
+            "name": "Medicae Mechadendrite",
+            "effect": "This model has a 5+ invulnerable save.",
+            "price": 10
+        },
+        {
+            "name": "Ballistic Mechadendrite",
+            "effect": "This model has a 5+ invulnerable save.",
+            "price": 5
+        },
+        {
+            "name": "Heavy Armature Legs",
+            "effect": "This model never suffers the penalty for moving and firing heavy weapons and cannot be moved by enemy models. If the equipped model advances its must always advance by D3”.",
+            "price": 5,
+            "isArmouryItem": true
+        }
+    ]
 }

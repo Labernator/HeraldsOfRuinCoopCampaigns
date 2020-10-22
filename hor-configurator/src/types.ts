@@ -13,6 +13,7 @@ export enum FactionEnum {
     Primaris = "Primaris",
     DarkAngels = "Dark Angels",
     Tau = "Tau Empire",
+    AdeptusMechanicus = "Adeptus Mechanicus",
 }
 
 export interface Model {
@@ -51,7 +52,8 @@ export interface WeaponReference {
 }
 
 // Weapons interface
-export interface WeaponBaseStats {
+
+export interface Weapon {
     name: string;
     type?: string;
     strength?: string | number;
@@ -59,13 +61,10 @@ export interface WeaponBaseStats {
     ap?: string | number;
     range?: number;
     rule?: string;
-    isArmouryItem: boolean;
-}
-
-export interface Weapon extends WeaponBaseStats {
+    isArmouryItem?: boolean;
     price?: number;
     amount?: number;
-    multiProfiles?: WeaponBaseStats[];
+    multiProfiles?: Weapon[];
 }
 // Rule interface
 export interface Rule {

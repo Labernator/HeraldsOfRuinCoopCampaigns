@@ -9,7 +9,11 @@ export const WarbandPage = (path: any) => {
         setModelMap([
             ...modelMap,
             ...Array.from(document.querySelectorAll(".model-container")).filter((el) => el.getBoundingClientRect().height + el.getBoundingClientRect().top < 1122).map((element) => ({ "id": element.id, "page": 1 })),
-            ...Array.from(document.querySelectorAll(".model-container")).filter((el) => el.getBoundingClientRect().height + el.getBoundingClientRect().top >= 1122).map((element) => ({ "id": element.id, "page": 2 })),
+            ...Array.from(document.querySelectorAll(".model-container")).filter((el) =>
+                el.getBoundingClientRect().height + el.getBoundingClientRect().top >= 1122 &&
+                el.getBoundingClientRect().height + el.getBoundingClientRect().top < 2244
+            ).map((element) => ({ "id": element.id, "page": 2 })),
+            ...Array.from(document.querySelectorAll(".model-container")).filter((el) => el.getBoundingClientRect().height + el.getBoundingClientRect().top >= 2244).map((element) => ({ "id": element.id, "page": 3 })),
         ]);
     }, []);
 
@@ -22,6 +26,7 @@ export const WarbandPage = (path: any) => {
         {modelMap.length ?
             <div><WarbandRenderer state={{ ...state, Roster: filterRosterToPage(1) }} page={1} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster)} />
                 <WarbandRenderer state={{ ...state, Roster: filterRosterToPage(2) }} page={2} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster)} />
+                <WarbandRenderer state={{ ...state, Roster: filterRosterToPage(3) }} page={3} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster)} />
             </div > : undefined
         }
         <WarbandRenderer state={state} page={1} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster)} fullRender={true} />

@@ -1,14 +1,15 @@
 import React from "react";
-import { EquipmentReferences, OtherEquipment, Weapon, WeaponBaseStats } from "../types";
-import { getDetailedList } from "../utility/Utils";
+import { EquipmentReferences, FactionEnum, OtherEquipment, Weapon } from "../types";
+import { getDetailedList, getWeaponPrice } from "../utility/Utils";
 
-export const ModelEquipmentRenderer = ({ equipment }: { equipment: EquipmentReferences }) => {
+export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: EquipmentReferences; faction: FactionEnum }) => {
     const equiList = getDetailedList(equipment);
     const hasMeleeWeaponsOnly = () => equiList.weapons.every((weapon) => weapon.type === "Melee");
-    const stuffPriceString = (stuff: OtherEquipment | Weapon) => stuff.price ? `(${stuff.price})` : "";
-    const renderMultiProfiles = (multiProfiles: WeaponBaseStats[]) => multiProfiles.map(renderWeaponLine);
-    const renderWeaponLine = (weapon: WeaponBaseStats) => <tr>
-        <td>{` - ${weapon.name} ${stuffPriceString(weapon)}`}</td>
+    const weaponPriceString = (weapon: Weapon) => getWeaponPrice(weapon.name, faction) ? `(${getWeaponPrice(weapon.name, faction)})` : "";
+    const otherEquipmentPriceString = (otherEquipment: OtherEquipment) => otherEquipment.price ? `(${otherEquipment.price})` : "";
+    const renderMultiProfiles = (multiProfiles: Weapon[]) => multiProfiles.map(renderWeaponLine);
+    const renderWeaponLine = (weapon: Weapon) => <tr>
+        <td>{` - ${weapon.name} ${weaponPriceString(weapon)}`}</td>
         <td>{weapon.type}</td>
         {!hasMeleeWeaponsOnly() ? <td>{weapon.range}</td> : undefined}
         <td>{weapon.strength}</td>
@@ -18,12 +19,12 @@ export const ModelEquipmentRenderer = ({ equipment }: { equipment: EquipmentRefe
     </tr>;
     const renderWeapons = () => equiList.weapons.map((weapon) => weapon.multiProfiles ?
         [<tr>
-            <td colSpan={4}>{`${weapon.name} ${stuffPriceString(weapon)}`}</td>
+            <td colSpan={4}>{`${weapon.name} ${weaponPriceString(weapon)}`}</td>
         </tr>,
         renderMultiProfiles(weapon.multiProfiles)]
         :
         [<tr>
-            <td>{`${weapon.name} ${stuffPriceString(weapon)}`}</td>
+            <td>{`${weapon.name} ${weaponPriceString(weapon)}`}</td>
             <td>{weapon.type}</td>
             {!hasMeleeWeaponsOnly() ? <td>{weapon.range}</td> : undefined}
             <td>{weapon.strength}</td>
@@ -34,7 +35,7 @@ export const ModelEquipmentRenderer = ({ equipment }: { equipment: EquipmentRefe
     );
     const renderOtherEquipment = () => equiList.otherEquipment?.map((otherEquipment) =>
         <tr>
-            <td>{`${otherEquipment.name} ${stuffPriceString(otherEquipment)}`}</td>
+            <td>{`${otherEquipment.name} ${otherEquipmentPriceString(otherEquipment)}`}</td>
             <td>{otherEquipment.effect}</td>
         </tr>);
     return <div><table className="enemies-table">
