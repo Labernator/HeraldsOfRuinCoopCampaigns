@@ -10,6 +10,6 @@ Choose one of the current rosters to view and download or upload your own roster
 If you want to upload your own roster, you need to create a JSON file that sticks to the warband interface.
 
 You can find the warband interface definition here:
-[Types](hor-configurator/src/types.ts)
+[Types definition](https://github.com/Labernator/HeraldsOfRuinCoopCampaigns/blob/master/hor-configurator/src/types.ts)
 
 You can find the sample warband JSON files here:
