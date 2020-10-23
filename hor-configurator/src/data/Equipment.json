@@ -57,6 +57,14 @@
             "range": 12
         },
         {
+            "name": "Heavy Bolt Pistol",
+            "type": "Pistol 1",
+            "strength": 4,
+            "damage": "1",
+            "ap": 1,
+            "range": 12
+        },
+        {
             "name": "Frag Grenade",
             "type": "Grenade D6",
             "strength": 3,
@@ -112,6 +120,35 @@
             "ap": 1
         },
         {
+            "name": "Flail of the Unforgiven",
+            "type": "Melee",
+            "strength": "+2",
+            "damage": 2,
+            "ap": 3
+        },
+        {
+            "name": "Mace of Absolution",
+            "type": "Melee",
+            "strength": "x2",
+            "damage": 3,
+            "ap": 2
+        },
+        {
+            "name": "Blade of Caliban",
+            "type": "Melee",
+            "strength": "+3",
+            "damage": "D3",
+            "ap": 3
+        },
+        {
+            "name": "Halberd of Caliban",
+            "type": "Melee",
+            "strength": "+3",
+            "damage": "D3",
+            "ap": 4,
+            "rule": "Make an additional D3 attacks if the target unit contains 5 or more models."
+        },
+        {
             "name": "Power Axe",
             "type": "Melee",
             "strength": "+1",
@@ -124,6 +161,14 @@
             "strength": "+2",
             "damage": 1,
             "ap": 1
+        },
+        {
+            "name": "Combat Knife",
+            "type": "Melee",
+            "strength": "user",
+            "damage": "1",
+            "ap": 0,
+            "rule": "Gain +1 attack with this weapon."
         },
         {
             "name": "Chainsword",
@@ -155,6 +200,14 @@
             "ap": 3
         },
         {
+            "name": "Power Fist",
+            "type": "Melee",
+            "strength": "x2",
+            "damage": "D3",
+            "ap": 3,
+            "rule": "Subtract 1 from the to hit roll when attacking with this."
+        },
+        {
             "name": "Heavy Bolter",
             "type": "Heavy 3",
             "strength": 5,
@@ -169,7 +222,7 @@
             "damage": 1,
             "ap": 0,
             "range": 8,
-            "rule": "This weapon hits automatically. When firing Overwatch, roll two dice for the amount of attacks and discard the lowest."
+            "rule": "This weapon  hits automatically. When firing Overwatch, roll two dice for the amount of attacks and discard the lowest."
         },
         {
             "name": "Laspistol",
@@ -211,8 +264,57 @@
             ]
         },
         {
+            "name": "Master-Crafted Boltgun",
+            "type": "Rapid Fire 1",
+            "strength": 4,
+            "damage": 2,
+            "ap": 1,
+            "range": 24
+        },
+        {
+            "name": "Master-Crafted Auto Bolt Rifle",
+            "type": "Assault 2",
+            "strength": 4,
+            "damage": 2,
+            "ap": 0,
+            "range": 24
+        },
+        {
+            "name": "Boltgun",
+            "type": "Rapid Fire 1",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 24
+        },
+        {
+            "name": "Storm Bolter",
+            "type": "Rapid Fire 2",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 24
+        },
+        {
+            "name": "Combi-Bolter",
+            "type": "Rapid Fire 2",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 24
+        },
+        {
+            "name": "Astartes Shotgun",
+            "type": "Assault 2",
+            "strength": 4,
+            "damage": 1,
+            "ap": 0,
+            "range": 12,
+            "rule": "Add +1 Strength if the target is within half range."
+        },
+        {
             "name": "Combi-Plasma",
-            "rule": "Choose one or two of the profiles below. If you use both, subtract 1 from the to hit rolls.",
+            "rule": "Choose one or two of the profiles below. If you choose both, subtract 1 from all hit rolls for this weapon.",
             "multiProfiles": [
                 {
                     "name": "Boltgun",
@@ -243,6 +345,27 @@
                             "rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Boltstorm Gauntlet",
+            "multiProfiles": [
+                {
+                    "name": "Shooting",
+                    "type": "Pistol 3",
+                    "strength": 4,
+                    "damage": 1,
+                    "ap": 0,
+                    "range": 12
+                },
+                {
+                    "name": "Melee",
+                    "type": "Melee",
+                    "strength": "x2",
+                    "damage": "D3",
+                    "ap": 3,
+                    "rule": "Subtract 1 from the to hit roll when attacking with this."
                 }
             ]
         },
