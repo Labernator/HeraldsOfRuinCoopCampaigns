@@ -169,7 +169,7 @@
             "damage": 1,
             "ap": 0,
             "range": 8,
-            "rule": "This weapon  hits automatically. When firing Overwatch, roll two dice for the amount of attacks and discard the lowest."
+            "rule": "This weapon hits automatically. When firing Overwatch, roll two dice for the amount of attacks and discard the lowest."
         },
         {
             "name": "Laspistol",
@@ -212,7 +212,7 @@
         },
         {
             "name": "Combi-Plasma",
-            "rule": "Choose one or two of the profiles below. If you choose both, subtract 1 from all hit rolls for this weapon.",
+            "rule": "Choose one or two of the profiles below. If you use both, subtract 1 from the to hit rolls.",
             "multiProfiles": [
                 {
                     "name": "Boltgun",

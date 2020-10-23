@@ -10,12 +10,12 @@ const philosophies = RulesJson.Philosophies as Philosophy[];
 const priceList = ArmySpecifics.PriceList;
 
 export const getWeaponDetails = (name: string) => weapons.find((weapon) => weapon.name === name) as Weapon;
-export const getWeaponPrice = (weaponName: string, faction: FactionEnum) => {
+export const getWeaponPrice = (weaponName: string, faction: FactionEnum, amount?: number) => {
     switch (faction) {
-        case FactionEnum.Primaris: return priceList.Primaris.find((weapon) => weapon.name === weaponName)?.price || 0;
-        case FactionEnum.DarkAngels: return priceList.DarkAngels.find((weapon) => weapon.name === weaponName)?.price || 0;
-        case FactionEnum.Tau: return priceList.Tau.find((weapon) => weapon.name === weaponName)?.price || 0;
-        case FactionEnum.AdeptusMechanicus: return priceList.AdeptusMechanicus.find((weapon) => weapon.name === weaponName)?.price || 0;
+        case FactionEnum.Primaris: return (priceList.Primaris.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.DarkAngels: return (priceList.DarkAngels.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.Tau: return (priceList.Tau.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.AdeptusMechanicus: return (priceList.AdeptusMechanicus.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
         default: return 0;
     }
 };
@@ -40,7 +40,7 @@ export const getDetailedList = (referenceList: EquipmentReferences) => {
 export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
     let totalPrice = model.price || 0;
 
-    totalPrice = totalPrice + model.equipment.weapons.reduce((a, weapon) => a + getWeaponPrice(weapon.name, faction), 0);
+    totalPrice = totalPrice + model.equipment.weapons.reduce((a, weapon) => a + getWeaponPrice(weapon.name, faction, weapon.amount), 0);
     if (model.equipment.otherEquipment) {
         totalPrice = totalPrice + model.equipment.otherEquipment.reduce((a, equipment) => {
             const equipmentDetails = getOtherEquipmentDetails(equipment);

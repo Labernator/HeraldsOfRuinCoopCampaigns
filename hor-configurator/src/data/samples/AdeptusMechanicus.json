@@ -30,11 +30,11 @@
                         "name": "Omnissian Axe"
                     },
                     {
-                        "name": "Volkite Blaster",
-                        "amount": 2
+                        "name": "Volkite Blaster"
                     },
                     {
-                        "name": "Combi-Plasma"
+                        "name": "Combi-Plasma",
+                        "amount": 2
                     }
                 ],
                 "otherEquipment": [

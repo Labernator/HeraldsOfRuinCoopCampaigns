@@ -5,18 +5,20 @@ import { getDetailedList, getWeaponPrice } from "../utility/Utils";
 export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: EquipmentReferences; faction: FactionEnum }) => {
     const equiList = getDetailedList(equipment);
     const hasMeleeWeaponsOnly = () => equiList.weapons.every((weapon) => weapon.type === "Melee");
-    const weaponPriceString = (weapon: Weapon) => getWeaponPrice(weapon.name, faction) ? `(${getWeaponPrice(weapon.name, faction)})` : "";
+    const weaponPriceString = (weapon: Weapon) => getWeaponPrice(weapon.name, faction, weapon.amount) ? `(${getWeaponPrice(weapon.name, faction, weapon.amount)})` : "";
     const otherEquipmentPriceString = (otherEquipment: OtherEquipment) => otherEquipment.price ? `(${otherEquipment.price})` : "";
     const renderMultiProfiles = (multiProfiles: Weapon[]) => multiProfiles.map(renderWeaponLine);
-    const renderWeaponLine = (weapon: Weapon) => <tr>
-        <td>{` - ${weapon.name} ${weaponPriceString(weapon)}`}</td>
-        <td>{weapon.type}</td>
-        {!hasMeleeWeaponsOnly() ? <td>{weapon.range}</td> : undefined}
-        <td>{weapon.strength}</td>
-        <td>{weapon.ap}</td>
-        <td>{weapon.damage}</td>
-        <td>{weapon.rule}</td>
-    </tr>;
+    const renderWeaponLine = (weapon: Weapon) =>
+        <tr>
+            <td>{` - ${weapon.name} ${weaponPriceString(weapon)}`}</td>
+            <td>{weapon.type}</td>
+            {!hasMeleeWeaponsOnly() ? <td>{weapon.range}</td> : undefined}
+            <td>{weapon.strength}</td>
+            <td>{weapon.ap}</td>
+            <td>{weapon.damage}</td>
+            <td>{weapon.rule}</td>
+        </tr>;
+
     const renderWeapons = () => equiList.weapons.map((weapon) => weapon.multiProfiles ?
         [<tr>
             <td colSpan={4}>{`${weapon.name} ${weaponPriceString(weapon)}`}</td>
