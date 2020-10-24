@@ -66,7 +66,7 @@
         },
         {
             "name": "Master of Machines",
-            "effect": "At the end of your Movement you may repair another single friendly <FORGE WORLD> model within 3”. It regains D3 lost wounds. A model may not be the target of the Master of Machines ability more than once per turn."
+            "effect": "At the end of your Movement you may repair another single friendly <FORGE WORLD> model within 3”. It regains D3 lost wounds. A model my only be target once per turn."
         },
         {
             "name": "Noospheric Fulcrum",
@@ -82,19 +82,19 @@
         },
         {
             "name": "Heavy Battle Servitor",
-            "effect": "Gains a 6+ invulnerable save."
+            "effect": "This model may move and fire heavy weapons without penalty. If it advances it must always advance by D3”."
         },
         {
             "name": "Thermal Shed",
-            "effect": "Gains a 6+ invulnerable save."
+            "effect": "Subtract 1 from your Armour save if equipped with a Plasma Culverin or a Heavy Grav-Cannon."
         },
         {
             "name": "Heavy Tracks",
-            "effect": "Gains a 6+ invulnerable save."
+            "effect": "Ignore distance terrain penalties when moving, charging, or advancing. This model cannot be moved by an enemy model."
         },
         {
             "name": "Magos Biologis",
-            "effect": "Gains a 6+ invulnerable save."
+            "effect": "Friendly <FORGE WORLD> models within 6” re-roll 1’s to wound."
         }
     ],
     "ArmyRules": [

@@ -1,14 +1,13 @@
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import React from "react";
-import { ExportWarbandIcon } from "../icons";
+import { ExportWarbandIcon } from "../images";
 export const PdfGenerator = ({ title }: { title: string }) => {
 
     const exportPdf = async () => {
         const jsPdf = new jsPDF("p", "mm", "a4");
         let canvas: HTMLCanvasElement;
         const container = Array.from(document.querySelectorAll(".pdf-container"));
-        // tslint:disable-next-line: prefer-for-of
         for (let i = 0; i < container.length; i++) {
             if (i > 0) {
                 jsPdf.addPage();
@@ -26,7 +25,7 @@ export const PdfGenerator = ({ title }: { title: string }) => {
             src={ExportWarbandIcon}
             className="pdf-export"
             id={"pdf-generator-icon"}
-            title={"GeneratePdf"}
+            title={"Generate a PDF file from this list"}
             alt={"GeneratePdfIcon"}
             onClick={exportPdf}>
         </img>

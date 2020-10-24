@@ -1,3 +1,4 @@
+import AdeptusMechanicusPng from "./AdeptusMechanicus.png";
 import DarkAngelsPng from "./DarkAngels.png";
 import ExportPng from "./ExportWarband.png";
 import ImportWarbandPng from "./ImportWarband.png";
@@ -10,4 +11,5 @@ export const UseSampleIcon = UseSamplePng;
 export const DarkAngelsCover = DarkAngelsPng;
 export const TauEmpireCover = TauEmpirePng;
 export const PrimarisCover = PrimarisPng;
+export const AdeptusMechanicusCover = AdeptusMechanicusPng;
 export const ExportWarbandIcon = ExportPng;

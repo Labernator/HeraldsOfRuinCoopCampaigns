@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
+import * as AdeptusMechanicus from "../data/samples/AdeptusMechanicus.json";
 import * as DarkAngelsJson from "../data/samples/DarkAngels.json";
 import * as PrimarisJson from "../data/samples/PrimarisBois.json";
 import * as TauJson from "../data/samples/TauEmpire.json";
-import { DarkAngelsCover, PrimarisCover, TauEmpireCover } from "../icons";
+import { AdeptusMechanicusCover, DarkAngelsCover, ImportWarbandIcon, PrimarisCover, TauEmpireCover } from "../images";
 import { Warband } from "../types";
 import { FileUploader } from "../utility/index";
 
@@ -43,9 +44,19 @@ export const LandingPage = () => {
                         setState((PrimarisJson as any).default as Warband);
                         setPathName("/Warband");
                     }} />
+                <img
+                    alt="Adeptus Mechanicus"
+                    className="landing-page-column-icon"
+                    src={AdeptusMechanicusCover}
+                    onClick={() => {
+                        setState((AdeptusMechanicus as any).default as Warband);
+                        setPathName("/Warband");
+                    }} />
             </div>
             <div style={{ fontSize: "30px", fontWeight: "bold", float: "left", padding: "50px 10px 10px 10px" }}>Alternatively load your own warband roster from file:</div>
-            <FileUploader setStateCallback={setStateAndPath} />
+            <FileUploader image={
+                <img style={{ width: "150px", height: "150px", float: "left" }} alt="ImportWarband" className="landing-page-column-icon" src={ImportWarbandIcon} />
+            } setStateCallback={setStateAndPath} />
         </div >
     );
 };

@@ -74,6 +74,10 @@
             {
                 "name": "Arc Claw",
                 "price": 4
+            },
+            {
+                "name": "Servo-Arm",
+                "price": 12
             }
         ]
     },

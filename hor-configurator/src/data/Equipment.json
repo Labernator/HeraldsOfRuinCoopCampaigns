@@ -79,7 +79,7 @@
             "damage": 1,
             "ap": 0,
             "range": 24,
-            "rule": "For each wound roll of 6+, the target suffers an additional mortal wound."
+            "rule": "Wound rolls of 6+ cause an additional mortal wound."
         },
         {
             "name": "Krag Grenade",
@@ -208,6 +208,14 @@
             "rule": "Subtract 1 from the to hit roll when attacking with this."
         },
         {
+            "name": "Servo-Arm",
+            "type": "Melee",
+            "strength": "x2",
+            "damage": "3",
+            "ap": 2,
+            "rule": "This weapon can only be used for 1 attack at a time. Subtract 1 from the to hit roll when attacking with this."
+        },
+        {
             "name": "Heavy Bolter",
             "type": "Heavy 3",
             "strength": 5,
@@ -326,6 +334,7 @@
                 },
                 {
                     "name": "Plasma Gun",
+                    "rule": "When firing this weapon, choose one of the profiles below.",
                     "multiProfiles": [
                         {
                             "name": "Standard",
@@ -400,6 +409,7 @@
         },
         {
             "name": "Plasma Incinerator",
+            "rule": "When firing this weapon, choose one of the profiles below.",
             "multiProfiles": [
                 {
                     "name": "Standard",
@@ -537,12 +547,12 @@
         },
         {
             "name": "Medicae Mechadendrite",
-            "effect": "This model has a 5+ invulnerable save.",
+            "effect": "At the end of your Movement phase, this model can attempt to heal a model or revive a single model. Nominate a model who was killed in the previous turn and was within 3” of the healing models’ current position, on a 4+ the model is revived with 1 wound remaining. After attempting the revive the equipped model must skip it actions for all other phases this turn. Alternatively, select a wounded model within 3”. That model immediately regains 1 wound.",
             "price": 10
         },
         {
             "name": "Ballistic Mechadendrite",
-            "effect": "This model has a 5+ invulnerable save.",
+            "effect": "The bearer may purchase an additional weapon from the Pistols or Magos Special weapons list which is fired with a -1 to BS. This upgrade may be taken twice by the same model.",
             "price": 5
         },
         {

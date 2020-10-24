@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { ImportWarbandIcon } from "../images";
 import { FactionEnum, Model, PageMap, Warband } from "../types";
-import { getAllKeywords, getRosterPrice, getStratagems, PdfGenerator } from "../utility/index";
+import { FileUploader, getAllKeywords, getRosterPrice, getStratagems, PdfGenerator } from "../utility/index";
 import { WarbandRenderer } from "../WarbandRendering/WarbandRenderer";
 
 export const WarbandPage = (path: any) => {
     const [modelMap, setModelMap] = useState<PageMap[]>([]);
+    const [state, setState] = useState<Warband>(path.location.state as Warband);
     useEffect(() => {
         setModelMap([
             ...modelMap,
@@ -17,12 +19,14 @@ export const WarbandPage = (path: any) => {
         ]);
     }, []);
 
-    const state = path.location.state as Warband;
     const faction = state.Faction as FactionEnum;
     const rosterPrice = getRosterPrice(state.Roster, faction);
     const filterRosterToPage = (page: number): Model[] => state.Roster.filter((member) => modelMap.find((entry) => entry.id === `modelsheet_${member.name}` && entry.page === page));
     return <div>
         <PdfGenerator title={state.Title} />
+        <FileUploader image={
+            <img style={{ width: "50px", height: "50px", left: "150px" }} alt="OpenWarband" className="pdf-export" src={ImportWarbandIcon} title="Open another warband from file" />
+        } setStateCallback={setState} />
         {modelMap.length ?
             <div><WarbandRenderer state={{ ...state, Roster: filterRosterToPage(1) }} page={1} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster)} />
                 <WarbandRenderer state={{ ...state, Roster: filterRosterToPage(2) }} page={2} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster)} />

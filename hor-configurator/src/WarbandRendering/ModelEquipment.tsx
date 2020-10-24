@@ -4,37 +4,38 @@ import { getDetailedList, getWeaponPrice } from "../utility/Utils";
 
 export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: EquipmentReferences; faction: FactionEnum }) => {
     const equiList = getDetailedList(equipment);
-    const hasMeleeWeaponsOnly = () => equiList.weapons.every((weapon) => weapon.type === "Melee");
     const weaponPriceString = (weapon: Weapon) => getWeaponPrice(weapon.name, faction, weapon.amount) ? `(${getWeaponPrice(weapon.name, faction, weapon.amount)})` : "";
     const otherEquipmentPriceString = (otherEquipment: OtherEquipment) => otherEquipment.price ? `(${otherEquipment.price})` : "";
-    const renderMultiProfiles = (multiProfiles: Weapon[]) => multiProfiles.map(renderWeaponLine);
-    const renderWeaponLine = (weapon: Weapon) =>
-        <tr>
-            <td>{` - ${weapon.name} ${weaponPriceString(weapon)}`}</td>
-            <td>{weapon.type}</td>
-            {!hasMeleeWeaponsOnly() ? <td>{weapon.range}</td> : undefined}
-            <td>{weapon.strength}</td>
-            <td>{weapon.ap}</td>
-            <td>{weapon.damage}</td>
-            <td>{weapon.rule}</td>
-        </tr>;
 
-    const renderWeapons = () => equiList.weapons.map((weapon) => weapon.multiProfiles ?
-        [<tr>
-            <td colSpan={4}>{`${weapon.name} ${weaponPriceString(weapon)}`}</td>
-        </tr>,
-        renderMultiProfiles(weapon.multiProfiles)]
-        :
-        [<tr>
-            <td>{`${weapon.name} ${weaponPriceString(weapon)}`}</td>
-            <td>{weapon.type}</td>
-            {!hasMeleeWeaponsOnly() ? <td>{weapon.range}</td> : undefined}
-            <td>{weapon.strength}</td>
-            <td>{weapon.ap}</td>
-            <td>{weapon.damage}</td>
-            <td>{weapon.rule}</td>
-        </tr>]
-    );
+    const renderWeapon = (weapon: Weapon, cnt: number) => {
+        let arr: JSX.Element[] = [];
+        let nr = cnt;
+        const weaponName = nr === 1 ? ` - ${weapon.name}` : nr === 2 ? ` -  - ${weapon.name}` : weapon.name;
+        if (weapon.multiProfiles) {
+            const amountString = weapon.amount && nr === 0 ? `${weapon.amount}x` : "";
+            arr = [
+                ...arr,
+                <tr>
+                    <td>{`${amountString} ${weaponName} ${weaponPriceString(weapon)}`}</td>
+                    {weapon.rule ? <td colSpan={6}>{`${weapon.rule}`}</td> : undefined}
+                </tr>,
+            ];
+            nr = nr + 1;
+            arr = [...arr, ...weapon.multiProfiles.reduce((acc, weaponPart) => [...acc, ...renderWeapon(weaponPart, nr)], [] as JSX.Element[])];
+        } else {
+            arr = [...arr, <tr>
+                <td>{`${weaponName} ${weaponPriceString(weapon)}`}</td>
+                <td>{weapon.type}</td>
+                <td>{weapon.range}</td>
+                <td>{weapon.strength}</td>
+                <td>{weapon.ap}</td>
+                <td>{weapon.damage}</td>
+                <td>{weapon.rule}</td>
+            </tr>];
+        }
+        return arr;
+    };
+
     const renderOtherEquipment = () => equiList.otherEquipment?.map((otherEquipment) =>
         <tr>
             <td>{`${otherEquipment.name} ${otherEquipmentPriceString(otherEquipment)}`}</td>
@@ -43,18 +44,18 @@ export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: Equi
     return <div><table className="enemies-table">
         <colgroup>
             <col style={{ width: "100px" }} />
-            {!hasMeleeWeaponsOnly() ? <col style={{ width: "45px" }} /> : <col style={{ width: "20px" }} />}
+            <col style={{ width: "45px" }} />
             <col style={{ width: "20px" }} />
             <col style={{ width: "20px" }} />
             <col style={{ width: "20px" }} />
-            {!hasMeleeWeaponsOnly() ? <col style={{ width: "20px" }} /> : <col style={{ width: "252px" }} />}
-            {!hasMeleeWeaponsOnly() ? <col style={{ width: "180px" }} /> : undefined}
+            <col style={{ width: "20px" }} />
+            <col style={{ width: "180px" }} />
         </colgroup>
         <thead>
             <tr>
                 <th>Weapons</th>
                 <th>Type</th>
-                {!hasMeleeWeaponsOnly() ? <th>Rng</th> : undefined}
+                <th>Rng</th>
                 <th>Str</th>
                 <th>AP</th>
                 <th>Dmg</th>
@@ -63,13 +64,13 @@ export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: Equi
         </thead>
 
         <tbody>
-            {renderWeapons()}
+            {equiList.weapons.map((weapon) => renderWeapon(weapon, 0))}
         </tbody>
     </table>
         {equipment.otherEquipment ? <table className="enemies-table">
             <colgroup>
                 <col style={{ width: "100px" }} />
-                <col style={{ width: "362px" }} />
+                <col style={{ width: "307px" }} />
             </colgroup>
             <thead>
                 <tr>
