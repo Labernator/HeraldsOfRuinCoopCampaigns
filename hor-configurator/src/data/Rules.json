@@ -66,7 +66,7 @@
         },
         {
             "name": "Master of Machines",
-            "effect": "At the end of your Movement you may repair another single friendly <FORGE WORLD> model within 3”. It regains D3 lost wounds. A model may not be the target of the Master of Machines ability more than once per turn."
+            "effect": "At the end of your Movement you may repair another single friendly <FORGE WORLD> model within 3”. It regains D3 lost wounds. A model my only be target once per turn."
         },
         {
             "name": "Noospheric Fulcrum",
@@ -82,19 +82,75 @@
         },
         {
             "name": "Heavy Battle Servitor",
-            "effect": "Gains a 6+ invulnerable save."
+            "effect": "This model may move and fire heavy weapons without penalty. If it advances it must always advance by D3”."
         },
         {
             "name": "Thermal Shed",
-            "effect": "Gains a 6+ invulnerable save."
+            "effect": "Subtract 1 from your Armour save if equipped with a Plasma Culverin or a Heavy Grav-Cannon."
         },
         {
             "name": "Heavy Tracks",
-            "effect": "Gains a 6+ invulnerable save."
+            "effect": "Ignore distance terrain penalties when moving, charging, or advancing. This model cannot be moved by an enemy model."
         },
         {
             "name": "Magos Biologis",
+            "effect": "Friendly <FORGE WORLD> models within 6” re-roll 1’s to wound."
+        },
+        {
+            "name": "Guide the Faithful",
+            "effect": "All friendly 'Order of the Valorous Heart' models within 3” of this model may re-roll to hit rolls of 1."
+        },
+        {
+            "name": "Bodyguard",
+            "effect": "When an Order of the Valorous Heart CHARACTER model within 3” would lose any wounds from an attack, this model may roll a D6; on a 2+ this model suffers 1 mortal wound for each of those wounds instead. Only one attempt can be made to intercept each attack."
+        },
+        {
+            "name": "Sworn Protectors",
+            "effect": "Re-roll hit rolls whilst within 6” of any friendly Order of the Valorous Heart CANONESSES."
+        },
+        {
+            "name": "Camo Cloak",
+            "effect": "Gain +2 armour save instead of +1 against ranged attacks for being in cover."
+        },
+        {
+            "name": "Concealed Position",
+            "effect": "During deployment, you can set up this model anywhere that is more than 9” away from any enemy models and the enemy deployment zone."
+        },
+        {
+            "name": "Sky Strike",
+            "effect": "During deployment, you can hold this model back. At the end of one of your Movement phases you can set up this unit anywhere that is more than 9” away from any enemy models."
+        },
+        {
+            "name": "Manta Strike",
+            "effect": "During deployment, you can hold this model back. At the end of one of your Movement phases you can set up this unit anywhere that is more than 9” away from any enemy models."
+        },
+        {
+            "name": "Angelic Visage",
+            "effect": "The invulnerable save received from the Shield of Faith is improved by 1 (max 4+)."
+        },
+        {
+            "name": "Acts of Faith",
+            "effect": "See the codex for this rule."
+        },
+        {
+            "name": "Sacred Rites",
+            "effect": "See the codex for this rule."
+        },
+        {
+            "name": "Litany of Deeds",
+            "effect": "See the codex for this rule."
+        },
+        {
+            "name": "Shield of Faith",
             "effect": "Gains a 6+ invulnerable save."
+        },
+        {
+            "name": "Zealot",
+            "effect": "Re-roll the hit roll of any melee attack if you made a charge move, were charged or performed a Heroic Intervention this turn."
+        },
+        {
+            "name": "Spiritual Fortitude",
+            "effect": "When this model would lose a wound as a result of a mortal wound in the Psychic phase, roll a D6; on a 5+ that wound is not lost."
         }
     ],
     "ArmyRules": [
@@ -104,7 +160,7 @@
         },
         {
             "name": "And They Shall Know No Fear",
-            "effect": "Re-roll failed Morale tests for this unit."
+            "effect": "Re-roll failed Morale tests for this model."
         },
         {
             "name": "Chapter Tactics: Novamarines",
@@ -147,6 +203,11 @@
             "name": "A More Subtle Touch",
             "tp": 2,
             "text": "Your team contains no units with the SKITARII keyword."
+        },
+        {
+            "name": "World on Fire",
+            "tp": 2,
+            "text": "Every model that can take a flame weapon has a flame weapon (flamer, combi-flamer, hand flamer, heavy flamer and the Widowmaker are flame weapons)."
         }
     ]
 }

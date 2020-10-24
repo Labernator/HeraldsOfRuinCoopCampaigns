@@ -11,16 +11,22 @@ const priceList = ArmySpecifics.PriceList;
 
 export const getWeaponDetails = (name: string) => weapons.find((weapon) => weapon.name === name) as Weapon;
 export const getWeaponPrice = (weaponName: string, faction: FactionEnum, amount?: number) => {
+    if (getWeaponDetails(weaponName)?.isLegendary) {
+        return 20;
+    }
     switch (faction) {
         case FactionEnum.Primaris: return (priceList.Primaris.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
         case FactionEnum.DarkAngels: return (priceList.DarkAngels.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
         case FactionEnum.Tau: return (priceList.Tau.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
         case FactionEnum.AdeptusMechanicus: return (priceList.AdeptusMechanicus.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.AdeptaSororitas: return (priceList.AdeptaSororitas.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.Deathwatch: return (priceList.Deathwatch.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
         default: return 0;
     }
 };
 
-export const getOtherEquipmentDetails = (name: string) => otherEquipment.find((equi) => equi.name === name) as OtherEquipment;
+export const getOtherEquipmentDetails = (name: string) =>
+    otherEquipment.find((equi) => equi.name === name) as OtherEquipment;
 export const getDetailedList = (referenceList: EquipmentReferences) => {
     const detailedList: Equipment = {
         weapons: [],

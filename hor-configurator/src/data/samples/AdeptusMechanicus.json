@@ -6,7 +6,7 @@
         "Soldiers of the Machine God"
     ],
     "Philosophy": "A More Subtle Touch",
-    "NthScenario": 2,
+    "NthScenario": 1,
     "Roster": [
         {
             "name": "Tech Priest Procurator",
@@ -27,19 +27,18 @@
             "equipment": {
                 "weapons": [
                     {
-                        "name": "Omnissian Axe"
-                    },
-                    {
                         "name": "Volkite Blaster"
                     },
                     {
                         "name": "Combi-Plasma",
                         "amount": 2
+                    },
+                    {
+                        "name": "Omnissian Axe"
                     }
                 ],
                 "otherEquipment": [
                     "Medicae Mechadendrite",
-                    "Ballistic Mechadendrite",
                     "Heavy Armature Legs"
                 ]
             },
@@ -55,11 +54,11 @@
                 "Magos Retiarus"
             ],
             "rules": [
+                "Canticles of the Omnissiah",
                 "Advanced Bionics",
                 "Master of Machines",
-                "Noospheric Fulcrum",
                 "Magos Retiarius",
-                "Canticles of the Omnissiah"
+                "Noospheric Fulcrum"
             ]
         },
         {
@@ -107,49 +106,6 @@
             ]
         },
         {
-            "name": "Kataphron Battle Servitor",
-            "type": "Core",
-            "price": 15,
-            "stats": {
-                "Movement": 6,
-                "WeaponSkill": "4+",
-                "BallisticSkill": "4+",
-                "Strength": 5,
-                "Toughness": 5,
-                "Wounds": 3,
-                "Attacks": 2,
-                "Leadership": 7,
-                "Save": "3+",
-                "InvulnerableSave": "6+"
-            },
-            "equipment": {
-                "weapons": [
-                    {
-                        "name": "Heavy Arc Rifle"
-                    },
-                    {
-                        "name": "Cognis Flamer"
-                    }
-                ]
-            },
-            "keywords": [
-                "Imperium",
-                "Adeptus Mechanicus",
-                "Forge World",
-                "Infantry",
-                "Cult Mechanicus",
-                "Kataphron Servitor",
-                "Servitor"
-            ],
-            "rules": [
-                "Canticles of the Omnissiah",
-                "Bionics",
-                "Heavy Battle Servitor",
-                "Thermal Shed",
-                "Heavy Tracks"
-            ]
-        },
-        {
             "name": "Tech Priest Auctoris",
             "type": "Special",
             "price": 30,
@@ -168,10 +124,13 @@
             "equipment": {
                 "weapons": [
                     {
+                        "name": "Laspistol"
+                    },
+                    {
                         "name": "Omnissian Axe"
                     },
                     {
-                        "name": "Laspistol"
+                        "name": "Servo-Arm"
                     }
                 ]
             },

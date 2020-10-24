@@ -117,6 +117,12 @@ th {
 td {
   padding:5px;
 }
+
+tr > td:first-child {
+  font-weight: bold;
+  font-style: italic;
+}
+
 .quick-ref-table-container {
   grid-column: 1;
   border-right: 1px solid;

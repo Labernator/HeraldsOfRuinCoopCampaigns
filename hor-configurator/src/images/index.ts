@@ -1,4 +1,8 @@
+import AdeptaSororitasPng from "./AdeptaSororitas.png";
+import AdeptusMechanicusPng from "./AdeptusMechanicus.png";
+import AstraMilitarumPng from "./AstraMilitarum.png";
 import DarkAngelsPng from "./DarkAngels.png";
+import DeathwatchPng from "./Deathwatch.png";
 import ExportPng from "./ExportWarband.png";
 import ImportWarbandPng from "./ImportWarband.png";
 import PrimarisPng from "./SpaceMarines.png";
@@ -10,4 +14,8 @@ export const UseSampleIcon = UseSamplePng;
 export const DarkAngelsCover = DarkAngelsPng;
 export const TauEmpireCover = TauEmpirePng;
 export const PrimarisCover = PrimarisPng;
+export const AdeptusMechanicusCover = AdeptusMechanicusPng;
 export const ExportWarbandIcon = ExportPng;
+export const DeathwatchCover = DeathwatchPng;
+export const AstraMilitarumCover = AstraMilitarumPng;
+export const AdeptaSororitasCover = AdeptaSororitasPng;

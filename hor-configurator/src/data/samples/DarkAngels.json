@@ -27,7 +27,7 @@
             "equipment": {
                 "weapons": [
                     {
-                        "name": "Scoped Heretics Bane"
+                        "name": "Heretics Bane"
                     },
                     {
                         "name": "Auto Boltstorm Gauntlets"
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "name": "Primaris Intercessor",
+            "name": "Eliminator",
             "type": "Core",
             "price": 18,
             "stats": {
@@ -101,23 +101,23 @@
                 "Toughness": 4,
                 "Wounds": 2,
                 "Attacks": 2,
-                "Leadership": 7,
+                "Leadership": 8,
                 "Save": "3+",
                 "InvulnerableSave": "-"
             },
             "equipment": {
                 "weapons": [
                     {
-                        "name": "Auto Bolt Rifle"
+                        "name": "Bolt Sniper Rifle"
                     },
                     {
                         "name": "Bolt Pistol"
                     },
                     {
-                        "name": "Frag Grenade"
+                        "name": "Frag Grenades"
                     },
                     {
-                        "name": "Krag Grenade"
+                        "name": "Krag Grenades"
                     }
                 ]
             },
@@ -125,9 +125,14 @@
                 "Imperium",
                 "Adeptus Astartes",
                 "Dark Angels",
-                "Intercessors",
+                "Eliminators",
+                "Phobos",
                 "Infantry",
                 "Primaris"
+            ],
+            "rules": [
+                "Camo Cloak",
+                "Concealed Position"
             ]
         },
         {
@@ -152,10 +157,10 @@
                         "name": "Bolt Pistol"
                     },
                     {
-                        "name": "Frag Grenade"
+                        "name": "Frag Grenades"
                     },
                     {
-                        "name": "Krag Grenade"
+                        "name": "Krag Grenades"
                     },
                     {
                         "name": "Bike with Twin Boltgun"
@@ -197,10 +202,10 @@
                         "name": "Bolt Pistol"
                     },
                     {
-                        "name": "Frag Grenade"
+                        "name": "Frag Grenades"
                     },
                     {
-                        "name": "Krag Grenade"
+                        "name": "Krag Grenades"
                     },
                     {
                         "name": "Corvus Hammer"
@@ -246,10 +251,10 @@
                         "name": "Bolt Pistol"
                     },
                     {
-                        "name": "Frag Grenade"
+                        "name": "Frag Grenades"
                     },
                     {
-                        "name": "Krag Grenade"
+                        "name": "Krag Grenades"
                     },
                     {
                         "name": "Plasma Incinerator"

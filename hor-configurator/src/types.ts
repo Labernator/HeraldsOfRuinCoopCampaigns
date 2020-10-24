@@ -6,7 +6,7 @@ export interface Warband {
     NthScenario: number;
     Philosophy?: string;
     Roster: Model[];
-    ArmyRules: string[];
+    ArmyRules?: string[];
 }
 
 export enum FactionEnum {
@@ -14,6 +14,9 @@ export enum FactionEnum {
     DarkAngels = "Dark Angels",
     Tau = "Tau Empire",
     AdeptusMechanicus = "Adeptus Mechanicus",
+    AdeptaSororitas = "Adepta Sororitas",
+    Deathwatch = "Deathwatch",
+    AstraMilitarum = "Astra Militarum",
 }
 
 export interface Model {
@@ -65,6 +68,7 @@ export interface Weapon {
     price?: number;
     amount?: number;
     multiProfiles?: Weapon[];
+    isLegendary?: boolean;
 }
 // Rule interface
 export interface Rule {

@@ -10,7 +10,7 @@ export const WarbandRenderer = ({ state, page, rosterPrice, stratagems, keywords
         <div className="quick-ref-title">{`${state.Title} - ${state.Faction} (${rosterPrice} pts) - ${page === 1 ? "Roster" : "Roster Page 2"}`}</div>
         {page === 1 ?
             <div>
-                <ArmyRulesHeaderRenderer armyRules={state.ArmyRules} />
+                {state.ArmyRules ? <ArmyRulesHeaderRenderer armyRules={state.ArmyRules} /> : undefined}
                 <ArmyKeywordsRenderer keywords={keywords} />
                 <ArmyTacticalPointsRenderer stratagems={stratagems} philosophy={state.Philosophy} />
             </div> :

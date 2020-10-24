@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
+import * as AdeptaSororitas from "../data/samples/AdeptaSororitas.json";
+import * as AdeptusMechanicus from "../data/samples/AdeptusMechanicus.json";
 import * as DarkAngelsJson from "../data/samples/DarkAngels.json";
 import * as PrimarisJson from "../data/samples/PrimarisBois.json";
 import * as TauJson from "../data/samples/TauEmpire.json";
-import { DarkAngelsCover, PrimarisCover, TauEmpireCover } from "../icons";
+import { AdeptaSororitasCover, AdeptusMechanicusCover, DarkAngelsCover, DeathwatchCover, ImportWarbandIcon, PrimarisCover, TauEmpireCover } from "../images";
 import { Warband } from "../types";
-import { FileUploader } from "../utility/index";
+import { FileUploader } from "../utility";
+
 
 export const LandingPage = () => {
     const [state, setState] = useState<Warband | undefined>(undefined);
@@ -16,11 +19,15 @@ export const LandingPage = () => {
     };
     return (
         <div className="a4-container">
-            <div style={{ fontSize: "35px", fontWeight: "bold", float: "left", padding: "10px" }}>Choose your warband to view its roster</div>
+            <div style={{ fontSize: "30px", fontWeight: "bold", position: "absolute", top: 10, left: "150px" }}>Click here to load your warband roster from file</div>
+            <FileUploader image={
+                <img style={{ width: "50px", height: "50px", left: "75px", top: 5 }} alt="OpenWarband" className="pdf-export" src={ImportWarbandIcon} title="Open any warband from file" />
+            } setStateCallback={setStateAndPath} />
+            <div style={{ fontSize: "26px", fontWeight: "bold", float: "left", padding: "10px" }}>Alternatively choose a sample warband from below to view its roster:</div>
             <div style={{ display: "grid", gridTemplateColumns: "264px 264px 264px", float: "left" }}>
-                {state ? <Redirect to={{ pathname, state }} /> : undefined}
+                {state ? <Redirect to={{ pathname, state }} push /> : undefined}
                 <img
-                    alt="DarkAngels"
+                    alt="Dark Angels"
                     className="landing-page-column-icon"
                     src={DarkAngelsCover}
                     onClick={() => {
@@ -28,7 +35,7 @@ export const LandingPage = () => {
                         setPathName("/Warband");
                     }} />
                 <img
-                    alt="TauEmpire"
+                    alt="Tau Empire"
                     className="landing-page-column-icon"
                     src={TauEmpireCover}
                     onClick={() => {
@@ -43,9 +50,40 @@ export const LandingPage = () => {
                         setState((PrimarisJson as any).default as Warband);
                         setPathName("/Warband");
                     }} />
+                <img
+                    alt="Adeptus Mechanicus"
+                    className="landing-page-column-icon"
+                    src={AdeptusMechanicusCover}
+                    onClick={() => {
+                        setState((AdeptusMechanicus as any).default as Warband);
+                        setPathName("/Warband");
+                    }} />
+                <img
+                    alt="Deathwatch"
+                    className="landing-page-column-icon"
+                    src={DeathwatchCover}
+                    onClick={() => {
+                        setState((AdeptusMechanicus as any).default as Warband);
+                        setPathName("/Warband");
+                    }} />
+                {/* <img
+                    alt="Astra Militarum"
+                    className="landing-page-column-icon"
+                    src={AstraMilitarumCover}
+                    onClick={() => {
+                        setState((AdeptusMechanicus as any).default as Warband);
+                        setPathName("/Warband");
+                    }} /> */}
+                <img
+                    alt="Adepta Sororitas"
+                    className="landing-page-column-icon"
+                    src={AdeptaSororitasCover}
+                    onClick={() => {
+                        setState((AdeptaSororitas as any).default as Warband);
+                        setPathName("/Warband");
+                    }} />
             </div>
-            <div style={{ fontSize: "30px", fontWeight: "bold", float: "left", padding: "50px 10px 10px 10px" }}>Alternatively load your own warband roster from file:</div>
-            <FileUploader setStateCallback={setStateAndPath} />
+
         </div >
     );
 };

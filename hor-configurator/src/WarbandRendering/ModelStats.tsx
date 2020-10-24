@@ -32,17 +32,17 @@ export const ModelStatsRenderer = ({ name, stats }: { name: string; stats: Model
         </colgroup>
         <thead>
             <tr>
-                <td>Name</td>
-                <td>M</td>
-                <td>WS</td>
-                <td>BS</td>
-                <td>S</td>
-                <td>T</td>
-                <td>W</td>
-                <td>A</td>
-                <td>LD</td>
-                <td>Sv</td>
-                <td>Is</td>
+                <th>Name</th>
+                <th>M</th>
+                <th>WS</th>
+                <th>BS</th>
+                <th>S</th>
+                <th>T</th>
+                <th>W</th>
+                <th>A</th>
+                <th>LD</th>
+                <th>Sv</th>
+                <th>Is</th>
             </tr>
         </thead>
         <tbody>

@@ -18,16 +18,16 @@
                 "price": 15
             },
             {
-                "name": "Scoped Heretics Bane",
-                "price": 20
-            },
-            {
                 "name": "Bike with Twin Boltgun",
                 "price": 2
             },
             {
                 "name": "Auto Bolt Rifle",
                 "price": 2
+            },
+            {
+                "name": "Bolt Sniper Rifle",
+                "price": 3
             }
         ],
         "Primaris": [
@@ -74,6 +74,38 @@
             {
                 "name": "Arc Claw",
                 "price": 4
+            },
+            {
+                "name": "Servo-Arm",
+                "price": 12
+            }
+        ],
+        "Deathwatch": [
+            {
+                "name": "Heavy Bolter",
+                "price": 10
+            }
+        ],
+        "AdeptaSororitas": [
+            {
+                "name": "Blessed Blade",
+                "price": 9
+            },
+            {
+                "name": "Inferno Pistol",
+                "price": 7
+            },
+            {
+                "name": "Flamer",
+                "price": 6
+            },
+            {
+                "name": "Hand Flamer",
+                "price": 1
+            },
+            {
+                "name": "Power Sword",
+                "price": 4
             }
         ]
     },
@@ -94,6 +126,21 @@
             "Leader": 1
         },
         "AdeptusMechanicus": {
+            "Core": 20,
+            "Special": 5,
+            "Leader": 1
+        },
+        "AdeptaSororitas": {
+            "Core": 20,
+            "Special": 5,
+            "Leader": 1
+        },
+        "Deathwatch": {
+            "Core": 20,
+            "Special": 5,
+            "Leader": 1
+        },
+        "AstraMilitarum": {
             "Core": 20,
             "Special": 5,
             "Leader": 1

@@ -7,6 +7,10 @@ const getModelAllowance = (faction: FactionEnum): ModelAllowance => {
         case FactionEnum.Primaris: return ArmySpecifics.ModelAllowance.Primaris;
         case FactionEnum.DarkAngels: return ArmySpecifics.ModelAllowance.DarkAngels;
         case FactionEnum.Tau: return ArmySpecifics.ModelAllowance.Tau;
+        case FactionEnum.AdeptusMechanicus: return ArmySpecifics.ModelAllowance.AdeptusMechanicus;
+        case FactionEnum.Deathwatch: return ArmySpecifics.ModelAllowance.Deathwatch;
+        case FactionEnum.AdeptaSororitas: return ArmySpecifics.ModelAllowance.AdeptaSororitas;
+        case FactionEnum.AstraMilitarum: return ArmySpecifics.ModelAllowance.AstraMilitarum;
         default: return { Core: 0, Special: 0, Leader: 0 };
     }
 };
@@ -26,7 +30,7 @@ export const getStratagems = (warband: Warband): TacticalPoints[] => {
     myArr = countCore(warband.Roster) === getModelAllowance(warband.Faction as FactionEnum).Core ? [...myArr, { name: "Strength In Numbers", amount: 1, text: strInNumberText }] : [...myArr];
     myArr = countSpecial(warband.Roster) === getModelAllowance(warband.Faction as FactionEnum).Special ? [...myArr, { name: "Cream Of The Crop", amount: 1, text: creamOfCropText }] : [...myArr];
     // myArr = hasOneOfEach(warband.Roster) ? [...myArr, {name: "Mind The Boat", amount: 1, text:"Gain 1 TP for each section of your Opus, other than Leaders, from which you have selected the minimum number of models."}] : [...myArr];
-    myArr = hasTrueHeros(warband.Roster, warband) ? [...myArr, { name: "Herohammer", amount: hasTrueHeros(warband.Roster, warband), text: "Gain +1 TP for each model in your team which cost 100 points or more" }] : [...myArr];
+    myArr = hasTrueHeros(warband.Roster, warband) ? [...myArr, { name: "Herohammer", amount: hasTrueHeros(warband.Roster, warband), text: "Gain 1 TP for each model in your team which cost 100 points or more" }] : [...myArr];
     myArr = getAllKeywords(warband.Roster).length > 8 ? [...myArr, { name: "Death And Diversity", amount: 1, text: "Gain 1 TP if your team contains 8 or more different Keywords." }] : [...myArr];
     myArr = hasArmouryEquipment(warband.Roster).length === 0 ? [...myArr, { name: "Boots Before Loot", amount: 1, text: "Gain 1 TP if your team does not contain any items from your Opus’ Armoury" }] : [...myArr];
     myArr = hasArmouryEquipment(warband.Roster).length >= 5 ? [...myArr, { name: "Shiny Fingz", amount: 1, text: "Gain 1 TP if your team contains 5 or more Armoury items" }] : [...myArr];

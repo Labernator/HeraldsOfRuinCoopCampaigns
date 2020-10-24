@@ -1,0 +1,335 @@
+{
+    "Title": "The Emperors Faithful",
+    "Faction": "Adepta Sororitas",
+    "Philosophy": "World on Fire",
+    "NthScenario": 1,
+    "Roster": [
+        {
+            "name": "Canoness Regular",
+            "type": "Leader",
+            "price": 35,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "2+",
+                "BallisticSkill": "2+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 4,
+                "Attacks": 3,
+                "Leadership": 9,
+                "Save": "3+",
+                "InvulnerableSave": "6+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Inferno Pistol"
+                    },
+                    {
+                        "name": "Blessed Blade"
+                    },
+                    {
+                        "name": "Frag Grenades"
+                    },
+                    {
+                        "name": "Krag Grenades"
+                    }
+                ],
+                "otherEquipment": [
+                    "Jump Pack"
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adepta Sororitas",
+                "Order of the Valorous Heart",
+                "Infantry",
+                "Character",
+                "Canoness Regular",
+                "Jump Pack",
+                "Fly"
+            ],
+            "rules": [
+                "Acts of Faith",
+                "Sacred Rites",
+                "Shield of Faith",
+                "Guide the Faithful"
+            ]
+        },
+        {
+            "name": "Celestian",
+            "type": "Core",
+            "amount": 2,
+            "price": 10,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 1,
+                "Attacks": 2,
+                "Leadership": 8,
+                "Save": "3+",
+                "InvulnerableSave": "6+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Boltgun"
+                    },
+                    {
+                        "name": "Bolt Pistol"
+                    },
+                    {
+                        "name": "Frag Grenades"
+                    },
+                    {
+                        "name": "Krag Grenades"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adepta Sororitas",
+                "Order of the Valorous Heart",
+                "Infantry",
+                "Celestian"
+            ],
+            "rules": [
+                "Acts of Faith",
+                "Sacred Rites",
+                "Shield of Faith",
+                "Bodyguard",
+                "Sworn Protectors"
+            ]
+        },
+        {
+            "name": "Celestian",
+            "type": "Core",
+            "amount": 2,
+            "price": 10,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 1,
+                "Attacks": 2,
+                "Leadership": 8,
+                "Save": "3+",
+                "InvulnerableSave": "6+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Flamer"
+                    },
+                    {
+                        "name": "Bolt Pistol"
+                    },
+                    {
+                        "name": "Frag Grenades"
+                    },
+                    {
+                        "name": "Krag Grenades"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adepta Sororitas",
+                "Order of the Valorous Heart",
+                "Infantry",
+                "Celestian"
+            ],
+            "rules": [
+                "Acts of Faith",
+                "Sacred Rites",
+                "Shield of Faith",
+                "Bodyguard",
+                "Sworn Protectors"
+            ]
+        },
+        {
+            "name": "Seraphim",
+            "type": "Core",
+            "amount": 2,
+            "price": 11,
+            "stats": {
+                "Movement": 12,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 1,
+                "Attacks": 1,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "5+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Bolt Pistol",
+                        "amount": 2
+                    },
+                    {
+                        "name": "Frag Grenades"
+                    },
+                    {
+                        "name": "Krag Grenades"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adepta Sororitas",
+                "Order of the Valorous Heart",
+                "Infantry",
+                "Seraphim",
+                "Fly",
+                "Jump"
+            ],
+            "rules": [
+                "Acts of Faith",
+                "Sacred Rites",
+                "Shield of Faith",
+                "Angelic Visage",
+                "Sky Strike"
+            ]
+        },
+        {
+            "name": "Seraphim",
+            "type": "Core",
+            "amount": 2,
+            "price": 11,
+            "stats": {
+                "Movement": 12,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 1,
+                "Attacks": 1,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "5+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Hand Flamer",
+                        "amount": 2
+                    },
+                    {
+                        "name": "Frag Grenades"
+                    },
+                    {
+                        "name": "Krag Grenades"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adepta Sororitas",
+                "Order of the Valorous Heart",
+                "Infantry",
+                "Seraphim",
+                "Fly",
+                "Jump"
+            ],
+            "rules": [
+                "Acts of Faith",
+                "Sacred Rites",
+                "Shield of Faith",
+                "Angelic Visage",
+                "Sky Strike"
+            ]
+        },
+        {
+            "name": "Ministorum Crusader",
+            "type": "Core",
+            "price": 9,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "4+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 1,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "4+",
+                "InvulnerableSave": "3+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Power Sword"
+                    }
+                ],
+                "otherEquipment": [
+                    "Storm Shield"
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Ministorum",
+                "Infantry",
+                "Crusaders"
+            ],
+            "rules": [
+                "Acts of Faith",
+                "Sacred Rites",
+                "Shield of Faith",
+                "Zealot",
+                "Spiritual Fortitude"
+            ]
+        },
+        {
+            "name": "Imagifier",
+            "type": "Special",
+            "price": 30,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 3,
+                "Toughness": 3,
+                "Wounds": 2,
+                "Attacks": 2,
+                "Leadership": 8,
+                "Save": "3+",
+                "InvulnerableSave": "6+"
+            },
+            "equipment": {
+                "weapons": [
+                    {
+                        "name": "Bolt Pistol"
+                    },
+                    {
+                        "name": "Frag Grenades"
+                    },
+                    {
+                        "name": "Krag Grenades"
+                    }
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adepta Sororitas",
+                "Order of the Valorous Heart",
+                "Infantry",
+                "Imagifier"
+            ],
+            "rules": [
+                "Acts of Faith",
+                "Sacred Rites",
+                "Shield of Faith",
+                "Litany of Deeds"
+            ]
+        }
+    ]
+}
