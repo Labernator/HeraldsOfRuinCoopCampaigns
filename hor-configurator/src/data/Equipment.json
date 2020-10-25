@@ -18,24 +18,15 @@
         },
         {
             "name": "Bolt Sniper Rifle",
+            "rule": "This weapon can target a CHARACTER model even if it is not the closest enemy model. Choose one of the profiles below when firing this weapon:",
             "multiProfiles": [
-                {
-                    "name": "Executioner Round",
-                    "type": "Heavy 1",
-                    "strength": 5,
-                    "damage": 1,
-                    "ap": 1,
-                    "range": 36,
-                    "rule": "This weapon can target a CHARACTER model even it is not the closest enemy model and can target models that are not visible to the bearer. Targets saving throws do not benefit from cover. Add +2 to hit when firing this weapon"
-                },
                 {
                     "name": "Hyperfrag Round",
                     "type": "Heavy D3",
                     "strength": 5,
                     "damage": 1,
                     "ap": 0,
-                    "range": 36,
-                    "rule": "This weapon can target a CHARACTER model even it is not the closest enemy model."
+                    "range": 36
                 },
                 {
                     "name": "Mortis Round",
@@ -44,7 +35,16 @@
                     "damage": "D3",
                     "ap": 2,
                     "range": 36,
-                    "rule": "This weapon can target a CHARACTER model even it is not the closest enemy model. Wound rolls of 6+ inflict an additional mortal wound to the target."
+                    "rule": "Wound rolls of 6+ inflict an additional mortal wound."
+                },
+                {
+                    "name": "Executioner Round",
+                    "type": "Heavy 1",
+                    "strength": 5,
+                    "damage": 1,
+                    "ap": 1,
+                    "range": 36,
+                    "rule": "This weapon can target models that are not visible to the bearer. Targets saving throws do not benefit from cover. Add +2 to hit when firing this weapon"
                 }
             ]
         },
@@ -301,7 +301,7 @@
                     "damage": 2,
                     "ap": 3,
                     "range": 18,
-                    "rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
+                    "rule": "On a hit roll of 1, the bearer is slain (after attack is resolved)"
                 }
             ]
         },
@@ -385,7 +385,7 @@
                             "damage": 2,
                             "ap": 3,
                             "range": 24,
-                            "rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
+                            "rule": "On a hit roll of 1, the bearer is slain (after attack is resolved)"
                         }
                     ]
                 }
@@ -460,7 +460,7 @@
                     "damage": 2,
                     "ap": 4,
                     "range": 30,
-                    "rule": "On a hit roll of 1, the bearer is slain (after weapon resolved)"
+                    "rule": "On a hit roll of 1, the bearer is slain (after attack is resolved)"
                 }
             ]
         },

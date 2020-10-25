@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
-import { LandingPage, WarbandPage } from "./pages/index";
+import { LandingPage, WarbandPage } from "./pages";
 
 export const App = () =>
   <BrowserRouter>

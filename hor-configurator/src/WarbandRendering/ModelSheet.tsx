@@ -1,6 +1,6 @@
 import React from "react";
 import { FactionEnum, Model } from "../types";
-import { getRule } from "../utility/index";
+import { getRule } from "../utility";
 import { ModelEquipmentRenderer } from "./ModelEquipment";
 import { ModelHeaderRenderer } from "./ModelHeaderRenderer";
 import { ModelKeywordRenderer } from "./ModelKeywords";

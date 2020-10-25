@@ -9,7 +9,6 @@ import { AdeptaSororitasCover, AdeptusMechanicusCover, DarkAngelsCover, Deathwat
 import { Warband } from "../types";
 import { FileUploader } from "../utility";
 
-
 export const LandingPage = () => {
     const [state, setState] = useState<Warband | undefined>(undefined);
     const [pathname, setPathName] = useState<string>("");
