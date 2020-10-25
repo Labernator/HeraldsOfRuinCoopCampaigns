@@ -1,5 +1,6 @@
 import React from "react";
 import { FactionEnum, TacticalPoints, Warband } from "../types";
+import { getTotalUnitPrice } from "../utility";
 import { ArmyKeywordsRenderer } from "./ArmyKeywords";
 import { ArmyRulesHeaderRenderer } from "./ArmyRules";
 import { ArmyTacticalPointsRenderer } from "./ArmyTacticalPoints";
@@ -15,6 +16,6 @@ export const WarbandRenderer = ({ state, page, rosterPrice, stratagems, keywords
                 <ArmyTacticalPointsRenderer stratagems={stratagems} philosophy={state.Philosophy} />
             </div> :
             undefined}
-        {state.Roster?.map((member) => <ModelSheetRenderer key={`modelsheet_${member.name}`} model={member} faction={state.Faction as FactionEnum} />)}
+        {state.Roster?.map((member) => <ModelSheetRenderer key={`modelsheet-${member.name}-${getTotalUnitPrice(member, state.Faction as FactionEnum)}`} model={member} faction={state.Faction as FactionEnum} />)}
         <div className="roster-sheet-footer">{`${page.nr} / ${page.total}`}</div>
     </div >;

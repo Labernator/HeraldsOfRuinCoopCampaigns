@@ -15,7 +15,7 @@ export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: Equi
             const amountString = weapon.amount && nr === 0 ? `${weapon.amount}x` : "";
             arr = [
                 ...arr,
-                <tr>
+                <tr key={`weapon-table-row-${weapon.name}-${nr}`}>
                     <td>{`${amountString} ${weaponName} ${weaponPriceString(weapon)}`}</td>
                     {weapon.rule ? <td colSpan={6}>{`${weapon.rule}`}</td> : undefined}
                 </tr>,
@@ -23,7 +23,7 @@ export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: Equi
             nr = nr + 1;
             arr = [...arr, ...weapon.multiProfiles.reduce((acc, weaponPart) => [...acc, ...renderWeapon(weaponPart, nr)], [] as JSX.Element[])];
         } else {
-            arr = [...arr, <tr>
+            arr = [...arr, <tr key={`weapon-table-row-${weapon.name}-${nr}`}>
                 <td>{`${weaponName} ${weaponPriceString(weapon)}`}</td>
                 <td>{weapon.type}</td>
                 <td>{weapon.range}</td>
@@ -37,36 +37,36 @@ export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: Equi
     };
 
     const renderOtherEquipment = () => equiList.otherEquipment?.map((otherEquipment) =>
-        <tr>
+        <tr key={`weapon-table-row-${otherEquipment.name}`}>
             <td>{`${otherEquipment.name} ${otherEquipmentPriceString(otherEquipment)}`}</td>
             <td>{otherEquipment.effect}</td>
         </tr>);
-    return <div><table className="enemies-table">
-        <colgroup>
-            <col style={{ width: "100px" }} />
-            <col style={{ width: "45px" }} />
-            <col style={{ width: "20px" }} />
-            <col style={{ width: "20px" }} />
-            <col style={{ width: "20px" }} />
-            <col style={{ width: "20px" }} />
-            <col style={{ width: "180px" }} />
-        </colgroup>
-        <thead>
-            <tr>
-                <th>Weapons</th>
-                <th>Type</th>
-                <th>Rng</th>
-                <th>Str</th>
-                <th>AP</th>
-                <th>Dmg</th>
-                <th>Rule</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            {equiList.weapons.map((weapon) => renderWeapon(weapon, 0))}
-        </tbody>
-    </table>
+    return <div>
+        <table className="enemies-table">
+            <colgroup>
+                <col style={{ width: "100px" }} />
+                <col style={{ width: "45px" }} />
+                <col style={{ width: "20px" }} />
+                <col style={{ width: "20px" }} />
+                <col style={{ width: "20px" }} />
+                <col style={{ width: "20px" }} />
+                <col style={{ width: "180px" }} />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Weapons</th>
+                    <th>Type</th>
+                    <th>Rng</th>
+                    <th>Str</th>
+                    <th>AP</th>
+                    <th>Dmg</th>
+                    <th>Rule</th>
+                </tr>
+            </thead>
+            <tbody>
+                {equiList.weapons.map((weapon) => renderWeapon(weapon, 0))}
+            </tbody>
+        </table>
         {equipment.otherEquipment ? <table className="enemies-table">
             <colgroup>
                 <col style={{ width: "100px" }} />
@@ -78,7 +78,6 @@ export const ModelEquipmentRenderer = ({ equipment, faction }: { equipment: Equi
                     <th>Effect</th>
                 </tr>
             </thead>
-
             <tbody>
                 {renderOtherEquipment()}
             </tbody>
