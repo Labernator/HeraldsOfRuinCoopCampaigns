@@ -46,7 +46,7 @@ export interface ModelStats {
 }
 
 export interface EquipmentReferences {
-    weapons: WeaponReference[];
+    weapons: Array<WeaponReference | string>;
     otherEquipment?: string[];
 }
 export interface WeaponReference {

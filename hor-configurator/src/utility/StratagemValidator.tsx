@@ -21,7 +21,7 @@ const countCore = (members: Model[]) => members.filter((member) => member.type =
 // const hasOneOfEach = (members: Model[]) => members.some((member) => member.type === "Special") && members.some((member) => member.type === "Core");
 const hasTrueHeros = (members: Model[], warband: Warband) => members.filter((member) => getTotalUnitPrice(member, warband.Faction as FactionEnum) >= 100).length;
 export const hasArmouryEquipment = (models: Model[]) => models.filter((model) =>
-    model.equipment.weapons.some((weapon) => getWeaponDetails(weapon.name).isArmouryItem) ||
+    model.equipment.weapons.some((weapon) => getWeaponDetails(typeof weapon === "string" ? weapon : weapon.name).isArmouryItem) ||
     model.equipment.otherEquipment?.some((equi) => getOtherEquipmentDetails(equi).isArmouryItem)
 );
 

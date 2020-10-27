@@ -24,6 +24,10 @@
             ]
         },
         "ordered-imports": true,
+        "no-implicit-dependencies": [
+            true,
+            "dev"
+        ],
         "completed-docs": false,
         "no-any": false,
         "no-magic-numbers": false,

@@ -33,8 +33,8 @@ export const getDetailedList = (referenceList: EquipmentReferences) => {
         otherEquipment: [],
     };
     detailedList.weapons = referenceList.weapons.map((weapon) => {
-        const detailedWeapon = getWeaponDetails(weapon.name);
-        if (weapon.amount) {
+        const detailedWeapon = getWeaponDetails(typeof weapon === "string" ? weapon : weapon.name);
+        if (typeof weapon !== "string" && weapon.amount) {
             detailedWeapon.amount = weapon.amount;
         }
         return detailedWeapon;
@@ -46,7 +46,7 @@ export const getDetailedList = (referenceList: EquipmentReferences) => {
 export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
     let totalPrice = model.price || 0;
 
-    totalPrice = totalPrice + model.equipment.weapons.reduce((a, weapon) => a + getWeaponPrice(weapon.name, faction, weapon.amount), 0);
+    totalPrice = totalPrice + model.equipment.weapons.reduce((a, weapon) => a + getWeaponPrice(typeof weapon === "string" ? weapon : weapon.name, faction, typeof weapon === "string" ? undefined : weapon.amount), 0);
     if (model.equipment.otherEquipment) {
         totalPrice = totalPrice + model.equipment.otherEquipment.reduce((a, equipment) => {
             const equipmentDetails = getOtherEquipmentDetails(equipment);

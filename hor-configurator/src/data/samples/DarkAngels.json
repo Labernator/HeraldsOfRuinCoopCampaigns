@@ -26,12 +26,8 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Heretics Bane"
-                    },
-                    {
-                        "name": "Auto Boltstorm Gauntlets"
-                    }
+                    "Heretics Bane",
+                    "Auto Boltstorm Gauntlets"
                 ]
             },
             "keywords": [
@@ -67,12 +63,8 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Fragstorm Grenade Launcher"
-                    },
-                    {
-                        "name": "Auto Boltstorm Gauntlets"
-                    }
+                    "Fragstorm Grenade Launcher",
+                    "Auto Boltstorm Gauntlets"
                 ]
             },
             "keywords": [
@@ -107,18 +99,10 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Bolt Sniper Rifle"
-                    },
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenades"
-                    },
-                    {
-                        "name": "Krag Grenades"
-                    }
+                    "Bolt Sniper Rifle",
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades"
                 ]
             },
             "keywords": [
@@ -153,18 +137,10 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenades"
-                    },
-                    {
-                        "name": "Krag Grenades"
-                    },
-                    {
-                        "name": "Bike with Twin Boltgun"
-                    }
+                    "Bike with Twin Boltgun",
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades"
                 ]
             },
             "keywords": [
@@ -198,21 +174,11 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenades"
-                    },
-                    {
-                        "name": "Krag Grenades"
-                    },
-                    {
-                        "name": "Corvus Hammer"
-                    },
-                    {
-                        "name": "Bike with Plasma Talon"
-                    }
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades",
+                    "Corvus Hammer",
+                    "Bike with Plasma Talon"
                 ]
             },
             "keywords": [
@@ -247,18 +213,10 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenades"
-                    },
-                    {
-                        "name": "Krag Grenades"
-                    },
-                    {
-                        "name": "Plasma Incinerator"
-                    }
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades",
+                    "Plasma Incinerator"
                 ]
             },
             "keywords": [

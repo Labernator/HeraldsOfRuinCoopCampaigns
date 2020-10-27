@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { ImportWarbandIcon } from "../images";
 import { FactionEnum, Model, PageMap, Warband } from "../types";
-import { FileUploader, getAllKeywords, getRosterPrice, getStratagems, getTotalUnitPrice, PdfGenerator } from "../utility";
+import { getAllKeywords, getRosterPrice, getStratagems, getTotalUnitPrice } from "../utility";
+import { Toolbar } from "../utility/Toolbar";
 import { WarbandRenderer } from "../WarbandRendering/WarbandRenderer";
+import { CodeEditorContainer } from "./CodeMirror";
 
 export const WarbandPage = (path: any) => {
     const [modelMap, setModelMap] = useState<PageMap[]>([]);
     const [state, setState] = useState<Warband>(path.location.state as Warband);
+    const [editorVisible, setEditorVisibility] = useState<boolean>(false);
     useEffect(() => {
         setModelMap((map) => [
             ...map,
@@ -42,12 +44,9 @@ export const WarbandPage = (path: any) => {
         return pages;
     };
     return <div>
-        <PdfGenerator title={state.Title} />
-        <FileUploader image={
-            <img style={{ width: "50px", height: "50px", left: "150px" }} alt="OpenWarband" className="pdf-export" src={ImportWarbandIcon} title="Open another warband from file" />
-        } setStateCallback={setState} />
-        {modelMap.length ? <div>{renderPages()}</div > : undefined
-        }
+        <Toolbar state={state} setState={setState} editorVisible={editorVisible} setEditorVisibility={setEditorVisibility} />
+        {modelMap.length ? <div>{renderPages()}</div > : undefined}
         <WarbandRenderer state={state} page={{ nr: 1, total: 1 }} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster)} fullRender={true} />
+        <CodeEditorContainer code={state} visible={editorVisible} onSave={setState} />
     </div >;
 };

@@ -20,7 +20,7 @@ export const LandingPage = () => {
         <div className="a4-container">
             <div style={{ fontSize: "30px", fontWeight: "bold", position: "absolute", top: 10, left: "150px" }}>Click here to load your warband roster from file</div>
             <FileUploader image={
-                <img style={{ width: "50px", height: "50px", left: "75px", top: 5 }} alt="OpenWarband" className="pdf-export" src={ImportWarbandIcon} title="Open any warband from file" />
+                <img style={{ width: "50px", height: "50px", left: "75px", top: 5 }} alt="OpenWarband" className="toolbar-icon" src={ImportWarbandIcon} title="Open any warband from file" />
             } setStateCallback={setStateAndPath} />
             <div style={{ fontSize: "26px", fontWeight: "bold", float: "left", padding: "10px" }}>Alternatively choose a sample warband from below to view its roster:</div>
             <div style={{ display: "grid", gridTemplateColumns: "264px 264px 264px", float: "left" }}>

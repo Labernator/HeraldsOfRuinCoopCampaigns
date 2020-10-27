@@ -1,7 +1,7 @@
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import React from "react";
-import { ExportWarbandIcon } from "../images";
+import { SavePdfIcon } from "../images";
 export const PdfGenerator = ({ title }: { title: string }) => {
 
     const exportPdf = async () => {
@@ -22,8 +22,9 @@ export const PdfGenerator = ({ title }: { title: string }) => {
 
     return <div id="pdf-generator" className="pdf-generator">
         <img
-            src={ExportWarbandIcon}
-            className="pdf-export"
+            src={SavePdfIcon}
+            style={{ left: "150px" }}
+            className="toolbar-icon"
             id={"pdf-generator-icon"}
             title={"Generate a PDF file from this list"}
             alt={"GeneratePdfIcon"}
