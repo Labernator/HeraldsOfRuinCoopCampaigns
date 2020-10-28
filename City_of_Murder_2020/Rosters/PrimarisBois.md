@@ -22,7 +22,6 @@ Re-roll failed Morale tests.
 
 <ins>*Special Rules*</ins>   
 **Rites of War** - Friendly modells within 6" may re-roll hit rolls of 1.  
-**Hero** - This model can gain XP.  
 
 <ins>*Equipment*</ins>  
 
@@ -78,7 +77,6 @@ Re-roll failed Morale tests.
 <ins>*Special Rules*</ins>  
 **Fire Storm** - This model may fire twice if it remained stationary during their turn (including when firing Overwatch).  
 **Relentless Advance** - Do not suffer any penalty to your to hit rolls for Advancing and firing Assault weapons.  
-**Hero** - This model can gain XP.  
 
 <ins>*Equipment*</ins>  
 
@@ -121,9 +119,10 @@ Nobody died
 => 75  
  
 **Recruitment**  
-1 Hellblaster (33)  
-1 Intercessor (17)  
-=> 50 + 25 in die Bank
+1 Assault Marine (12)  
+1 Attack Bike (37)  
+1 Eliminator (21)  
+=> 70 + 5 in die Bank
 </details>
 
 <details>
@@ -138,7 +137,6 @@ Nobody died
 
 <ins>*Special Rules*</ins>   
 **Rites of War** - Friendly modells within 6" may re-roll hit rolls of 1.  
-**Hero** - This model can gain XP.  
 
 <ins>*Equipment*</ins>  
 
@@ -150,7 +148,7 @@ Nobody died
 |Krak Grenade|6"|Grenade 1|6|-1|D3||
 
 <ins>**Core**</ins>  
-**3x Hellblaster** (je 33 = 99)  
+**2x Hellblaster** (je 33 = 66)  
 
 |M|WS|BS|S|T|W|A|Ld|Sv|
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
@@ -167,7 +165,7 @@ Nobody died
 |Frag Grenade|6"|Grenade D6|3|0|1||
 |Krak Grenade|6"|Grenade 1|6|-1|D3||
 
-**2x Intercessor** (je 17 = 34)  
+**1x Intercessor** (je 17 = 17)  
 
 |M|WS|BS|S|T|W|A|Ld|Sv|
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
@@ -184,6 +182,63 @@ Nobody died
 |Frag Grenade|6"|Grenade D6|3|0|1||
 |Krak Grenade|6"|Grenade 1|6|-1|D3||
 
+**1x Assault Marine** (je 12 = 12)  
+
+|M|WS|BS|S|T|W|A|Ld|Sv|
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|6"|3+|3+|4|4|1|1|7|3+|
+
+<ins>*Special Rules*</ins>  
+
+<ins>*Equipment*</ins>  
+
+|Weapon|Range|Type|S|AP|D|Abilities|
+|:---|:---|:---|:---|:---|:---|:---|
+|Chainsword|Melee|Melee|User|0|1|+1A|
+|Bolt Pistol|12"|Pistol 1|4|0|1||
+|Frag Grenade|6"|Grenade D6|3|0|1||
+|Krak Grenade|6"|Grenade 1|6|-1|D3||
+
+**1x Eliminator** (je 21 = 21)  
+
+|M|WS|BS|S|T|W|A|Ld|Sv|
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|6"|3+|3+|4|4|2|2|7|3+|
+
+<ins>*Special Rules*</ins>  
+**Camo Cloak** - While in cover add +1AS.  
+**Concealed Positions** - Deepstrike.  
+
+<ins>*Equipment*</ins>  
+
+|Weapon|Range|Type|S|AP|D|Abilities|
+|:---|:---|:---|:---|:---|:---|:---|
+|Bolt Sniper Rifle (Executioner)|36"|Heavy 1|5|-1|1|+2 to-hit, no cover saves|
+|Bolt Sniper Rifle (Hyperfrag)|36"|Heavy D3|5|0|1||
+|Bolt Sniper Rifle (Mortis)|36"|Heavy 1|5|-2|D3|6+ to-wound causes additional mortal wound|
+|Bolt Pistol|12"|Pistol 1|4|0|1||
+|Frag Grenade|6"|Grenade D6|3|0|1||
+|Krak Grenade|6"|Grenade 1|6|-1|D3||
+
+**1x Attack Bike** (je 37 = 37)  
+
+|M|WS|BS|S|T|W|A|Ld|Sv|
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|14"|3+|3+|4|5|4|2|7|3+|
+
+<ins>*Special Rules*</ins>  
+**Turbo-boost** - This model ddvances 6" instead of rolling a dice.  
+
+<ins>*Equipment*</ins>  
+
+|Weapon|Range|Type|S|AP|D|Abilities|
+|:---|:---|:---|:---|:---|:---|:---|
+|Heavy Bolter|36"|Heavy 3|5|-1|1||
+|Twin Bolt Gun|24"|Rapid Fire 2|4|0|1||
+|2 Bolt Pistol|12"|Pistol 1|4|0|1||
+|Frag Grenade|6"|Grenade D6|3|0|1||
+|Krak Grenade|6"|Grenade 1|6|-1|D3||
+
 <ins>**Special**</ins>  
 2x Aggressor (je 39 = 78)  
 
@@ -194,7 +249,6 @@ Nobody died
 <ins>*Special Rules*</ins>  
 **Fire Storm** - This model may fire twice if it remained stationary during their turn (including when firing Overwatch).  
 **Relentless Advance** - Do not suffer any penalty to your to hit rolls for Advancing and firing Assault weapons.  
-**Hero** - This model can gain XP.  
 
 <ins>*Equipment*</ins>  
 
@@ -223,7 +277,7 @@ Nobody died
 |Frag Grenade|6"|Grenade D6|3|0|1||
 |Krak Grenade|6"|Grenade 1|6|-1|D3||
 
-=> 300 Points (25 auf der Bank)
+=> 320 Points (5 auf der Bank)
 </details>
 
 ### Tactical points  
@@ -233,9 +287,9 @@ Nobody died
 **Cream Of The Crop** - Max Special (+1)  
 **Boots Before Loot** - No items from the Armoury (+1)  
 
-**Philosophy**: Quick Reaction Force (+1)  
-No model on your team may be equipped with Heavy weapons.  
+**Philosophy**: The Hammer of the Imperium (+2)  
+If you are not the first player to use a Tactical Action, you lose 2TP.  
 
-=> 6 Pts
+=> 8 Pts
 
 **Keywords** - Imperium, Adeptus Astrates, Novamarines, Infantry, Hellblasters, Primaris, Sergeant, Intercessors, Aggressors, MK X Gravis, Character, Apothecary
