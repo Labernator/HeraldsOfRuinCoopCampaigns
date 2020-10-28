@@ -282,14 +282,13 @@ Nobody died
 
 ### Tactical points  
 **Destined For Greatness** - Include a team leader (+2)  
-**Death And Diversity** - Eight different keywords (+1)  
-**Bound By Experience** - All models share one keyword (infantry & primaris) (+1)  
+**Death And Diversity** - Eight different keywords (+1)   
 **Cream Of The Crop** - Max Special (+1)  
 **Boots Before Loot** - No items from the Armoury (+1)  
 
 **Philosophy**: The Hammer of the Imperium (+2)  
 If you are not the first player to use a Tactical Action, you lose 2TP.  
 
-=> 8 Pts
+=> 7 Pts
 
 **Keywords** - Imperium, Adeptus Astrates, Novamarines, Infantry, Hellblasters, Primaris, Sergeant, Intercessors, Aggressors, MK X Gravis, Character, Apothecary
