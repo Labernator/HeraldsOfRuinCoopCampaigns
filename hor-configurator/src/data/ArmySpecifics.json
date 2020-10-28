@@ -52,6 +52,10 @@
             {
                 "name": "Burst Cannon",
                 "price": 8
+            },
+            {
+                "name": "Heavy Rail Rifle",
+                "price": 35
             }
         ],
         "AdeptusMechanicus": [

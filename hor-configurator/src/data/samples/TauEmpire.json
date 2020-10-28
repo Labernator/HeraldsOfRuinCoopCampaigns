@@ -10,7 +10,7 @@
         {
             "name": "Crisis Shas'vre",
             "type": "Leader",
-            "price": 35,
+            "price": 34,
             "stats": [
                 {
                     "Movement": 8,
@@ -99,7 +99,7 @@
             "name": "Pathfinder",
             "type": "Core",
             "amount": 6,
-            "price": 9,
+            "price": 5,
             "stats": {
                 "Movement": 7,
                 "WeaponSkill": "5+",
@@ -135,7 +135,7 @@
         {
             "name": "Crisis Shas'ui",
             "type": "Special",
-            "price": 35,
+            "price": 24,
             "amount": 2,
             "stats": {
                 "Movement": 8,
