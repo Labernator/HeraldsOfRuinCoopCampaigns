@@ -10,7 +10,7 @@ export interface Warband {
 }
 
 export enum FactionEnum {
-    Primaris = "Primaris",
+    PrimarisSpaceMarines = "Primaris Space Marines",
     DarkAngels = "Dark Angels",
     Tau = "Tau Empire",
     AdeptusMechanicus = "Adeptus Mechanicus",
@@ -126,4 +126,17 @@ export interface Philosophy {
 export interface PageMap {
     id: string;
     page: number;
+}
+
+export interface ArmySpecificStuff {
+    Keywords: string[];
+    ModelAllowance: {
+        Core: number;
+        Special: number;
+        Leader: number;
+    };
+    PriceList: Array<{
+        name: string;
+        price: number;
+    }>;
 }

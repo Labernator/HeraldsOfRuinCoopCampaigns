@@ -1,6 +1,75 @@
 {
-    "PriceList": {
-        "DarkAngels": [
+    "PrimarisSpaceMarines": {
+        "Keywords": [
+            "Imperium",
+            "Adeptus Astartes",
+            "Novamarines"
+        ],
+        "ModelAllowance": {
+            "Core": 20,
+            "Special": 3,
+            "Leader": 1
+        },
+        "PriceList": [
+            {
+                "name": "Heavy Bolter",
+                "price": 10
+            },
+            {
+                "name": "Bike with Twin Boltgun",
+                "price": 2
+            },
+            {
+                "name": "Auto Boltstorm Gauntlets",
+                "price": 14
+            },
+            {
+                "name": "Fragstorm Grenade Launcher",
+                "price": 4
+            },
+            {
+                "name": "Plasma Incinerator",
+                "price": 15
+            },
+            {
+                "name": "Bolt Sniper Rifle",
+                "price": 3
+            }
+        ]
+    },
+    "Tau": {
+        "Keywords": [
+            "T'au Empire",
+            "Sept"
+        ],
+        "ModelAllowance": {
+            "Core": 20,
+            "Special": 3,
+            "Leader": 1
+        },
+        "PriceList": [
+            {
+                "name": "Burst Cannon",
+                "price": 8
+            },
+            {
+                "name": "Heavy Rail Rifle",
+                "price": 35
+            }
+        ]
+    },
+    "DarkAngels": {
+        "Keywords": [
+            "Imperium",
+            "Adeptus Astartes",
+            "Dark Angels"
+        ],
+        "ModelAllowance": {
+            "Core": 20,
+            "Special": 3,
+            "Leader": 1
+        },
+        "PriceList": [
             {
                 "name": "Heavy Bolter",
                 "price": 10
@@ -29,36 +98,54 @@
                 "name": "Bolt Sniper Rifle",
                 "price": 3
             }
+        ]
+    },
+    "AdeptaSororitas": {
+        "Keywords": [
+            "Imperium",
+            "Adepta Sororitas",
+            "Order of the Valorous Heart"
         ],
-        "Primaris": [
+        "ModelAllowance": {
+            "Core": 20,
+            "Special": 5,
+            "Leader": 1
+        },
+        "PriceList": [
             {
-                "name": "Heavy Bolter",
-                "price": 10
+                "name": "Blessed Blade",
+                "price": 9
             },
             {
-                "name": "Auto Boltstorm Gauntlets",
-                "price": 14
+                "name": "Inferno Pistol",
+                "price": 7
             },
             {
-                "name": "Fragstorm Grenade Launcher",
+                "name": "Flamer",
+                "price": 6
+            },
+            {
+                "name": "Hand Flamer",
+                "price": 1
+            },
+            {
+                "name": "Power Sword",
                 "price": 4
-            },
-            {
-                "name": "Plasma Incinerator",
-                "price": 15
             }
+        ]
+    },
+    "AdeptusMechanicus": {
+        "Keywords": [
+            "Imperium",
+            "Adeptus Mechanicus",
+            "Forge World"
         ],
-        "Tau": [
-            {
-                "name": "Burst Cannon",
-                "price": 8
-            },
-            {
-                "name": "Heavy Rail Rifle",
-                "price": 35
-            }
-        ],
-        "AdeptusMechanicus": [
+        "ModelAllowance": {
+            "Core": 20,
+            "Special": 5,
+            "Leader": 1
+        },
+        "PriceList": [
             {
                 "name": "Cognis Flamer",
                 "price": 10
@@ -83,71 +170,24 @@
                 "name": "Servo-Arm",
                 "price": 12
             }
+        ]
+    },
+    "Deathwatch": {
+        "Keywords": [
+            "Imperium",
+            "Adeptus Astartes",
+            "Deathwatch"
         ],
-        "Deathwatch": [
+        "ModelAllowance": {
+            "Core": 20,
+            "Special": 3,
+            "Leader": 1
+        },
+        "PriceList": [
             {
                 "name": "Heavy Bolter",
                 "price": 10
             }
-        ],
-        "AdeptaSororitas": [
-            {
-                "name": "Blessed Blade",
-                "price": 9
-            },
-            {
-                "name": "Inferno Pistol",
-                "price": 7
-            },
-            {
-                "name": "Flamer",
-                "price": 6
-            },
-            {
-                "name": "Hand Flamer",
-                "price": 1
-            },
-            {
-                "name": "Power Sword",
-                "price": 4
-            }
         ]
-    },
-    "ModelAllowance": {
-        "DarkAngels": {
-            "Core": 20,
-            "Special": 3,
-            "Leader": 1
-        },
-        "Primaris": {
-            "Core": 20,
-            "Special": 3,
-            "Leader": 1
-        },
-        "Tau": {
-            "Core": 20,
-            "Special": 3,
-            "Leader": 1
-        },
-        "AdeptusMechanicus": {
-            "Core": 20,
-            "Special": 5,
-            "Leader": 1
-        },
-        "AdeptaSororitas": {
-            "Core": 20,
-            "Special": 5,
-            "Leader": 1
-        },
-        "Deathwatch": {
-            "Core": 20,
-            "Special": 5,
-            "Leader": 1
-        },
-        "AstraMilitarum": {
-            "Core": 20,
-            "Special": 5,
-            "Leader": 1
-        }
     }
 }

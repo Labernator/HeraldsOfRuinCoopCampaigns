@@ -7,7 +7,6 @@ const otherEquipment = EquipmentJson.otherEquipment as OtherEquipment[];
 const armyRules = RulesJson.ArmyRules as Rule[];
 const rules = RulesJson.rules as Rule[];
 const philosophies = RulesJson.Philosophies as Philosophy[];
-const priceList = ArmySpecifics.PriceList;
 
 export const getWeaponDetails = (name: string) => weapons.find((weapon) => weapon.name === name) as Weapon;
 export const getWeaponPrice = (weaponName: string, faction: FactionEnum, amount?: number) => {
@@ -15,12 +14,12 @@ export const getWeaponPrice = (weaponName: string, faction: FactionEnum, amount?
         return 20;
     }
     switch (faction) {
-        case FactionEnum.Primaris: return (priceList.Primaris.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
-        case FactionEnum.DarkAngels: return (priceList.DarkAngels.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
-        case FactionEnum.Tau: return (priceList.Tau.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
-        case FactionEnum.AdeptusMechanicus: return (priceList.AdeptusMechanicus.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
-        case FactionEnum.AdeptaSororitas: return (priceList.AdeptaSororitas.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
-        case FactionEnum.Deathwatch: return (priceList.Deathwatch.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.PrimarisSpaceMarines: return (ArmySpecifics.PrimarisSpaceMarines.PriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.DarkAngels: return (ArmySpecifics.DarkAngels.PriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.Tau: return (ArmySpecifics.Tau.PriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.AdeptusMechanicus: return (ArmySpecifics.AdeptusMechanicus.PriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.AdeptaSororitas: return (ArmySpecifics.AdeptaSororitas.PriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+        case FactionEnum.Deathwatch: return (ArmySpecifics.Deathwatch.PriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
         default: return 0;
     }
 };

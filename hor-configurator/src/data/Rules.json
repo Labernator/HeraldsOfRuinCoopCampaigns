@@ -151,6 +151,10 @@
         {
             "name": "Spiritual Fortitude",
             "effect": "When this model would lose a wound as a result of a mortal wound in the Psychic phase, roll a D6; on a 5+ that wound is not lost."
+        },
+        {
+            "name": "Jump Pack Assault",
+            "effect": "During deployment, you can hold this model back. At the end of one of your Movement phases you can set up this unit anywhere that is more than 9” away from any enemy models."
         }
     ],
     "ArmyRules": [
@@ -208,6 +212,11 @@
             "name": "World on Fire",
             "tp": 2,
             "text": "Every model that can take a flame weapon has a flame weapon (flamer, combi-flamer, hand flamer, heavy flamer and the Widowmaker are flame weapons)."
+        },
+        {
+            "name": "The Hammer of the Imperium",
+            "tp": 2,
+            "text": "If you are not the first player to use a Tactical Action, you lose 2TP."
         }
     ]
 }

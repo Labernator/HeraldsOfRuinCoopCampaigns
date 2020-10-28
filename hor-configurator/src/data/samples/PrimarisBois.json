@@ -1,12 +1,12 @@
 {
     "Title": "Primaris Bois",
-    "Faction": "Primaris",
+    "Faction": "Primaris Space Marines",
     "ArmyRules": [
         "Chapter Tactics: Novamarines",
         "Defenders of Humanity",
         "And They Shall Know No Fear"
     ],
-    "Philosophy": "Quick Reaction Force",
+    "Philosophy": "The Hammer of the Imperium",
     "NthScenario": 2,
     "Roster": [
         {
@@ -27,18 +27,10 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Plasma Incinerator"
-                    },
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenades"
-                    },
-                    {
-                        "name": "Krag Grenades"
-                    }
+                    "Plasma Incinerator",
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades"
                 ]
             },
             "keywords": [
@@ -57,7 +49,6 @@
         {
             "name": "Primaris Intercessor",
             "type": "Core",
-            "amount": 2,
             "price": 17,
             "stats": {
                 "Movement": 6,
@@ -73,18 +64,10 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Bolt Rifle"
-                    },
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenades"
-                    },
-                    {
-                        "name": "Krag Grenades"
-                    }
+                    "Bolt Rifle",
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades"
                 ]
             },
             "keywords": [
@@ -97,9 +80,122 @@
             ]
         },
         {
+            "name": "Eliminator",
+            "type": "Core",
+            "price": 18,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 2,
+                "Attacks": 2,
+                "Leadership": 8,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    "Bolt Sniper Rifle",
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades"
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Eliminators",
+                "Phobos",
+                "Infantry",
+                "Primaris"
+            ],
+            "rules": [
+                "Camo Cloak",
+                "Concealed Position"
+            ]
+        },
+        {
+            "name": "Assault Marine",
+            "type": "Core",
+            "price": 12,
+            "stats": {
+                "Movement": 6,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 4,
+                "Wounds": 1,
+                "Attacks": 1,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    "Chainsword",
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades"
+                ]
+            },
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Assault Squad",
+                "Infantry"
+            ],
+            "rules": [
+                "Jump Pack Assault"
+            ]
+        },
+        {
+            "name": "Attack Bike",
+            "type": "Core",
+            "price": 25,
+            "stats": {
+                "Movement": 14,
+                "WeaponSkill": "3+",
+                "BallisticSkill": "3+",
+                "Strength": 4,
+                "Toughness": 5,
+                "Wounds": 4,
+                "Attacks": 2,
+                "Leadership": 7,
+                "Save": "3+",
+                "InvulnerableSave": "-"
+            },
+            "equipment": {
+                "weapons": [
+                    "Heavy Bolter",
+                    "Bike with Twin Boltgun",
+                    {
+                        "name": "Bolt Pistol",
+                        "amount": 2
+                    },
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades"
+                ]
+            },
+            "rules": [
+                "Turbo-boost"
+            ],
+            "keywords": [
+                "Imperium",
+                "Adeptus Astartes",
+                "Novamarines",
+                "Biker",
+                "Attack Bike Squad"
+            ]
+        },
+        {
             "name": "Hellblaster",
             "type": "Core",
-            "amount": 3,
+            "amount": 2,
             "price": 18,
             "stats": {
                 "Movement": 6,
@@ -115,18 +211,10 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenades"
-                    },
-                    {
-                        "name": "Krag Grenades"
-                    },
-                    {
-                        "name": "Plasma Incinerator"
-                    }
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades",
+                    "Plasma Incinerator"
                 ]
             },
             "keywords": [
@@ -157,12 +245,8 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Fragstorm Grenade Launcher"
-                    },
-                    {
-                        "name": "Auto Boltstorm Gauntlets"
-                    }
+                    "Fragstorm Grenade Launcher",
+                    "Auto Boltstorm Gauntlets"
                 ]
             },
             "keywords": [
@@ -197,18 +281,10 @@
             },
             "equipment": {
                 "weapons": [
-                    {
-                        "name": "Bolt Pistol"
-                    },
-                    {
-                        "name": "Frag Grenades"
-                    },
-                    {
-                        "name": "Krag Grenades"
-                    },
-                    {
-                        "name": "Marksman Bolt Carbine"
-                    }
+                    "Bolt Pistol",
+                    "Frag Grenades",
+                    "Krag Grenades",
+                    "Marksman Bolt Carbine"
                 ]
             },
             "keywords": [
