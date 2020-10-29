@@ -10,7 +10,6 @@
         {
             "name": "Crisis Shas'vre",
             "type": "Leader",
-            "price": 34,
             "stats": [
                 {
                     "Movement": 8,
@@ -65,7 +64,6 @@
             "name": "Fire Warrior",
             "type": "Core",
             "amount": 7,
-            "price": 7,
             "stats": {
                 "Movement": 6,
                 "WeaponSkill": "5+",
@@ -99,7 +97,6 @@
             "name": "Pathfinder",
             "type": "Core",
             "amount": 6,
-            "price": 5,
             "stats": {
                 "Movement": 7,
                 "WeaponSkill": "5+",
@@ -135,7 +132,6 @@
         {
             "name": "Crisis Shas'ui",
             "type": "Special",
-            "price": 24,
             "amount": 2,
             "stats": {
                 "Movement": 8,
@@ -175,7 +171,6 @@
         {
             "name": "Broadside Shas'ui",
             "type": "Special",
-            "price": 35,
             "stats": [
                 {
                     "Movement": 5,
@@ -226,7 +221,6 @@
             "name": "MV4 Shield Drone [Tactical Drone]",
             "type": "Core",
             "amount": 3,
-            "price": 10,
             "stats": {
                 "Movement": 8,
                 "WeaponSkill": "5+",
@@ -238,14 +232,6 @@
                 "Leadership": 6,
                 "Save": "4+",
                 "InvulnerableSave": "4+"
-            },
-            "equipment": {
-                "weapons": [
-                    {
-                        "name": "Pulse Carbine",
-                        "amount": 2
-                    }
-                ]
             },
             "keywords": [
                 "T'au Empire",
@@ -262,7 +248,6 @@
         {
             "name": "MV1 Gun Drone [Tactical Drone]",
             "type": "Core",
-            "price": 12,
             "stats": {
                 "Movement": 8,
                 "WeaponSkill": "5+",

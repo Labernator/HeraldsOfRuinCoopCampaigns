@@ -29,7 +29,7 @@ export interface Model {
     armyRules?: string[];
     rules?: string[];
     keywords: string[];
-    equipment: EquipmentReferences;
+    equipment?: EquipmentReferences;
 }
 
 export interface ModelStats {
@@ -135,7 +135,11 @@ export interface ArmySpecificStuff {
         Special: number;
         Leader: number;
     };
-    PriceList: Array<{
+    EquipmentPriceList: Array<{
+        name: string;
+        price: number;
+    }>;
+    UnitPriceList: Array<{
         name: string;
         price: number;
     }>;

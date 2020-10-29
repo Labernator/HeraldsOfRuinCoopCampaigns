@@ -12,7 +12,6 @@
         {
             "name": "Hellblaster Sergeant",
             "type": "Leader",
-            "price": 42,
             "stats": {
                 "Movement": 6,
                 "WeaponSkill": "3+",
@@ -49,7 +48,6 @@
         {
             "name": "Primaris Intercessor",
             "type": "Core",
-            "price": 17,
             "stats": {
                 "Movement": 6,
                 "WeaponSkill": "3+",
@@ -82,7 +80,6 @@
         {
             "name": "Eliminator",
             "type": "Core",
-            "price": 18,
             "stats": {
                 "Movement": 6,
                 "WeaponSkill": "3+",
@@ -120,7 +117,6 @@
         {
             "name": "Assault Marine",
             "type": "Core",
-            "price": 12,
             "stats": {
                 "Movement": 6,
                 "WeaponSkill": "3+",
@@ -155,7 +151,6 @@
         {
             "name": "Attack Bike",
             "type": "Core",
-            "price": 25,
             "stats": {
                 "Movement": 14,
                 "WeaponSkill": "3+",
@@ -196,7 +191,6 @@
             "name": "Hellblaster",
             "type": "Core",
             "amount": 2,
-            "price": 18,
             "stats": {
                 "Movement": 6,
                 "WeaponSkill": "3+",
@@ -230,7 +224,6 @@
             "name": "Aggressor",
             "type": "Special",
             "amount": 2,
-            "price": 21,
             "stats": {
                 "Movement": 5,
                 "WeaponSkill": "3+",
@@ -266,7 +259,6 @@
         {
             "name": "Infiltrator Helix Adept",
             "type": "Special",
-            "price": 32,
             "stats": {
                 "Movement": 6,
                 "WeaponSkill": "3+",

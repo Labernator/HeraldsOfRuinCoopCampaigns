@@ -1,18 +1,5 @@
-import * as ArmySpecifics from "../data/ArmySpecifics.json";
-import { ArmySpecificStuff, FactionEnum, Model, TacticalPoints, Warband } from "../types";
-import { getAllKeywords, getOtherEquipmentDetails, getTotalUnitPrice, getWeaponDetails } from "./Utils";
-
-const getFactionSpecifics = (faction: FactionEnum): ArmySpecificStuff => {
-    switch (faction) {
-        case FactionEnum.PrimarisSpaceMarines: return ArmySpecifics.PrimarisSpaceMarines;
-        case FactionEnum.DarkAngels: return ArmySpecifics.DarkAngels;
-        case FactionEnum.Tau: return ArmySpecifics.Tau;
-        case FactionEnum.AdeptusMechanicus: return ArmySpecifics.AdeptusMechanicus;
-        case FactionEnum.Deathwatch: return ArmySpecifics.Deathwatch;
-        case FactionEnum.AdeptaSororitas: return ArmySpecifics.AdeptaSororitas;
-        default: return { "Keywords": [], "ModelAllowance": { "Core": 0, "Special": 0, "Leader": 0 }, "PriceList": [] };
-    }
-};
+import { FactionEnum, Model, TacticalPoints, Warband } from "../types";
+import { getAllKeywords, getFactionSpecifics, getOtherEquipmentDetails, getTotalUnitPrice, getWeaponDetails } from "./Utils";
 
 const strInNumberText = "Gain 1 TP for taking the maximum number of Core models according to your Model Allowance.";
 const creamOfCropText = "Gain 1 TP for taking the maximum number of Special models according to your Model Allowance.";
@@ -21,8 +8,8 @@ const countCore = (members: Model[]) => members.filter((member) => member.type =
 // const hasOneOfEach = (members: Model[]) => members.some((member) => member.type === "Special") && members.some((member) => member.type === "Core");
 const hasTrueHeros = (members: Model[], warband: Warband) => members.filter((member) => getTotalUnitPrice(member, warband.Faction as FactionEnum) >= 100).length;
 export const hasArmouryEquipment = (models: Model[]) => models.filter((model) =>
-    model.equipment.weapons.some((weapon) => getWeaponDetails(typeof weapon === "string" ? weapon : weapon.name).isArmouryItem) ||
-    model.equipment.otherEquipment?.some((equi) => getOtherEquipmentDetails(equi).isArmouryItem)
+    model.equipment?.weapons.some((weapon) => getWeaponDetails(typeof weapon === "string" ? weapon : weapon.name).isArmouryItem) ||
+    model.equipment?.otherEquipment?.some((equi) => getOtherEquipmentDetails(equi).isArmouryItem)
 );
 const allUnitsSharedKeyword = (members: Model[], faction: FactionEnum) => {
     const factionKeywords = getFactionSpecifics(faction).Keywords;

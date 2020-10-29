@@ -10,7 +10,7 @@
             "Special": 3,
             "Leader": 1
         },
-        "PriceList": [
+        "EquipmentPriceList": [
             {
                 "name": "Heavy Bolter",
                 "price": 10
@@ -35,6 +35,40 @@
                 "name": "Bolt Sniper Rifle",
                 "price": 3
             }
+        ],
+        "UnitPriceList": [
+            {
+                "name": "Hellblaster Sergeant",
+                "price": 42
+            },
+            {
+                "name": "Primaris Intercessor",
+                "price": 17
+            },
+            {
+                "name": "Eliminator",
+                "price": 18
+            },
+            {
+                "name": "Assault Marine",
+                "price": 12
+            },
+            {
+                "name": "Attack Bike",
+                "price": 25
+            },
+            {
+                "name": "Hellblaster",
+                "price": 18
+            },
+            {
+                "name": "Aggressor",
+                "price": 21
+            },
+            {
+                "name": "Infiltrator Helix Adept",
+                "price": 32
+            }
         ]
     },
     "Tau": {
@@ -47,7 +81,7 @@
             "Special": 3,
             "Leader": 1
         },
-        "PriceList": [
+        "EquipmentPriceList": [
             {
                 "name": "Burst Cannon",
                 "price": 8
@@ -55,6 +89,40 @@
             {
                 "name": "Heavy Rail Rifle",
                 "price": 35
+            }
+        ],
+        "UnitPriceList": [
+            {
+                "name": "Crisis Shas'vre",
+                "price": 34
+            },
+            {
+                "name": "Fire Warrior",
+                "price": 7
+            },
+            {
+                "name": "Pathfinder",
+                "price": 5
+            },
+            {
+                "name": "Crisis Shas'ui",
+                "price": 24
+            },
+            {
+                "name": "Broadside Shas'ui",
+                "price": 35
+            },
+            {
+                "name": "MV4 Shield Drone [Tactical Drone]",
+                "price": 10
+            },
+            {
+                "name": "MV1 Gun Drone [Tactical Drone]",
+                "price": 12
+            },
+            {
+                "name": "Infiltrator Helix Adept",
+                "price": 32
             }
         ]
     },
@@ -69,7 +137,7 @@
             "Special": 3,
             "Leader": 1
         },
-        "PriceList": [
+        "EquipmentPriceList": [
             {
                 "name": "Heavy Bolter",
                 "price": 10
@@ -98,6 +166,60 @@
                 "name": "Bolt Sniper Rifle",
                 "price": 3
             }
+        ],
+        "UnitPriceList": [
+            {
+                "name": "Aggressor Sergeant",
+                "price": 35
+            },
+            {
+                "name": "Sergeant",
+                "price": 31
+            },
+            {
+                "name": "Primaris Intercessor",
+                "price": 18
+            },
+            {
+                "name": "Eliminator",
+                "price": 18
+            },
+            {
+                "name": "Tactical Marine",
+                "price": 13
+            },
+            {
+                "name": "Scout",
+                "price": 11
+            },
+            {
+                "name": "Assault Marine",
+                "price": 13
+            },
+            {
+                "name": "Ravenwing Attack Bike",
+                "price": 35
+            },
+            {
+                "name": "Hellblaster",
+                "price": 18
+            },
+            {
+                "name": "Aggressor",
+                "price": 21
+            },
+            {
+                "name": "Ravenwing Biker",
+                "price": 25
+            },
+            {
+                "name": "Scout Biker",
+                "price": 23
+            },
+            {
+                "name": "Ravenwing Black Knight",
+                "price": 46
+            }
         ]
     },
     "AdeptaSororitas": {
@@ -111,7 +233,7 @@
             "Special": 5,
             "Leader": 1
         },
-        "PriceList": [
+        "EquipmentPriceList": [
             {
                 "name": "Blessed Blade",
                 "price": 9
@@ -132,7 +254,8 @@
                 "name": "Power Sword",
                 "price": 4
             }
-        ]
+        ],
+        "UnitPriceList": []
     },
     "AdeptusMechanicus": {
         "Keywords": [
@@ -145,7 +268,7 @@
             "Special": 5,
             "Leader": 1
         },
-        "PriceList": [
+        "EquipmentPriceList": [
             {
                 "name": "Cognis Flamer",
                 "price": 10
@@ -170,7 +293,8 @@
                 "name": "Servo-Arm",
                 "price": 12
             }
-        ]
+        ],
+        "UnitPriceList": []
     },
     "Deathwatch": {
         "Keywords": [
@@ -183,11 +307,12 @@
             "Special": 3,
             "Leader": 1
         },
-        "PriceList": [
+        "EquipmentPriceList": [
             {
                 "name": "Heavy Bolter",
                 "price": 10
             }
-        ]
+        ],
+        "UnitPriceList": []
     }
 }
