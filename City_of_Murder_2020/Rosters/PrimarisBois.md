@@ -121,8 +121,8 @@ Nobody died
 **Recruitment**  
 1 Assault Marine (12)  
 1 Attack Bike (37)  
-1 Eliminator (21)  
-=> 70 + 5 in die Bank
+1 Eliminator (24)  
+=> 73 + 2 in die Bank
 </details>
 
 <details>
@@ -199,7 +199,7 @@ Nobody died
 |Frag Grenade|6"|Grenade D6|3|0|1||
 |Krak Grenade|6"|Grenade 1|6|-1|D3||
 
-**1x Eliminator** (je 21 = 21)  
+**1x Eliminator** (je 24 = 24)  
 
 |M|WS|BS|S|T|W|A|Ld|Sv|
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
@@ -277,7 +277,7 @@ Nobody died
 |Frag Grenade|6"|Grenade D6|3|0|1||
 |Krak Grenade|6"|Grenade 1|6|-1|D3||
 
-=> 320 Points (5 auf der Bank)
+=> 323 Points (2 auf der Bank)
 </details>
 
 ### Tactical points  
