@@ -37,7 +37,7 @@ export const WarbandPage = (path: any) => {
                     page={{ nr: i, total: getPageCountFromMap() }}
                     rosterPrice={rosterPrice}
                     stratagems={getStratagems(state)}
-                    keywords={getAllKeywords(state.Roster)}
+                    keywords={getAllKeywords(state.Roster, faction)}
                 />,
             ];
         }
@@ -46,7 +46,7 @@ export const WarbandPage = (path: any) => {
     return <div>
         <Toolbar state={state} setState={setState} editorVisible={editorVisible} setEditorVisibility={setEditorVisibility} />
         {modelMap.length ? <div>{renderPages()}</div > : undefined}
-        <WarbandRenderer state={state} page={{ nr: 1, total: 1 }} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster)} fullRender={true} />
+        <WarbandRenderer state={state} page={{ nr: 1, total: 1 }} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster, faction)} fullRender={true} />
         <CodeEditorContainer code={state} visible={editorVisible} onSave={setState} />
     </div >;
 };

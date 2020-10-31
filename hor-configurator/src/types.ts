@@ -22,13 +22,12 @@ export enum FactionEnum {
 export interface Model {
     name: string;
     amount?: number;
-    kind?: string;
     price?: number;
-    type: string;
-    stats: ModelStats | ModelStats[];
+    type?: string;
+    stats?: ModelStats | ModelStats[];
     armyRules?: string[];
     rules?: string[];
-    keywords: string[];
+    keywords?: string[];
     equipment?: EquipmentReferences;
 }
 
@@ -139,8 +138,12 @@ export interface ArmySpecificStuff {
         name: string;
         price: number;
     }>;
-    UnitPriceList: Array<{
+    UnitList: Array<{
         name: string;
+        type: string;
         price: number;
+        stats: ModelStats | ModelStats[];
+        keywords: string[];
+        rules?: string[];
     }>;
 }

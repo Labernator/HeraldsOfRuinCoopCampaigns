@@ -9,6 +9,14 @@
             "range": 16
         },
         {
+            "name": "Reductor Pistol",
+            "type": "Pistol 1",
+            "strength": 4,
+            "damage": "2",
+            "ap": 3,
+            "range": 3
+        },
+        {
             "name": "Assault Bolter",
             "type": "Assault 3",
             "strength": 5,
@@ -67,10 +75,19 @@
         {
             "name": "Frag Grenades",
             "type": "Grenade D6",
+            "strength": "*",
+            "damage": "*",
+            "ap": "*",
+            "range": 6
+        },
+        {
+            "name": "Shock Grenades",
+            "type": "Grenade D3",
             "strength": 3,
             "damage": 1,
             "ap": 0,
-            "range": 6
+            "range": 6,
+            "rule": "If an enemy INFANTRY model is hit by this, it cannot fire Overwatch and must subtract 1 from any hit rolls model."
         },
         {
             "name": "Volkite Blaster",
@@ -191,6 +208,14 @@
             "strength": "user",
             "damage": "D3",
             "ap": 3
+        },
+        {
+            "name": "Accelerator Autocannon",
+            "type": "Heavy 2",
+            "strength": 7,
+            "damage": "2",
+            "ap": 2,
+            "range": 48
         },
         {
             "name": "Force Stave",

@@ -11,19 +11,6 @@
     "Roster": [
         {
             "name": "Hellblaster Sergeant",
-            "type": "Leader",
-            "stats": {
-                "Movement": 6,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 4,
-                "Wounds": 4,
-                "Attacks": 3,
-                "Leadership": 8,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
             "equipment": {
                 "weapons": [
                     "Plasma Incinerator",
@@ -32,34 +19,12 @@
                     "Krag Grenades"
                 ]
             },
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Hellblasters",
-                "Sergeant",
-                "Infantry",
-                "Primaris"
-            ],
             "rules": [
                 "Rites of War"
             ]
         },
         {
             "name": "Primaris Intercessor",
-            "type": "Core",
-            "stats": {
-                "Movement": 6,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 4,
-                "Wounds": 2,
-                "Attacks": 2,
-                "Leadership": 7,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
             "equipment": {
                 "weapons": [
                     "Bolt Rifle",
@@ -67,31 +32,10 @@
                     "Frag Grenades",
                     "Krag Grenades"
                 ]
-            },
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Intercessors",
-                "Infantry",
-                "Primaris"
-            ]
+            }
         },
         {
             "name": "Eliminator",
-            "type": "Core",
-            "stats": {
-                "Movement": 6,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 4,
-                "Wounds": 2,
-                "Attacks": 2,
-                "Leadership": 8,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
             "equipment": {
                 "weapons": [
                     "Bolt Sniper Rifle",
@@ -99,36 +43,10 @@
                     "Frag Grenades",
                     "Krag Grenades"
                 ]
-            },
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Eliminators",
-                "Phobos",
-                "Infantry",
-                "Primaris"
-            ],
-            "rules": [
-                "Camo Cloak",
-                "Concealed Position"
-            ]
+            }
         },
         {
             "name": "Assault Marine",
-            "type": "Core",
-            "stats": {
-                "Movement": 6,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 4,
-                "Wounds": 1,
-                "Attacks": 1,
-                "Leadership": 7,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
             "equipment": {
                 "weapons": [
                     "Chainsword",
@@ -136,33 +54,10 @@
                     "Frag Grenades",
                     "Krag Grenades"
                 ]
-            },
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Assault Squad",
-                "Infantry"
-            ],
-            "rules": [
-                "Jump Pack Assault"
-            ]
+            }
         },
         {
             "name": "Attack Bike",
-            "type": "Core",
-            "stats": {
-                "Movement": 14,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 5,
-                "Wounds": 4,
-                "Attacks": 2,
-                "Leadership": 7,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
             "equipment": {
                 "weapons": [
                     "Heavy Bolter",
@@ -175,34 +70,12 @@
                     "Frag Grenades",
                     "Krag Grenades"
                 ]
-            },
-            "rules": [
-                "Turbo-boost"
-            ],
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Biker",
-                "Attack Bike Squad"
-            ]
+            }
         },
         {
             "name": "Hellblaster",
             "type": "Core",
             "amount": 2,
-            "stats": {
-                "Movement": 6,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 4,
-                "Wounds": 2,
-                "Attacks": 2,
-                "Leadership": 7,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
             "equipment": {
                 "weapons": [
                     "Bolt Pistol",
@@ -210,67 +83,20 @@
                     "Krag Grenades",
                     "Plasma Incinerator"
                 ]
-            },
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Hellblasters",
-                "Infantry",
-                "Primaris"
-            ]
+            }
         },
         {
             "name": "Aggressor",
-            "type": "Special",
             "amount": 2,
-            "stats": {
-                "Movement": 5,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 5,
-                "Wounds": 2,
-                "Attacks": 2,
-                "Leadership": 7,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
             "equipment": {
                 "weapons": [
                     "Fragstorm Grenade Launcher",
                     "Auto Boltstorm Gauntlets"
                 ]
-            },
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Aggressors",
-                "MK X Gravis",
-                "Infantry",
-                "Primaris"
-            ],
-            "rules": [
-                "Fire Storm",
-                "Relentless Advance"
-            ]
+            }
         },
         {
             "name": "Infiltrator Helix Adept",
-            "type": "Special",
-            "stats": {
-                "Movement": 6,
-                "WeaponSkill": "3+",
-                "BallisticSkill": "3+",
-                "Strength": 4,
-                "Toughness": 4,
-                "Wounds": 2,
-                "Attacks": 2,
-                "Leadership": 7,
-                "Save": "3+",
-                "InvulnerableSave": "-"
-            },
             "equipment": {
                 "weapons": [
                     "Bolt Pistol",
@@ -278,18 +104,7 @@
                     "Krag Grenades",
                     "Marksman Bolt Carbine"
                 ]
-            },
-            "keywords": [
-                "Imperium",
-                "Adeptus Astartes",
-                "Novamarines",
-                "Apothecary",
-                "Character"
-            ],
-            "rules": [
-                "Helix Adept Amendment",
-                "Smoke Grenade"
-            ]
+            }
         }
     ]
 }

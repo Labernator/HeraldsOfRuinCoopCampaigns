@@ -10,7 +10,8 @@
         },
         {
             "name": "Rites of War",
-            "effect": "Friendly modells within 6” may re-roll hit rolls of 1."
+            "effect": "Friendly modells within 6” may re-roll hit rolls of 1.",
+            "price": 12
         },
         {
             "name": "Jink",
@@ -26,7 +27,7 @@
         },
         {
             "name": "Smoke Grenade",
-            "effect": "One use only Instead of Shooting choose a point within 8”. Until the start of your next turn, enemy models subtract 1 from their shooting hit rolls when targeting friendly units within 3” of this point. Models can draw line of sight into and out of the affected area, but not through it."
+            "effect": "One use only - Instead of Shooting choose a point within 8”. Until the start of your next turn, enemy models subtract 1 from their shooting hit rolls when targeting friendly units within 3” of this point. Models can draw line of sight into and out of the affected area, but not through it."
         },
         {
             "name": "Bonding Knife Ritual",
@@ -73,7 +74,7 @@
             "effect": "Friendly <FORGE WORLD> Units within 6” may re-roll hit rolls of 1 in the Shooting phase."
         },
         {
-            "name": "Magos Retiarius",
+            "name": "Campus Retiarius",
             "effect": "Gain +1 BS. This model gains Two Ballistic mechadendrites which ignore their -1 to BS rule. In addition, this model may take a Volkite blaster or an eradication ray."
         },
         {
@@ -110,7 +111,8 @@
         },
         {
             "name": "Camo Cloak",
-            "effect": "Gain +2 armour save instead of +1 against ranged attacks for being in cover."
+            "effect": "Gain +2 armour save instead of +1 against ranged attacks for being in cover.",
+            "price": 3
         },
         {
             "name": "Concealed Position",

@@ -1,5 +1,5 @@
 import { FactionEnum, Model, TacticalPoints, Warband } from "../types";
-import { getAllKeywords, getFactionSpecifics, getOtherEquipmentDetails, getTotalUnitPrice, getWeaponDetails } from "./Utils";
+import { getAllKeywords, getFactionSpecifics, getModelKeywords, getOtherEquipmentDetails, getTotalUnitPrice, getWeaponDetails } from "./Utils";
 
 const strInNumberText = "Gain 1 TP for taking the maximum number of Core models according to your Model Allowance.";
 const creamOfCropText = "Gain 1 TP for taking the maximum number of Special models according to your Model Allowance.";
@@ -13,9 +13,9 @@ export const hasArmouryEquipment = (models: Model[]) => models.filter((model) =>
 );
 const allUnitsSharedKeyword = (members: Model[], faction: FactionEnum) => {
     const factionKeywords = getFactionSpecifics(faction).Keywords;
-    const membersWithoutFactionKeywords = members.map((model) => ({ ...model, keywords: (model.keywords.filter((keyword) => !factionKeywords.some((factionKeyword) => factionKeyword === keyword))) }));
+    const membersWithoutFactionKeywords = members.map((model) => ({ ...model, keywords: (getModelKeywords(model, faction).filter((keyword) => !factionKeywords.some((factionKeyword) => factionKeyword === keyword))) }));
     const firstMember = membersWithoutFactionKeywords.shift() as Model;
-    return firstMember?.keywords.reduce((commonKeywords, keyword) => {
+    return getModelKeywords(firstMember, faction).reduce((commonKeywords, keyword) => {
         if (membersWithoutFactionKeywords.every((inner) => inner.keywords.some((innerKeyword) => innerKeyword === keyword))) {
             return [...commonKeywords, keyword];
         }
@@ -30,7 +30,7 @@ export const getStratagems = (warband: Warband): TacticalPoints[] => {
     myArr = countSpecial(warband.Roster) === getFactionSpecifics(warband.Faction as FactionEnum).ModelAllowance.Special ? [...myArr, { name: "Cream Of The Crop", amount: 1, text: creamOfCropText }] : [...myArr];
     myArr = allUnitsSharedKeyword(warband.Roster, warband.Faction as FactionEnum) ? [...myArr, { name: "Bound by Experience", amount: 1, text: "Gain 1 TP if all models in your team share at least one non-faction keyword." }] : [...myArr];
     myArr = hasTrueHeros(warband.Roster, warband) ? [...myArr, { name: "Herohammer", amount: hasTrueHeros(warband.Roster, warband), text: "Gain 1 TP for each model in your team which cost 100 points or more" }] : [...myArr];
-    myArr = getAllKeywords(warband.Roster).length > 8 ? [...myArr, { name: "Death And Diversity", amount: 1, text: "Gain 1 TP if your team contains 8 or more different Keywords." }] : [...myArr];
+    myArr = getAllKeywords(warband.Roster, warband.Faction as FactionEnum).length > 8 ? [...myArr, { name: "Death And Diversity", amount: 1, text: "Gain 1 TP if your team contains 8 or more different Keywords." }] : [...myArr];
     myArr = hasArmouryEquipment(warband.Roster).length === 0 ? [...myArr, { name: "Boots Before Loot", amount: 1, text: "Gain 1 TP if your team does not contain any items from your Opus’ Armoury" }] : [...myArr];
     myArr = hasArmouryEquipment(warband.Roster).length >= 5 ? [...myArr, { name: "Shiny Fingz", amount: 1, text: "Gain 1 TP if your team contains 5 or more Armoury items" }] : [...myArr];
     return myArr;

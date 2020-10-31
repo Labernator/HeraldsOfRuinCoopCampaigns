@@ -1,4 +1,8 @@
-import * as ArmySpecifics from "../data/ArmySpecifics.json";
+import * as AdeptaSororitasArmySpecific from "../data/armySpecifics/AdeptaSororitas.json";
+import * as AdeptusMechanicusArmySpecific from "../data/armySpecifics/AdeptusMechanicus.json";
+import * as DarkAngelsArmySpecific from "../data/armySpecifics/DarkAngels.json";
+import * as PrimarisArmySpecifics from "../data/armySpecifics/PrimarisSpaceMarines.json";
+import * as TauArmySpecifics from "../data/armySpecifics/Tau.json";
 import * as EquipmentJson from "../data/Equipment.json";
 import * as RulesJson from "../data/Rules.json";
 import { ArmySpecificStuff, Equipment, EquipmentReferences, FactionEnum, Model, OtherEquipment, Philosophy, Rule, Weapon } from "../types";
@@ -12,13 +16,16 @@ export const getWeaponDetails = (name: string) => weapons.find((weapon) => weapo
 
 export const getFactionSpecifics = (faction: FactionEnum): ArmySpecificStuff => {
     switch (faction) {
-        case FactionEnum.PrimarisSpaceMarines: return ArmySpecifics.PrimarisSpaceMarines;
-        case FactionEnum.DarkAngels: return ArmySpecifics.DarkAngels;
-        case FactionEnum.Tau: return ArmySpecifics.Tau;
-        case FactionEnum.AdeptusMechanicus: return ArmySpecifics.AdeptusMechanicus;
-        case FactionEnum.Deathwatch: return ArmySpecifics.Deathwatch;
-        case FactionEnum.AdeptaSororitas: return ArmySpecifics.AdeptaSororitas;
-        default: return { "Keywords": [], "ModelAllowance": { "Core": 0, "Special": 0, "Leader": 0 }, "EquipmentPriceList": [], "UnitPriceList": [] };
+        case FactionEnum.AdeptaSororitas: return AdeptaSororitasArmySpecific.AdeptaSororitas;
+        case FactionEnum.AdeptusMechanicus: return AdeptusMechanicusArmySpecific.AdeptusMechanicus;
+        case FactionEnum.DarkAngels: return DarkAngelsArmySpecific.DarkAngels;
+        case FactionEnum.PrimarisSpaceMarines: return PrimarisArmySpecifics.PrimarisSpaceMarines;
+        case FactionEnum.Tau: return TauArmySpecifics.Tau;
+
+        // case FactionEnum.DarkAngels: return ArmySpecifics.DarkAngels;
+        // case FactionEnum.Deathwatch: return ArmySpecifics.Deathwatch;
+        // case FactionEnum.AdeptaSororitas: return ArmySpecifics.AdeptaSororitas;
+        default: return { "Keywords": [], "ModelAllowance": { "Core": 0, "Special": 0, "Leader": 0 }, "EquipmentPriceList": [], "UnitList": [] };
     }
 };
 
@@ -47,7 +54,7 @@ export const getDetailedList = (referenceList: EquipmentReferences) => {
     return detailedList;
 };
 export const getModelPrice = (modelName: string, faction: FactionEnum) =>
-    getFactionSpecifics(faction).UnitPriceList.find((unit) => unit.name === modelName)?.price || 0
+    getFactionSpecifics(faction).UnitList.find((unit) => unit.name === modelName)?.price || 0;
 export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
     let totalPrice = model.price || getModelPrice(model.name, faction) || 0;
 
@@ -60,6 +67,15 @@ export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
             } return a;
         }, 0);
     }
+    const modelRules = getModelRules(model, faction);
+    if (modelRules) {
+        totalPrice = totalPrice + modelRules.reduce((acc, rule) => {
+            const ruleDetails = getRule(rule);
+            if (ruleDetails?.price) {
+                return acc + ruleDetails.price;
+            } return acc;
+        }, 0);
+    }
     if (model.amount) {
         totalPrice = totalPrice * model.amount;
     }
@@ -69,5 +85,25 @@ export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
 export const getRosterPrice = (models: Model[], faction: FactionEnum) => models.reduce((totalCost, model) => totalCost + getTotalUnitPrice(model, faction), 0);
 export const getGlobalRule = (ruleName: string) => armyRules.find((rule) => rule.name === ruleName) as Rule;
 export const getRule = (ruleName: string) => rules.find((rule) => rule.name === ruleName) as Rule;
-export const getAllKeywords = (models: Model[]) => models.reduce((keywords: string[], model) => [...keywords, ...model.keywords], []).filter((item, idx, array) => array.indexOf(item) === idx).sort();
+export const getAllKeywords = (models: Model[], faction: FactionEnum) => models.reduce((keywords: string[], model) => [...keywords, ...getModelKeywords(model, faction)], []).filter((item, idx, array) => array.indexOf(item) === idx).sort();
 export const getPhilosophy = (name: string | undefined) => philosophies.find((philosophy) => philosophy.name === name) as Philosophy;
+
+export const getBaseModel = (model: Model, faction: FactionEnum) => getFactionSpecifics(faction).UnitList.find((unit) => unit.name === model.name);
+export const getModelKeywords = (model: Model, faction: FactionEnum) => {
+    const baseKeywords = getBaseModel(model, faction)?.keywords || [];
+    return model.keywords ? [...baseKeywords, ...model.keywords].filter((keyword, idx, array) => array.indexOf(keyword) === idx) : baseKeywords;
+};
+export const getModelRules = (model: Model, faction: FactionEnum) => {
+    const baseRules = getBaseModel(model, faction)?.rules || [];
+    return model.rules ? [...baseRules, ...(model.rules || [])].filter((rule, idx, array) => array.indexOf(rule) === idx) : baseRules;
+};
+export const getModelStats = (model: Model, faction: FactionEnum) => {
+    const stats = getBaseModel(model, faction)?.stats || [];
+    if (Array.isArray(stats) && Array.isArray(model.stats)) {
+        return model.stats ? [...stats, ...model.stats] : stats;
+    } else {
+        return model.stats ? { ...stats, ...model.stats } : stats;
+    }
+
+};
+export const getModelType = (model: Model, faction: FactionEnum) => model.type || getBaseModel(model, faction)?.type;

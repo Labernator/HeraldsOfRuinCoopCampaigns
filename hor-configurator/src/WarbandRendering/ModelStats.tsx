@@ -3,7 +3,7 @@ import { ModelStats } from "../types";
 
 export const ModelStatsRenderer = ({ name, stats }: { name: string; stats: ModelStats | ModelStats[] }) => {
     const renderAtomicStats = (characteristics: ModelStats, idx?: number) => <tr key={`modelstats-${name}-${idx}`}>
-        {idx === 0 ? <td rowSpan={2} style={{ paddingTop: "15px" }}>{name}</td> : idx !== undefined ? undefined : <td>{name}</td>}
+        {idx === 0 ? <td rowSpan={2} style={{ paddingTop: "12px" }}>{name}</td> : idx !== undefined ? undefined : <td>{name}</td>}
         <td>{characteristics.Movement}</td>
         <td>{characteristics.WeaponSkill}</td>
         <td>{characteristics.BallisticSkill}</td>
