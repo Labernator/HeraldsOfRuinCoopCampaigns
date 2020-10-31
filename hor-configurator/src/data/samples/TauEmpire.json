@@ -4,6 +4,10 @@
     "ArmyRules": [
         "For the Greater Good"
     ],
+    "Alignment": {
+        "name": "Sa’cea",
+        "replacing": "<SEPT>"
+    },
     "Philosophy": "One Track Mind",
     "NthScenario": 2,
     "Roster": [

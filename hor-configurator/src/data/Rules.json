@@ -99,15 +99,18 @@
         },
         {
             "name": "Guide the Faithful",
-            "effect": "All friendly 'Order of the Valorous Heart' models within 3” of this model may re-roll to hit rolls of 1."
+            "effect": "All friendly <ORDER> models within 3” of this model may re-roll to hit rolls of 1.",
+            "alignmentParameter": true
         },
         {
             "name": "Bodyguard",
-            "effect": "When an Order of the Valorous Heart CHARACTER model within 3” would lose any wounds from an attack, this model may roll a D6; on a 2+ this model suffers 1 mortal wound for each of those wounds instead. Only one attempt can be made to intercept each attack."
+            "effect": "When an <ORDER> CHARACTER model within 3” would lose any wounds from an attack, this model may roll a D6; on a 2+ this model suffers 1 mortal wound for each of those wounds instead. Only one attempt can be made to intercept each attack.",
+            "alignmentParameter": true
         },
         {
             "name": "Sworn Protectors",
-            "effect": "Re-roll hit rolls whilst within 6” of any friendly Order of the Valorous Heart CANONESSES."
+            "effect": "Re-roll hit rolls whilst within 6” of any friendly <ORDER> CANONESSES.",
+            "alignmentParameter": true
         },
         {
             "name": "Camo Cloak",
@@ -169,8 +172,12 @@
             "effect": "Re-roll failed Morale tests for this model."
         },
         {
-            "name": "Chapter Tactics: Novamarines",
-            "effect": "Re-roll failed wound rolls of 1 when attacking a model that do not have the IMPERIUM or CHAOS keyword."
+            "name": "Novamarines",
+            "effect": "Re-roll failed wound rolls of 1 when attacking a model that does not have the IMPERIUM or CHAOS keyword."
+        },
+        {
+            "name": "Sa’cea",
+            "effect": "Add 1 to the Leadership characteristic of models with this tenet. In addition, in the Shooting phase you can re-roll a single failed hit roll (can be used by max. 5 different units per turn)."
         },
         {
             "name": "Defenders of Humanity",

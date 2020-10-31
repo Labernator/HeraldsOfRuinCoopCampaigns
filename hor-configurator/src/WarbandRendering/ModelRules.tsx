@@ -1,13 +1,13 @@
 import React from "react";
 import { Rule } from "../types";
 
-export const ModelRulesRenderer = ({ rules }: { rules: Rule[] }) => {
+export const ModelRulesRenderer = ({ rules }: { rules: Rule[] | undefined }) => {
     const renderRules = () => rules?.map((rule) =>
         <tr key={`rule_${rule.name}`}>
             <td>{rule.price ? `${rule.name} (${rule.price})` : rule.name}</td>
             <td>{rule.effect}</td>
         </tr>);
-    return rules.length > 0 ? <table className="enemies-table">
+    return rules && rules.length > 0 ? <table className="enemies-table">
         <colgroup>
             <col style={{ width: "100px" }} />
             <col style={{ width: "305px" }} />

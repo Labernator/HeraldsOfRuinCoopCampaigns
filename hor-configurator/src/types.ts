@@ -5,10 +5,14 @@ export interface Warband {
     Faction: string;
     NthScenario: number;
     Philosophy?: string;
+    Alignment?: WarbandAlignment;
     Roster: Model[];
     ArmyRules?: string[];
 }
-
+export interface WarbandAlignment {
+    name: string;
+    replacing: string;
+}
 export enum FactionEnum {
     PrimarisSpaceMarines = "Primaris Space Marines",
     DarkAngels = "Dark Angels",
@@ -74,6 +78,7 @@ export interface Rule {
     name: string;
     effect: string;
     price?: number;
+    alignmentParameter?: boolean;
 }
 
 export interface Denizens {

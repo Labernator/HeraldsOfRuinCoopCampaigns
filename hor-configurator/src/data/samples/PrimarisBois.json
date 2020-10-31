@@ -2,10 +2,13 @@
     "Title": "Primaris Bois",
     "Faction": "Primaris Space Marines",
     "ArmyRules": [
-        "Chapter Tactics: Novamarines",
         "Defenders of Humanity",
         "And They Shall Know No Fear"
     ],
+    "Alignment": {
+        "name": "Novamarines",
+        "replacing": "<CHAPTER>"
+    },
     "Philosophy": "The Hammer of the Imperium",
     "NthScenario": 2,
     "Roster": [

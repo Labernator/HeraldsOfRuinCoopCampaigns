@@ -1,6 +1,6 @@
 import React from "react";
 import { FactionEnum, TacticalPoints, Warband } from "../types";
-import { getTotalUnitPrice } from "../utility";
+import { getRealModel, getTotalUnitPrice } from "../utility";
 import { ArmyKeywordsRenderer } from "./ArmyKeywords";
 import { ArmyRulesHeaderRenderer } from "./ArmyRules";
 import { ArmyTacticalPointsRenderer } from "./ArmyTacticalPoints";
@@ -11,11 +11,16 @@ export const WarbandRenderer = ({ state, page, rosterPrice, stratagems, keywords
         <div className="roster-sheet-title">{`${state.Title} - ${state.Faction} (${rosterPrice} pts)`}</div>
         {page.nr === 1 ?
             <div>
-                {state.ArmyRules ? <ArmyRulesHeaderRenderer armyRules={state.ArmyRules} /> : undefined}
-                <ArmyKeywordsRenderer keywords={keywords} />
+                <ArmyRulesHeaderRenderer armyRules={state.Alignment ? [state.Alignment.name, ...state.ArmyRules || []] : state.ArmyRules} />
+                <ArmyKeywordsRenderer keywords={keywords.map((keyword) => keyword === state.Alignment?.replacing ? state.Alignment?.name : keyword).sort()} />
                 <ArmyTacticalPointsRenderer stratagems={stratagems} philosophy={state.Philosophy} />
             </div> :
             undefined}
-        {state.Roster?.map((member) => <ModelSheetRenderer key={`modelsheet-${member.name}-${getTotalUnitPrice(member, state.Faction as FactionEnum)}`} model={member} faction={state.Faction as FactionEnum} />)}
+        {state.Roster?.map((member) => <ModelSheetRenderer
+            key={`modelsheet-${member.name}-${getTotalUnitPrice(member, state.Faction as FactionEnum)}`}
+            model={getRealModel(member, state.Faction as FactionEnum, state.Alignment)}
+            faction={state.Faction as FactionEnum}
+            alignment={state.Alignment}
+        />)}
         <div className="roster-sheet-footer">{`${page.nr} / ${page.total}`}</div>
     </div >;

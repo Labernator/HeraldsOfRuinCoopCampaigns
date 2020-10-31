@@ -5,7 +5,7 @@ import * as PrimarisArmySpecifics from "../data/armySpecifics/PrimarisSpaceMarin
 import * as TauArmySpecifics from "../data/armySpecifics/Tau.json";
 import * as EquipmentJson from "../data/Equipment.json";
 import * as RulesJson from "../data/Rules.json";
-import { ArmySpecificStuff, Equipment, EquipmentReferences, FactionEnum, Model, OtherEquipment, Philosophy, Rule, Weapon } from "../types";
+import { ArmySpecificStuff, Equipment, EquipmentReferences, FactionEnum, Model, OtherEquipment, Philosophy, Rule, WarbandAlignment, Weapon } from "../types";
 const weapons = EquipmentJson.weapons as Weapon[];
 const otherEquipment = EquipmentJson.otherEquipment as OtherEquipment[];
 const armyRules = RulesJson.ArmyRules as Rule[];
@@ -84,7 +84,13 @@ export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
 
 export const getRosterPrice = (models: Model[], faction: FactionEnum) => models.reduce((totalCost, model) => totalCost + getTotalUnitPrice(model, faction), 0);
 export const getGlobalRule = (ruleName: string) => armyRules.find((rule) => rule.name === ruleName) as Rule;
-export const getRule = (ruleName: string) => rules.find((rule) => rule.name === ruleName) as Rule;
+export const getRule = (ruleName: string, alignment?: WarbandAlignment): Rule => {
+    let actualRule = rules.find((rule) => rule.name === ruleName);
+    if (!actualRule) {
+        throw new Error(`Rule ${ruleName} needs to be added to metadata`);
+    }
+    return actualRule.alignmentParameter && alignment ? actualRule = { ...actualRule, effect: actualRule.effect.replace(alignment.replacing, alignment.name) } : actualRule;
+};
 export const getAllKeywords = (models: Model[], faction: FactionEnum) => models.reduce((keywords: string[], model) => [...keywords, ...getModelKeywords(model, faction)], []).filter((item, idx, array) => array.indexOf(item) === idx).sort();
 export const getPhilosophy = (name: string | undefined) => philosophies.find((philosophy) => philosophy.name === name) as Philosophy;
 
@@ -107,3 +113,16 @@ export const getModelStats = (model: Model, faction: FactionEnum) => {
 
 };
 export const getModelType = (model: Model, faction: FactionEnum) => model.type || getBaseModel(model, faction)?.type;
+
+export const getRealModel = (model: Model, faction: FactionEnum, alignment?: WarbandAlignment): Model => alignment ? {
+    ...model,
+    stats: getModelStats(model, faction),
+    keywords: getModelKeywords(model, faction).map((keyword) => keyword === alignment.replacing ? alignment.name : keyword),
+    rules: getModelRules(model, faction).map((rule) => rule === alignment.replacing ? alignment.name : rule),
+} : {
+        ...model,
+        stats: getModelStats(model, faction),
+        keywords: getModelKeywords(model, faction),
+        rules: getModelRules(model, faction),
+    }
+    ;
