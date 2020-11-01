@@ -21,11 +21,8 @@ export const getFactionSpecifics = (faction: FactionEnum): ArmySpecificStuff => 
         case FactionEnum.DarkAngels: return DarkAngelsArmySpecific.DarkAngels;
         case FactionEnum.PrimarisSpaceMarines: return PrimarisArmySpecifics.PrimarisSpaceMarines;
         case FactionEnum.Tau: return TauArmySpecifics.Tau;
-
-        // case FactionEnum.DarkAngels: return ArmySpecifics.DarkAngels;
         // case FactionEnum.Deathwatch: return ArmySpecifics.Deathwatch;
-        // case FactionEnum.AdeptaSororitas: return ArmySpecifics.AdeptaSororitas;
-        default: return { "Keywords": [], "AlignmentPlaceholder": "", "ModelAllowance": { "Core": 0, "Special": 0, "Leader": 0 }, "WeaponPriceList": [], "UnitList": [] };
+        default: return { "Keywords": [], "Philosophies": [], "AlignmentPlaceholder": "", "ModelAllowance": { "Core": 0, "Special": 0, "Leader": 0 }, "WeaponPriceList": [], "UnitList": [] };
     }
 };
 
@@ -37,7 +34,7 @@ export const getWeaponPrice = (weaponName: string, faction: FactionEnum, amount?
 };
 
 export const getOtherEquipmentDetails = (name: string) =>
-    otherEquipment.find((equi) => equi.name === name) as OtherEquipment;
+    otherEquipment.find((equi) => equi.name.toLocaleUpperCase() === name.toLocaleUpperCase()) as OtherEquipment;
 export const getDetailedList = (referenceList: EquipmentReferences) => {
     const detailedList: Equipment = {
         weapons: [],
@@ -92,7 +89,16 @@ export const getRule = (ruleName: string, faction: FactionEnum, alignment?: stri
     return actualRule.alignmentParameter && alignment ? actualRule = { ...actualRule, effect: actualRule.effect.replace(getFactionSpecifics(faction).AlignmentPlaceholder || "", alignment) } : actualRule;
 };
 export const getAllKeywords = (models: Model[], faction: FactionEnum) => models.reduce((keywords: string[], model) => [...keywords, ...getModelKeywords(model, faction)], []).filter((item, idx, array) => array.indexOf(item) === idx).sort();
-export const getPhilosophy = (name: string | undefined) => philosophies.find((philosophy) => philosophy.name.toLocaleUpperCase() === name?.toLocaleUpperCase()) as Philosophy;
+export const getPhilosophy = (name: string, faction: FactionEnum) => {
+    let phil = philosophies.find((philosophy) => philosophy.name.toLocaleUpperCase() === name?.toLocaleUpperCase());
+    if (!phil) {
+        phil = getFactionSpecifics(faction).Philosophies.find((philosophy) => philosophy.name.toLocaleUpperCase() === name?.toLocaleUpperCase());
+        if (!phil) {
+            throw new Error(`Philosophy ${name} needs to be added to metadata`);
+        }
+    }
+    return phil;
+};
 
 export const getBaseModel = (model: Model, faction: FactionEnum) => getFactionSpecifics(faction).UnitList.find((unit) => unit.name.toLocaleUpperCase() === model.name.toLocaleUpperCase());
 export const getModelKeywords = (model: Model, faction: FactionEnum) => {

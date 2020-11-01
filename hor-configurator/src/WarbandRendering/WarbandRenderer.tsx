@@ -13,7 +13,7 @@ export const WarbandRenderer = ({ state, page, rosterPrice, stratagems, keywords
             <div>
                 <ArmyRulesHeaderRenderer armyRules={state.Alignment ? [state.Alignment, ...state.ArmyRules || []] : state.ArmyRules} />
                 <ArmyKeywordsRenderer keywords={keywords.map((keyword) => keyword === getFactionSpecifics(state.Faction as FactionEnum).AlignmentPlaceholder ? state.Alignment || "" : keyword).sort()} />
-                <ArmyTacticalPointsRenderer stratagems={stratagems} philosophy={state.Philosophy} />
+                <ArmyTacticalPointsRenderer stratagems={stratagems} philosophy={state.Philosophy} faction={state.Faction as FactionEnum} />
             </div> :
             undefined}
         {state.Roster?.map((member) => <ModelSheetRenderer

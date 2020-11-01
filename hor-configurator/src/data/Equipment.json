@@ -701,6 +701,25 @@
             "damage": "D3",
             "ap": 4,
             "range": 30
+        },
+        {
+            "name": "Rail Carbine",
+            "rule": "Wound rolls of 6+ cause an additional mortal wound.",
+            "type": "Assault 2",
+            "strength": 6,
+            "damage": "D3",
+            "ap": 4,
+            "range": 18,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Kodachi",
+            "rule": "Wound rolls of 6+ are resolved at AP 4 and Damage 2.",
+            "type": "Melee",
+            "strength": "user",
+            "damage": 1,
+            "ap": 1,
+            "isArmouryItem": true
         }
     ],
     "otherEquipment": [
@@ -714,13 +733,19 @@
         },
         {
             "name": "Sniper Training",
-            "effect": "When this model remained stationary, re-roll 'To Hit' rolls of 1.",
+            "effect": "(Team Leader only) When this model remained stationary, re-roll 'To Hit' rolls of 1.",
+            "price": 5,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Compact Stimulant Injector",
+            "effect": "(Team Leader only) Roll a dice each time this model suffers a wound, on a roll of 6 ignore it.",
             "price": 5,
             "isArmouryItem": true
         },
         {
             "name": "Stabilizing Jet",
-            "effect": "+2” when advancing",
+            "effect": "(Jet Pack only) +2” when advancing",
             "price": 5,
             "isArmouryItem": true
         },
@@ -745,6 +770,30 @@
             "isArmouryItem": true
         },
         {
+            "name": "Marksman Honour",
+            "effect": "(Shas'ui only) Grants the model an additional attack with one of its ranged weapons each shooting phase.",
+            "price": 15,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Hardwired Support System",
+            "effect": "(Battlesuit only) The model may take an item from the Support Systems list, increasing it’s cost by 50% rounding up. Advanced Targeting System and Shield Generator’s cost is doubled instead.",
+            "price": 0,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Iridium Armour",
+            "effect": "(Crisis only) This model has a 2+ armour save.",
+            "price": 15,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Blacksun Visor",
+            "effect": "Ignore negative modifiers to hit rolls in the shooting phase that result from any special rules the target model has.",
+            "price": 5,
+            "isArmouryItem": true
+        },
+        {
             "name": "Jump Pack",
             "effect": "Increase this models movement to 12” and gain the Jump Pack and Fly keywords.",
             "price": 5
@@ -765,6 +814,11 @@
             "price": 5
         },
         {
+            "name": "Extended Drone Controller",
+            "effect": "Gun Drones or Marker Drones within 12”gain +1 to hit.",
+            "price": 10
+        },
+        {
             "name": "Early warning override",
             "effect": "If any enemy model are set up within 12” as the result of an ability that allows them to arrive mid-battle, then at the end of that phase you may shoot at one of those models as if it were your Shooting phase, but you must subtract 1 from hit rolls when resolving these shots.",
             "price": 5
@@ -778,6 +832,24 @@
             "name": "Shield generator",
             "effect": "This model has a 4+ invulnerable save.",
             "price": 8
+        },
+        {
+            "name": "Hard-Wired Light Shield",
+            "effect": "(Team Leader only) This model has a 5+ invulnerable save.",
+            "price": 15,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Command Node",
+            "effect": "(Team Leader only) Increases the models Inspiring Presence radius to 12”.",
+            "price": 10,
+            "isArmouryItem": true
+        },
+        {
+            "name": "XV05 Armour",
+            "effect": "(Team Leader only) This model has a 3+ armour save.",
+            "price": 5,
+            "isArmouryItem": true
         },
         {
             "name": "Target lock",

@@ -10,6 +10,13 @@
             "Special": 5,
             "Leader": 1
         },
+        "Philosophies": [
+            {
+                "name": "A More Subtle Touch",
+                "tp": 2,
+                "text": "Your team contains no models with the SKITARII keyword."
+            }
+        ],
         "WeaponPriceList": [
             {
                 "name": "Cognis Flamer",

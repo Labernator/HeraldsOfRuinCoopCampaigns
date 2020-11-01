@@ -11,6 +11,18 @@
             "Special": 3,
             "Leader": 1
         },
+        "Philosophies": [
+            {
+                "name": "The Hammer of the Imperium",
+                "tp": 2,
+                "text": "If you are not the first player to use a Tactical Action, you lose 2TP."
+            },
+            {
+                "name": "Quick Reaction Force",
+                "tp": 1,
+                "text": "No model on your team may be equipped with Heavy weapons."
+            }
+        ],
         "WeaponPriceList": [
             {
                 "name": "Heavy Bolter",

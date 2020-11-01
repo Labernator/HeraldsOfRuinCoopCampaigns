@@ -198,34 +198,9 @@
     ],
     "Philosophies": [
         {
-            "name": "Unwavering Zeal",
-            "tp": 2,
-            "text": "If you are the first player to fail a Morale test including Nerve test, you lose 2 TP."
-        },
-        {
-            "name": "Quick Reaction Force",
-            "tp": 1,
-            "text": "No model on your team may be equipped with Heavy weapons."
-        },
-        {
             "name": "One Track Mind",
             "tp": 1,
             "text": "Before the game, you choose a single Tactical Action available to you. You may only use that Tactical Action in the game. You may choose different Tactical Actions for each game"
-        },
-        {
-            "name": "A More Subtle Touch",
-            "tp": 2,
-            "text": "Your team contains no units with the SKITARII keyword."
-        },
-        {
-            "name": "World on Fire",
-            "tp": 2,
-            "text": "Every model that can take a flame weapon has a flame weapon (flamer, combi-flamer, hand flamer, heavy flamer and the Widowmaker are flame weapons)."
-        },
-        {
-            "name": "The Hammer of the Imperium",
-            "tp": 2,
-            "text": "If you are not the first player to use a Tactical Action, you lose 2TP."
         }
     ]
 }

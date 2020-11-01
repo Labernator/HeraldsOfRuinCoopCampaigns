@@ -11,6 +11,13 @@
             "Special": 5,
             "Leader": 1
         },
+        "Philosophies": [
+            {
+                "name": "World on Fire",
+                "tp": 2,
+                "text": "Every model that can take a flame weapon has a flame weapon (flamer, combi-flamer, hand flamer, heavy flamer and the Widowmaker are flame weapons)."
+            }
+        ],
         "WeaponPriceList": [
             {
                 "name": "Blessed Blade",

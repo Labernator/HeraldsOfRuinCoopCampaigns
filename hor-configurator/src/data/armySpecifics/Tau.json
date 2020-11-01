@@ -9,6 +9,38 @@
             "Special": 3,
             "Leader": 1
         },
+        "Philosophies": [
+            {
+                "name": "Mont'ka",
+                "tp": 2,
+                "text": "You must advance all deployed models within your first movement phase."
+            },
+            {
+                "name": "Kauyon",
+                "tp": 1,
+                "text": "You may not move any models within your first movement phase."
+            },
+            {
+                "name": "Superior Technology",
+                "tp": 2,
+                "text": "Your team contains only models with the 'Battlesuit' keyword. If done so, any drones taken as wargear counts as Core models."
+            },
+            {
+                "name": "The Auxiliary",
+                "tp": 2,
+                "text": "Your team contains only models with “Kroot” or “Vespid” in their name."
+            },
+            {
+                "name": "The Vanguard",
+                "tp": 1,
+                "text": "Your team contains only models with the 'Pathfinder Team' keyword."
+            },
+            {
+                "name": "Classic Approach",
+                "tp": 1,
+                "text": "Your team contains no models with the 'Battlesuit' keyword."
+            }
+        ],
         "WeaponPriceList": [
             {
                 "name": "Burst cannon",
@@ -45,6 +77,14 @@
             {
                 "name": "Ion rifle",
                 "price": 7
+            },
+            {
+                "name": "Kodachi",
+                "price": 8
+            },
+            {
+                "name": "Rail Carbine",
+                "price": 18
             }
         ],
         "UnitList": [

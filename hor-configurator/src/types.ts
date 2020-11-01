@@ -131,6 +131,7 @@ export interface PageMap {
 export interface ArmySpecificStuff {
     Keywords: string[];
     AlignmentPlaceholder?: string;
+    Philosophies: Philosophy[];
     ModelAllowance: {
         Core: number;
         Special: number;
