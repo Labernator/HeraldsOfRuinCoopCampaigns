@@ -5,12 +5,13 @@
             "Adeptus Astartes",
             "<CHAPTER>"
         ],
+        "AlignmentPlaceholder": "<CHAPTER>",
         "ModelAllowance": {
             "Core": 20,
             "Special": 3,
             "Leader": 1
         },
-        "EquipmentPriceList": [
+        "WeaponPriceList": [
             {
                 "name": "Heavy Bolter",
                 "price": 10

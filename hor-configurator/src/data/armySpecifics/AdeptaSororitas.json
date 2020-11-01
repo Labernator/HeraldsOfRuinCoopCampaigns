@@ -5,12 +5,13 @@
             "Adepta Sororitas",
             "<ORDER>"
         ],
+        "AlignmentPlaceholder": "<ORDER>",
         "ModelAllowance": {
             "Core": 20,
             "Special": 5,
             "Leader": 1
         },
-        "EquipmentPriceList": [
+        "WeaponPriceList": [
             {
                 "name": "Blessed Blade",
                 "price": 9

@@ -3,19 +3,48 @@
         "Keywords": [
             "T'au Empire"
         ],
+        "AlignmentPlaceholder": "<SEPT>",
         "ModelAllowance": {
             "Core": 20,
             "Special": 3,
             "Leader": 1
         },
-        "EquipmentPriceList": [
+        "WeaponPriceList": [
             {
-                "name": "Burst Cannon",
+                "name": "Burst cannon",
                 "price": 8
             },
             {
-                "name": "Heavy Rail Rifle",
+                "name": "Heavy rail rifle",
                 "price": 35
+            },
+            {
+                "name": "Airbursting Fragmentation fprojector",
+                "price": 8
+            },
+            {
+                "name": "Cyclic ion blaster",
+                "price": 18
+            },
+            {
+                "name": "Fusion blaster",
+                "price": 21
+            },
+            {
+                "name": "Missile pod",
+                "price": 24
+            },
+            {
+                "name": "Plasma rifle",
+                "price": 11
+            },
+            {
+                "name": "Rail rifle",
+                "price": 17
+            },
+            {
+                "name": "Ion rifle",
+                "price": 7
             }
         ],
         "UnitList": [
@@ -83,7 +112,10 @@
                     "T'au Empire",
                     "<SEPT>",
                     "Infantry",
-                    "Breacher Team"
+                    "Strike Team"
+                ],
+                "rules": [
+                    "Bonding Knife Ritual"
                 ]
             },
             {
@@ -107,6 +139,9 @@
                     "<SEPT>",
                     "Infantry",
                     "Pathfinder Team"
+                ],
+                "rules": [
+                    "Bonding Knife Ritual"
                 ]
             },
             {

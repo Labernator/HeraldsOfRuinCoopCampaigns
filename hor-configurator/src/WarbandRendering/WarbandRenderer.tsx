@@ -1,6 +1,6 @@
 import React from "react";
 import { FactionEnum, TacticalPoints, Warband } from "../types";
-import { getRealModel, getTotalUnitPrice } from "../utility";
+import { getFactionSpecifics, getRealModel, getTotalUnitPrice } from "../utility";
 import { ArmyKeywordsRenderer } from "./ArmyKeywords";
 import { ArmyRulesHeaderRenderer } from "./ArmyRules";
 import { ArmyTacticalPointsRenderer } from "./ArmyTacticalPoints";
@@ -11,8 +11,8 @@ export const WarbandRenderer = ({ state, page, rosterPrice, stratagems, keywords
         <div className="roster-sheet-title">{`${state.Title} - ${state.Faction} (${rosterPrice} pts)`}</div>
         {page.nr === 1 ?
             <div>
-                <ArmyRulesHeaderRenderer armyRules={state.Alignment ? [state.Alignment.name, ...state.ArmyRules || []] : state.ArmyRules} />
-                <ArmyKeywordsRenderer keywords={keywords.map((keyword) => keyword === state.Alignment?.replacing ? state.Alignment?.name : keyword).sort()} />
+                <ArmyRulesHeaderRenderer armyRules={state.Alignment ? [state.Alignment, ...state.ArmyRules || []] : state.ArmyRules} />
+                <ArmyKeywordsRenderer keywords={keywords.map((keyword) => keyword === getFactionSpecifics(state.Faction as FactionEnum).AlignmentPlaceholder ? state.Alignment || "" : keyword).sort()} />
                 <ArmyTacticalPointsRenderer stratagems={stratagems} philosophy={state.Philosophy} />
             </div> :
             undefined}

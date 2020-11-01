@@ -2,10 +2,7 @@
     "Title": "The Emperors Faithful",
     "Faction": "Adepta Sororitas",
     "Philosophy": "World on Fire",
-    "Alignment": {
-        "name": "Order of the Valorous Heart",
-        "replacing": "<ORDER>"
-    },
+    "Alignment": "Order of the Valorous Heart",
     "NthScenario": 1,
     "Roster": [
         {

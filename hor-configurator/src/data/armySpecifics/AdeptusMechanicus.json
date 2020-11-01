@@ -10,7 +10,7 @@
             "Special": 5,
             "Leader": 1
         },
-        "EquipmentPriceList": [
+        "WeaponPriceList": [
             {
                 "name": "Cognis Flamer",
                 "price": 10

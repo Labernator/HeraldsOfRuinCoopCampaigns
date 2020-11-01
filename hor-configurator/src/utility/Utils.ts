@@ -5,14 +5,14 @@ import * as PrimarisArmySpecifics from "../data/armySpecifics/PrimarisSpaceMarin
 import * as TauArmySpecifics from "../data/armySpecifics/Tau.json";
 import * as EquipmentJson from "../data/Equipment.json";
 import * as RulesJson from "../data/Rules.json";
-import { ArmySpecificStuff, Equipment, EquipmentReferences, FactionEnum, Model, OtherEquipment, Philosophy, Rule, WarbandAlignment, Weapon } from "../types";
+import { ArmySpecificStuff, Equipment, EquipmentReferences, FactionEnum, Model, OtherEquipment, Philosophy, Rule, Weapon } from "../types";
 const weapons = EquipmentJson.weapons as Weapon[];
 const otherEquipment = EquipmentJson.otherEquipment as OtherEquipment[];
 const armyRules = RulesJson.ArmyRules as Rule[];
 const rules = RulesJson.rules as Rule[];
 const philosophies = RulesJson.Philosophies as Philosophy[];
 
-export const getWeaponDetails = (name: string) => weapons.find((weapon) => weapon.name === name) as Weapon;
+export const getWeaponDetails = (name: string) => weapons.find((weapon) => weapon.name.toLocaleUpperCase() === name.toLocaleUpperCase()) as Weapon;
 
 export const getFactionSpecifics = (faction: FactionEnum): ArmySpecificStuff => {
     switch (faction) {
@@ -25,7 +25,7 @@ export const getFactionSpecifics = (faction: FactionEnum): ArmySpecificStuff => 
         // case FactionEnum.DarkAngels: return ArmySpecifics.DarkAngels;
         // case FactionEnum.Deathwatch: return ArmySpecifics.Deathwatch;
         // case FactionEnum.AdeptaSororitas: return ArmySpecifics.AdeptaSororitas;
-        default: return { "Keywords": [], "ModelAllowance": { "Core": 0, "Special": 0, "Leader": 0 }, "EquipmentPriceList": [], "UnitList": [] };
+        default: return { "Keywords": [], "AlignmentPlaceholder": "", "ModelAllowance": { "Core": 0, "Special": 0, "Leader": 0 }, "WeaponPriceList": [], "UnitList": [] };
     }
 };
 
@@ -33,7 +33,7 @@ export const getWeaponPrice = (weaponName: string, faction: FactionEnum, amount?
     if (getWeaponDetails(weaponName)?.isLegendary) {
         return 20;
     }
-    return (getFactionSpecifics(faction).EquipmentPriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+    return (getFactionSpecifics(faction).WeaponPriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
 };
 
 export const getOtherEquipmentDetails = (name: string) =>
@@ -70,7 +70,7 @@ export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
     const modelRules = getModelRules(model, faction);
     if (modelRules) {
         totalPrice = totalPrice + modelRules.reduce((acc, rule) => {
-            const ruleDetails = getRule(rule);
+            const ruleDetails = getRule(rule, faction);
             if (ruleDetails?.price) {
                 return acc + ruleDetails.price;
             } return acc;
@@ -84,17 +84,17 @@ export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
 
 export const getRosterPrice = (models: Model[], faction: FactionEnum) => models.reduce((totalCost, model) => totalCost + getTotalUnitPrice(model, faction), 0);
 export const getGlobalRule = (ruleName: string) => armyRules.find((rule) => rule.name === ruleName) as Rule;
-export const getRule = (ruleName: string, alignment?: WarbandAlignment): Rule => {
-    let actualRule = rules.find((rule) => rule.name === ruleName);
+export const getRule = (ruleName: string, faction: FactionEnum, alignment?: string): Rule => {
+    let actualRule = rules.find((rule) => rule.name.toLocaleUpperCase() === ruleName.toLocaleUpperCase());
     if (!actualRule) {
         throw new Error(`Rule ${ruleName} needs to be added to metadata`);
     }
-    return actualRule.alignmentParameter && alignment ? actualRule = { ...actualRule, effect: actualRule.effect.replace(alignment.replacing, alignment.name) } : actualRule;
+    return actualRule.alignmentParameter && alignment ? actualRule = { ...actualRule, effect: actualRule.effect.replace(getFactionSpecifics(faction).AlignmentPlaceholder || "", alignment) } : actualRule;
 };
 export const getAllKeywords = (models: Model[], faction: FactionEnum) => models.reduce((keywords: string[], model) => [...keywords, ...getModelKeywords(model, faction)], []).filter((item, idx, array) => array.indexOf(item) === idx).sort();
-export const getPhilosophy = (name: string | undefined) => philosophies.find((philosophy) => philosophy.name === name) as Philosophy;
+export const getPhilosophy = (name: string | undefined) => philosophies.find((philosophy) => philosophy.name.toLocaleUpperCase() === name?.toLocaleUpperCase()) as Philosophy;
 
-export const getBaseModel = (model: Model, faction: FactionEnum) => getFactionSpecifics(faction).UnitList.find((unit) => unit.name === model.name);
+export const getBaseModel = (model: Model, faction: FactionEnum) => getFactionSpecifics(faction).UnitList.find((unit) => unit.name.toLocaleUpperCase() === model.name.toLocaleUpperCase());
 export const getModelKeywords = (model: Model, faction: FactionEnum) => {
     const baseKeywords = getBaseModel(model, faction)?.keywords || [];
     return model.keywords ? [...baseKeywords, ...model.keywords].filter((keyword, idx, array) => array.indexOf(keyword) === idx) : baseKeywords;
@@ -114,15 +114,14 @@ export const getModelStats = (model: Model, faction: FactionEnum) => {
 };
 export const getModelType = (model: Model, faction: FactionEnum) => model.type || getBaseModel(model, faction)?.type;
 
-export const getRealModel = (model: Model, faction: FactionEnum, alignment?: WarbandAlignment): Model => alignment ? {
+export const getRealModel = (model: Model, faction: FactionEnum, alignment?: string): Model => alignment ? {
     ...model,
     stats: getModelStats(model, faction),
-    keywords: getModelKeywords(model, faction).map((keyword) => keyword === alignment.replacing ? alignment.name : keyword),
-    rules: getModelRules(model, faction).map((rule) => rule === alignment.replacing ? alignment.name : rule),
+    keywords: getModelKeywords(model, faction).map((keyword) => keyword === getFactionSpecifics(faction).AlignmentPlaceholder ? alignment : keyword),
+    rules: getModelRules(model, faction).map((rule) => rule === getFactionSpecifics(faction).AlignmentPlaceholder ? alignment : rule),
 } : {
         ...model,
         stats: getModelStats(model, faction),
         keywords: getModelKeywords(model, faction),
         rules: getModelRules(model, faction),
-    }
-    ;
+    };

@@ -5,13 +5,9 @@ export interface Warband {
     Faction: string;
     NthScenario: number;
     Philosophy?: string;
-    Alignment?: WarbandAlignment;
+    Alignment?: string;
     Roster: Model[];
     ArmyRules?: string[];
-}
-export interface WarbandAlignment {
-    name: string;
-    replacing: string;
 }
 export enum FactionEnum {
     PrimarisSpaceMarines = "Primaris Space Marines",
@@ -134,12 +130,13 @@ export interface PageMap {
 
 export interface ArmySpecificStuff {
     Keywords: string[];
+    AlignmentPlaceholder?: string;
     ModelAllowance: {
         Core: number;
         Special: number;
         Leader: number;
     };
-    EquipmentPriceList: Array<{
+    WeaponPriceList: Array<{
         name: string;
         price: number;
     }>;
