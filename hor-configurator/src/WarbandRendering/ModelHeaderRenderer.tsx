@@ -1,13 +1,10 @@
 import React from "react";
-import { FactionEnum, Model } from "../types";
-import { getModelType, getTotalUnitPrice } from "../utility/Utils";
+import { RenderModel } from "../types";
 
-export const ModelHeaderRenderer = ({ model, faction }: { model: Model; faction: FactionEnum }) => {
-    const unitPrice = getTotalUnitPrice(model, faction);
-    const priceString = unitPrice ? `(${unitPrice})` : "";
+export const ModelHeaderRenderer = ({ model }: { model: RenderModel }) => {
     const amountString = model.amount ? `${model.amount}x ` : "";
     return <div className="container-header">
-        <div style={{ float: "left", width: "75%" }}> {`${amountString} ${model.name} ${priceString}`}</div>
-        <div style={{ float: "right", width: "calc(25% - 30px)", paddingRight: "15px", textAlign: "right" }}>{`${getModelType(model, faction)}`}</div>
+        <div style={{ float: "left", width: "75%" }}> {`${amountString} ${model.name} (${model.price})`}</div>
+        <div style={{ float: "right", width: "calc(25% - 30px)", paddingRight: "15px", textAlign: "right" }}>{`${model.type}`}</div>
     </div>;
 };

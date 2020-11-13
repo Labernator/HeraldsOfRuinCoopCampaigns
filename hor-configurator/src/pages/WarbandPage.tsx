@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { FactionEnum, Model, PageMap, Warband } from "../types";
-import { getAllKeywords, getRosterPrice, getStratagems, getTotalUnitPrice } from "../utility";
+import { FactionEnum, PageMap, RenderModel, Warband } from "../types";
+import { getDetailedRoster, getRosterPrice, getStratagems, getTotalUnitPrice } from "../utility";
 import { Toolbar } from "../utility/Toolbar";
 import { WarbandRenderer } from "../WarbandRendering/WarbandRenderer";
 import { CodeEditorContainer } from "./CodeMirror";
@@ -23,8 +23,8 @@ export const WarbandPage = (path: any) => {
     }, []);
 
     const faction = state.Faction as FactionEnum;
-    const rosterPrice = getRosterPrice(state.Roster, faction);
-    const filterRosterToPage = (page: number): Model[] => state.Roster.filter((member) => modelMap.find((entry) => entry.id === `modelsheet-${member.name}-${getTotalUnitPrice(member, faction)}` && entry.page === page));
+    const roster = getDetailedRoster(state.Roster, faction, state.Alignment);
+    const filterRosterToPage = (page: number): RenderModel[] => roster.filter((member) => modelMap.find((entry) => entry.id === `modelsheet-${member.name}-${getTotalUnitPrice(member, faction)}` && entry.page === page));
     const getPageCountFromMap = () => modelMap.map((model) => model.page).filter((page, idx, arr) => arr.indexOf(page) === idx).length;
     const renderPages = () => {
         let pages: JSX.Element[] = [];
@@ -35,9 +35,8 @@ export const WarbandPage = (path: any) => {
                     key={`warband-pdf-rendering-page${i}`}
                     state={{ ...state, Roster: filterRosterToPage(i) }}
                     page={{ nr: i, total: getPageCountFromMap() }}
-                    rosterPrice={rosterPrice}
-                    stratagems={getStratagems(state)}
-                    keywords={getAllKeywords(state.Roster, faction)}
+                    rosterPrice={getRosterPrice(roster)}
+                    stratagems={getStratagems({ ...state, Roster: roster })}
                 />,
             ];
         }
@@ -46,7 +45,7 @@ export const WarbandPage = (path: any) => {
     return <div>
         <Toolbar state={state} setState={setState} editorVisible={editorVisible} setEditorVisibility={setEditorVisibility} />
         {modelMap.length ? <div>{renderPages()}</div > : undefined}
-        <WarbandRenderer state={state} page={{ nr: 1, total: 1 }} rosterPrice={rosterPrice} stratagems={getStratagems(state)} keywords={getAllKeywords(state.Roster, faction)} fullRender={true} />
+        <WarbandRenderer state={{ ...state, Roster: roster }} page={{ nr: 1, total: 1 }} rosterPrice={getRosterPrice(roster)} stratagems={getStratagems({ ...state, Roster: roster })} fullRender={true} />
         <CodeEditorContainer code={state} visible={editorVisible} onSave={setState} />
     </div >;
 };

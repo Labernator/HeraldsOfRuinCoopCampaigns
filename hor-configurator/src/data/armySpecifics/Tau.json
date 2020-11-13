@@ -3,6 +3,18 @@
         "Keywords": [
             "T'au Empire"
         ],
+        "ArmyRules": [
+            {
+                "name": "For the Greater Good",
+                "effect": "Increase the range for firing Overwatch to 6”."
+            }
+        ],
+        "Alignments": [
+            {
+                "name": "Sa’cea",
+                "effect": "Add 1 to the Leadership characteristic of models with this tenet. These models may re-roll a a single failed hit roll in the Shooting phase (max. 5 different models per turn)."
+            }
+        ],
         "AlignmentPlaceholder": "<SEPT>",
         "ModelAllowance": {
             "Core": 20,
@@ -118,6 +130,11 @@
                         "InvulnerableSave": "-"
                     }
                 ],
+                "equipment": {
+                    "weapons": [
+                        "Burst Cannon"
+                    ]
+                },
                 "keywords": [
                     "T'au Empire",
                     "<SEPT>",
@@ -148,6 +165,12 @@
                     "Save": "4+",
                     "InvulnerableSave": "-"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Pulse Rifle",
+                        "Photon grenade"
+                    ]
+                },
                 "keywords": [
                     "T'au Empire",
                     "<SEPT>",
@@ -174,6 +197,13 @@
                     "Save": "5+",
                     "InvulnerableSave": "-"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Pulse Carbine",
+                        "Markerlight",
+                        "Photon grenade"
+                    ]
+                },
                 "keywords": [
                     "T'au Empire",
                     "<SEPT>",
@@ -199,6 +229,11 @@
                     "Leadership": 8,
                     "Save": "3+",
                     "InvulnerableSave": "-"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Burst Cannon"
+                    ]
                 },
                 "keywords": [
                     "T'au Empire",
@@ -243,6 +278,11 @@
                         "InvulnerableSave": "-"
                     }
                 ],
+                "equipment": {
+                    "weapons": [
+                        "Heavy Rail Rifle"
+                    ]
+                },
                 "keywords": [
                     "T'au Empire",
                     "<SEPT>",
@@ -299,6 +339,14 @@
                     "Leadership": 6,
                     "Save": "4+",
                     "InvulnerableSave": "-"
+                },
+                "equipment": {
+                    "weapons": [
+                        {
+                            "name": "Pulse Carbine",
+                            "amount": 2
+                        }
+                    ]
                 },
                 "keywords": [
                     "T'au Empire",

@@ -1,10 +1,10 @@
 import React from "react";
-import { Equipment, OtherEquipment, Weapon } from "../types";
+import { OtherEquipment } from "../types";
 
-export const EquipmentRenderer = ({ equipment }: { equipment: Equipment }) => {
-    const hasMeleeWeaponsOnly = () => equipment.weapons.every((weapon) => weapon.type === "Melee");
-    const stuffPriceString = (stuff: OtherEquipment | Weapon) => stuff.price ? `(${stuff.price})` : "";
-    const renderWeapons = () => equipment.weapons.map((weapon) => [<tr>
+export const EquipmentRenderer = ({ equipment }: { equipment: any }) => {
+    const hasMeleeWeaponsOnly = () => equipment.weapons.every((weapon: any) => weapon.type === "Melee");
+    const stuffPriceString = (stuff: OtherEquipment | any) => stuff.price ? `(${stuff.price})` : "";
+    const renderWeapons = () => equipment.weapons.map((weapon: any) => [<tr>
         <td>{`${weapon.name} ${stuffPriceString(weapon)}`}</td>
         <td>{weapon.type}</td>
         {!hasMeleeWeaponsOnly() ? <td>{weapon.range}</td> : undefined}
@@ -14,7 +14,7 @@ export const EquipmentRenderer = ({ equipment }: { equipment: Equipment }) => {
         <td>{weapon.rule}</td>
     </tr>]
     );
-    const renderOtherEquipment = () => equipment.otherEquipment?.map((equipment) =>
+    const renderOtherEquipment = () => equipment.otherEquipment?.map((equipment: any) =>
         <tr>
             <td>{`${equipment.name} ${stuffPriceString(equipment)}`}</td>
             <td>{equipment.effect}</td>

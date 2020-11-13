@@ -9,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import { Controlled as CodeMirror } from "react-codemirror2";
 import { ExportWarbandIcon, RefreshWarbandDisabledIcon, RefreshWarbandIcon } from "../images";
 import { Warband } from "../types";
+import { isWarband } from "../utility";
 
 declare global {
     interface Window { jsonLint: any; }
@@ -20,7 +21,7 @@ require("codemirror/addon/lint/lint.css");
 
 export const CodeEditorContainer = ({ code, visible, onSave }: { code: Warband; visible: boolean; onSave: any }) => {
     const [codeEditorState, setCodeEditorState] = useState(JSON.stringify(code, null, 2));
-    const [isViable, setViable] = useState<boolean>(true);
+    const [isViable, setViable] = useState<boolean>(isWarband(code));
     const [isDirty, setDirty] = useState<boolean>(false);
     useEffect(() => {
         setCodeEditorState(JSON.stringify(code, null, 2));
@@ -50,7 +51,7 @@ export const CodeEditorContainer = ({ code, visible, onSave }: { code: Warband; 
                 style={{ width: "50px", height: "50px", left: "975px", cursor: isDirty ? "pointer" : "auto" }}
                 className="toolbar-icon"
                 alt="Refresh Warband"
-                onClick={() => isDirty ? refreshRendering() : (() => undefined)()}
+                onClick={() => isDirty && isViable ? refreshRendering() : (() => undefined)()}
                 title={`${isDirty ? "Refresh warband" : "Make a change in the Editor. Afterwards you can trigger the refresh by clicking here"}`}
             />
             <img
@@ -81,9 +82,27 @@ export const CodeEditorContainer = ({ code, visible, onSave }: { code: Warband; 
                     tabSize: 2,
                     lint: {
                         onUpdateLinting: (annotationsNotSorted: any[], annotations: any[], codeMirror: any) => {
-                            annotationsNotSorted.length > 0 ? setViable(false) : setViable(true);
+                            annotationsNotSorted.length > 0 ? setViable(false) : setViable(() => {
+                                let isWarbandBool = false;
+                                try {
+                                    isWarbandBool = isWarband(JSON.parse(codeEditorState));
+                                } catch (e) {
+
+                                } finally {
+                                    // tslint:disable-next-line: no-unsafe-finally
+                                    return isWarbandBool;
+                                }
+                            }
+                            );
                         },
                     },
+                }}
+                onKeyPress={(editor: CodeMirror.Editor, event?: KeyboardEvent) => {
+                    if (event?.ctrlKey && event?.code === "Space") {
+
+                        console.log(editor);
+                        console.log(event);
+                    }
                 }}
                 autoCursor={false}
                 onBeforeChange={(_editor: any, _data: any, value: string) => {

@@ -1,110 +1,39 @@
 {
     "Title": "Primaris Bois",
     "Faction": "Primaris Space Marines",
-    "ArmyRules": [
-        "Defenders of Humanity",
-        "And They Shall Know No Fear"
-    ],
     "Alignment": "Novamarines",
     "Philosophy": "The Hammer of the Imperium",
-    "NthScenario": 2,
+    "ScenariosPlayed": 1,
     "Roster": [
         {
             "name": "Hellblaster Sergeant",
-            "equipment": {
-                "weapons": [
-                    "Plasma Incinerator",
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            },
             "rules": [
                 "Rites of War"
             ]
         },
         {
-            "name": "Primaris Intercessor",
-            "equipment": {
-                "weapons": [
-                    "Bolt Rifle",
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "name": "Primaris Intercessor"
         },
         {
-            "name": "Eliminator",
-            "equipment": {
-                "weapons": [
-                    "Bolt Sniper Rifle",
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "name": "Eliminator"
         },
         {
-            "name": "Assault Marine",
-            "equipment": {
-                "weapons": [
-                    "Chainsword",
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "name": "Assault Marine"
         },
         {
-            "name": "Attack Bike",
-            "equipment": {
-                "weapons": [
-                    "Heavy Bolter",
-                    "Bike with Twin Boltgun",
-                    {
-                        "name": "Bolt Pistol",
-                        "amount": 2
-                    },
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "name": "Attack Bike"
         },
         {
             "name": "Hellblaster",
             "type": "Core",
-            "amount": 2,
-            "equipment": {
-                "weapons": [
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades",
-                    "Plasma Incinerator"
-                ]
-            }
+            "amount": 2
         },
         {
             "name": "Aggressor",
-            "amount": 2,
-            "equipment": {
-                "weapons": [
-                    "Fragstorm Grenade Launcher",
-                    "Auto Boltstorm Gauntlets"
-                ]
-            }
+            "amount": 2
         },
         {
-            "name": "Infiltrator Helix Adept",
-            "equipment": {
-                "weapons": [
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades",
-                    "Marksman Bolt Carbine"
-                ]
-            }
+            "name": "Infiltrator Helix Adept"
         }
     ]
 }

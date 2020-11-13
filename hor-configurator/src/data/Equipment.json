@@ -271,7 +271,7 @@
             "damage": 1,
             "ap": 0,
             "range": 8,
-            "rule": "This weapon  hits automatically. When firing Overwatch, roll two dice for the amount of attacks and discard the lowest."
+            "rule": "This weapon hits automatically. When firing Overwatch, roll two dice for the amount of attacks and discard the lowest."
         },
         {
             "name": "Flamer",
@@ -280,7 +280,7 @@
             "damage": 1,
             "ap": 0,
             "range": 8,
-            "rule": "This weapon  hits automatically."
+            "rule": "This weapon hits automatically."
         },
         {
             "name": "Hand Flamer",
@@ -289,7 +289,7 @@
             "damage": 1,
             "ap": 0,
             "range": 6,
-            "rule": "This weapon  hits automatically."
+            "rule": "This weapon hits automatically."
         },
         {
             "name": "Laspistol",
@@ -310,6 +310,7 @@
         },
         {
             "name": "Bike with Plasma Talon",
+            "rule": "When firing this weapon, choose one of the profiles below.",
             "multiProfiles": [
                 {
                     "name": "Standard",
@@ -488,16 +489,6 @@
                     "rule": "On a hit roll of 1, the bearer is slain (after attack is resolved)"
                 }
             ]
-        },
-        {
-            "name": "Heretics Bane",
-            "type": "Assault 3",
-            "strength": 6,
-            "damage": 1,
-            "ap": 1,
-            "range": 18,
-            "rule": "Add 1 to hit when firing this weapon stationary.",
-            "isLegendary": true
         },
         {
             "name": "Bike with Twin Boltgun",
@@ -720,6 +711,35 @@
             "damage": 1,
             "ap": 1,
             "isArmouryItem": true
+        },
+        {
+            "name": "Shard",
+            "rule": "This weapon never requires more than 3+ to hit.",
+            "type": "Rapid Fire 1",
+            "strength": 4,
+            "damage": 2,
+            "ap": 1,
+            "range": 24,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Widowmaker",
+            "rule": "This weapon hits automatically.",
+            "type": "Assault D6",
+            "strength": 4,
+            "damage": 1,
+            "ap": 1,
+            "range": 12,
+            "isArmouryItem": true
+        },
+        {
+            "name": "Lucia's Curtana",
+            "rule": "Once per mission, invoke a single Act of Faith that affects the bearer. This does not count against the number of Acts of Faith you have used this phase.",
+            "type": "Melee",
+            "strength": "+2",
+            "damage": 1,
+            "ap": 3,
+            "isArmouryItem": true
         }
     ],
     "otherEquipment": [
@@ -810,13 +830,14 @@
         },
         {
             "name": "Drone controller",
-            "effect": "<SEPT> Drone units within 6” gain +1 to hit.",
+            "effect": "<SEPT> Drones within 6” gain +1 to hit.",
             "price": 5
         },
         {
             "name": "Extended Drone Controller",
             "effect": "Gun Drones or Marker Drones within 12”gain +1 to hit.",
-            "price": 10
+            "price": 10,
+            "isArmouryItem": true
         },
         {
             "name": "Early warning override",

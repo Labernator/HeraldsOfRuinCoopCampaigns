@@ -6,73 +6,54 @@
         "And They Shall Know No Fear"
     ],
     "Philosophy": "Unwavering Zeal",
-    "NthScenario": 2,
+    "ScenariosPlayed": 1,
     "Roster": [
         {
             "name": "Aggressor Sergeant",
             "equipment": {
                 "weapons": [
-                    "Heretics Bane",
-                    "Auto Boltstorm Gauntlets"
+                    {
+                        "name": "Heretics Bane",
+                        "type": "Assault 3",
+                        "strength": 6,
+                        "damage": 1,
+                        "ap": 1,
+                        "range": 18,
+                        "rule": [
+                            {
+                                "name": "Scoped",
+                                "effect": "Add 1 to hit when firing this weapon stationary."
+                            },
+                            {
+                                "name": "Shield Breaker",
+                                "effect": "An enemy model that loses one or more wounds from this, loses its invulnerable save for the rest of the phase."
+                            }
+                        ],
+                        "replacing": [
+                            "Fragstorm Grenade Launcher"
+                        ],
+                        "isLegendary": true
+                    }
                 ]
             }
         },
         {
             "name": "Aggressor",
             "type": "Core",
-            "amount": 2,
-            "equipment": {
-                "weapons": [
-                    "Fragstorm Grenade Launcher",
-                    "Auto Boltstorm Gauntlets"
-                ]
-            }
+            "amount": 2
         },
         {
-            "name": "Eliminator",
-            "equipment": {
-                "weapons": [
-                    "Bolt Sniper Rifle",
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "name": "Eliminator"
         },
         {
-            "name": "Ravenwing Biker",
-            "equipment": {
-                "weapons": [
-                    "Bike with Twin Boltgun",
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "name": "Ravenwing Biker"
         },
         {
-            "name": "Ravenwing Black Knight",
-            "equipment": {
-                "weapons": [
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades",
-                    "Corvus Hammer",
-                    "Bike with Plasma Talon"
-                ]
-            }
+            "name": "Ravenwing Black Knight"
         },
         {
             "name": "Hellblaster",
-            "amount": 2,
-            "equipment": {
-                "weapons": [
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades",
-                    "Plasma Incinerator"
-                ]
-            }
+            "amount": 2
         }
     ]
 }

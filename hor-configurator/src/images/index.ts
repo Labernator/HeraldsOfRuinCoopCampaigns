@@ -5,6 +5,7 @@ import DarkAngelsPng from "./DarkAngels.png";
 import DeathwatchPng from "./Deathwatch.png";
 import ExportPng from "./ExportWarband.png";
 import ImportWarbandPng from "./ImportWarband.png";
+import LegendaryPng from "./LegendaryIcon.png";
 import OpenEditorPng from "./OpenEditor.png";
 import OpenEditorSelectedPng from "./OpenEditorSelected.png";
 import RefreshWarbandPng from "./RefreshWarband.png";
@@ -30,3 +31,5 @@ export const OpenEditorSelectedIcon = OpenEditorSelectedPng;
 export const SavePdfIcon = SavePdfPng;
 export const RefreshWarbandIcon = RefreshWarbandPng;
 export const RefreshWarbandDisabledIcon = RefreshWarbandDisabledPng;
+
+export const LegendaryIcon = LegendaryPng;

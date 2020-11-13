@@ -5,6 +5,16 @@
             "Adeptus Mechanicus",
             "Forge World"
         ],
+        "ArmyRules": [
+            {
+                "name": "Agripinaa – Staunch Defenders",
+                "effect": "When firing Overwatch, hit on a roll of 5+."
+            },
+            {
+                "name": "Soldiers of the Machine God",
+                "effect": "If a model is in range of an objective marker it controls the marker even if there are more enemy models within range."
+            }
+        ],
         "ModelAllowance": {
             "Core": 20,
             "Special": 5,
@@ -60,6 +70,11 @@
                     "Save": "3+",
                     "InvulnerableSave": "5+"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Omnissian Axe"
+                    ]
+                },
                 "keywords": [
                     "Imperium",
                     "Adeptus Mechanicus",
@@ -93,6 +108,12 @@
                     "Save": "3+",
                     "InvulnerableSave": "6+"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Heavy Arc Rifle",
+                        "Arc Claw"
+                    ]
+                },
                 "keywords": [
                     "Imperium",
                     "Adeptus Mechanicus",
@@ -125,6 +146,13 @@
                     "Leadership": 7,
                     "Save": "3+",
                     "InvulnerableSave": "6+"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Laspistol",
+                        "Omnissian Axe",
+                        "Servo-Arm"
+                    ]
                 },
                 "keywords": [
                     "Imperium",

@@ -38,13 +38,25 @@
             {
                 "name": "Power Sword",
                 "price": 4
+            },
+            {
+                "name": "Lucia's Curtana",
+                "price": 10
+            },
+            {
+                "name": "Widowmaker",
+                "price": 13
+            },
+            {
+                "name": "Shard",
+                "price": 5
             }
         ],
         "UnitList": [
             {
                 "name": "Canoness Regular",
                 "type": "Leader",
-                "price": 35,
+                "price": 40,
                 "stats": {
                     "Movement": 6,
                     "WeaponSkill": "2+",
@@ -56,6 +68,14 @@
                     "Leadership": 9,
                     "Save": "3+",
                     "InvulnerableSave": "6+"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Bolt Pistol",
+                        "Chainsword",
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
                 },
                 "keywords": [
                     "Imperium",
@@ -69,7 +89,8 @@
                     "Acts of Faith",
                     "Sacred Rites",
                     "Shield of Faith",
-                    "Guide the Faithful"
+                    "Guide the Faithful",
+                    "Rosarius"
                 ]
             },
             {
@@ -87,6 +108,14 @@
                     "Leadership": 8,
                     "Save": "3+",
                     "InvulnerableSave": "6+"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Boltgun",
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
                 },
                 "keywords": [
                     "Imperium",
@@ -118,6 +147,16 @@
                     "Leadership": 7,
                     "Save": "3+",
                     "InvulnerableSave": "5+"
+                },
+                "equipment": {
+                    "weapons": [
+                        {
+                            "name": "Bolt Pistol",
+                            "amount": 2
+                        },
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
                 },
                 "keywords": [
                     "Imperium",
@@ -152,6 +191,14 @@
                     "Save": "4+",
                     "InvulnerableSave": "3+"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Power Sword"
+                    ],
+                    "otherEquipment": [
+                        "Storm Shield"
+                    ]
+                },
                 "keywords": [
                     "Imperium",
                     "Adeptus Ministorum",
@@ -159,9 +206,6 @@
                     "Crusaders"
                 ],
                 "rules": [
-                    "Acts of Faith",
-                    "Sacred Rites",
-                    "Shield of Faith",
                     "Zealot",
                     "Spiritual Fortitude"
                 ]
@@ -181,6 +225,13 @@
                     "Leadership": 8,
                     "Save": "3+",
                     "InvulnerableSave": "6+"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
                 },
                 "keywords": [
                     "Imperium",

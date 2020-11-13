@@ -8,16 +8,7 @@
         {
             "name": "Crisis Shas'vre",
             "equipment": {
-                "weapons": [
-                    {
-                        "name": "Cyclic ion blaster",
-                        "replacing": [
-                            "Burst Cannon"
-                        ]
-                    }
-                ],
                 "otherEquipment": [
-                    "Sniper Training",
                     "Drone controller"
                 ]
             }
@@ -27,13 +18,13 @@
             "amount": 7
         },
         {
+            "name": "Pathfinder",
+            "amount": 6
+        },
+        {
             "name": "Crisis Shas'ui",
-            "amount": 2,
-            "equipment": {
-                "otherEquipment": [
-                    "Stabilizing Jet"
-                ]
-            }
+            "type": "Special",
+            "amount": 2
         },
         {
             "name": "Broadside Shas'ui"
@@ -43,8 +34,7 @@
             "amount": 3
         },
         {
-            "name": "MV1 Gun Drone [Tactical Drone]",
-            "amount": 2
+            "name": "MV1 Gun Drone [Tactical Drone]"
         }
     ]
 }

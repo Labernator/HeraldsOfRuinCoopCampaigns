@@ -5,14 +5,138 @@ import * as PrimarisArmySpecifics from "../data/armySpecifics/PrimarisSpaceMarin
 import * as TauArmySpecifics from "../data/armySpecifics/Tau.json";
 import * as EquipmentJson from "../data/Equipment.json";
 import * as RulesJson from "../data/Rules.json";
-import { ArmySpecificStuff, Equipment, EquipmentReferences, FactionEnum, Model, OtherEquipment, Philosophy, Rule, Weapon } from "../types";
-const weapons = EquipmentJson.weapons as Weapon[];
+// tslint:disable-next-line: max-line-length
+import { ArmySpecificStuff, BasicWeapon, FactionEnum, MetadataModel, MetadataWeapon, MultiProfileRenderWeapon, MultiProfileWeapon, OtherEquipment, Philosophy, RenderModel, RenderWeapon, RosterModel, RosterWeapon, Rule, SuperBasicWeapon, Warband, WeaponReference } from "../types";
+const weapons = EquipmentJson.weapons as MetadataWeapon[];
 const otherEquipment = EquipmentJson.otherEquipment as OtherEquipment[];
-const armyRules = RulesJson.ArmyRules as Rule[];
 const rules = RulesJson.rules as Rule[];
 const philosophies = RulesJson.Philosophies as Philosophy[];
 
-export const getWeaponDetails = (name: string) => weapons.find((weapon) => weapon.name.toLocaleUpperCase() === name.toLocaleUpperCase()) as Weapon;
+export const ensureWeaponExists = (input: MetadataWeapon | MultiProfileWeapon | undefined, name: string) => {
+    if (input === undefined) {
+        throw new TypeError(`${name} needs to be added to metadata`);
+    }
+    return input;
+};
+
+export const getDetailedRoster = (roster: RosterModel[], faction: FactionEnum, alignment?: string): RenderModel[] => roster.map((rosterModel) => {
+    const modelMetadata = getModelMetadata(rosterModel.name, faction);
+    const alignmentPlaceholder = getFactionSpecifics(faction).AlignmentPlaceholder;
+    if (!modelMetadata) {
+        throw new Error(`Model ${rosterModel.name} needs to be added to metadata`);
+    }
+    let remixedModel = remixModel(modelMetadata, rosterModel);
+    const ruleStrings = rosterModel.rules ? [...modelMetadata.rules || [], ...rosterModel.rules].filter((keyword, idx, array) => array.indexOf(keyword) === idx) : modelMetadata.rules || [];
+    remixedModel = {
+        ...remixedModel,
+        keywords: remixedModel.keywords.map((keyword) => keyword === alignmentPlaceholder ? alignment || keyword : keyword),
+        rules: ruleStrings.map((ruleName) => getRule(ruleName, faction, alignment)),
+    };
+    const equipment = modelMetadata.equipment;
+    remixedModel = {
+        ...remixedModel,
+        equipment: equipment ? {
+            weapons: equipment.weapons?.map((weapon) => getWeaponProfile(weapon, faction)),
+            otherEquipment: equipment.otherEquipment?.map(getOtherEquipmentDetails),
+        } : undefined,
+    };
+    let rosterWeapons: RenderWeapon[] = [];
+    let otherRosterEquipment: OtherEquipment[] | undefined;
+    let replacedWeapons: string[] = [];
+    if (rosterModel.equipment || remixedModel.equipment?.weapons) {
+        if (rosterModel.equipment) {
+            rosterWeapons = rosterModel.equipment.weapons?.map((weapon) => {
+                if (typeof (weapon) === "string") {
+                    return getWeaponProfile(weapon, faction);
+                }
+                if (!(isBasicWeapon(weapon) || isMultiProfileRenderWeapon(weapon)) && weapon.replacing) {
+                    const replacing = weapon.replacing;
+                    // tslint:disable-next-line: prefer-conditional-expression
+                    if (typeof (replacing) === "string") {
+                        replacedWeapons = [...replacedWeapons, replacing];
+                    } else {
+                        replacedWeapons = [...replacedWeapons, ...replacing];
+                    }
+                }
+                if (isRosterWeapon(weapon)) {
+                    return weapon;
+                }
+                return getWeaponProfile(weapon, faction);
+            }) || [];
+            otherRosterEquipment = rosterModel.equipment.otherEquipment?.map((equi) => {
+                if (typeof (equi) === "string") {
+                    return getOtherEquipmentDetails(equi);
+                }
+                return getOtherEquipmentDetails(equi.name);
+            });
+            // throw new Error("cant handle weapons brought to the fight yet...");
+        }
+        remixedModel = {
+            ...remixedModel, equipment: {
+                weapons: [...remixedModel.equipment?.weapons?.filter((weapon) => replacedWeapons.find((replacedWeapon) => replacedWeapon === weapon.name) === undefined) || [], ...rosterWeapons],
+            },
+        };
+    }
+    if (remixedModel.equipment?.otherEquipment || otherRosterEquipment) {
+        let otherRemixedEquipment = otherRosterEquipment ? [...remixedModel.equipment?.otherEquipment || [], ...otherRosterEquipment] : remixedModel.equipment?.otherEquipment;
+        if (otherRemixedEquipment && alignment) {
+            otherRemixedEquipment = otherRemixedEquipment.map((equi) => ({ ...equi, effect: equi.effect.replace(alignmentPlaceholder || "", alignment) }));
+        }
+        remixedModel = {
+            ...remixedModel, equipment: {
+                weapons: remixedModel.equipment?.weapons,
+                otherEquipment: otherRemixedEquipment,
+            },
+        };
+    }
+    remixedModel = {
+        ...remixedModel,
+        price: getTotalUnitPrice(remixedModel, faction),
+    };
+    return remixedModel;
+});
+const getModelMetadata = (name: string, faction: FactionEnum) => getFactionSpecifics(faction).UnitList.find((unit) => unit.name.toLocaleUpperCase() === name.toLocaleUpperCase());
+const remixModel = (metaDataModel: MetadataModel, rosterModel: RosterModel): RenderModel => {
+
+    const resultModel: RenderModel = {
+        name: rosterModel.name,
+        type: rosterModel.type || metaDataModel.type,
+        amount: rosterModel.amount,
+        // price: metaDataModel.price * (rosterModel.amount || 1),
+        price: metaDataModel.price,
+        keywords: rosterModel.keywords ? [...metaDataModel.keywords, ...rosterModel.keywords].filter((keyword, idx, array) => array.indexOf(keyword) === idx) : metaDataModel.keywords,
+        rules: [],
+        stats: Array.isArray(metaDataModel.stats) && Array.isArray(rosterModel.stats) ?
+            (rosterModel.stats ? [...metaDataModel.stats, ...rosterModel.stats] : metaDataModel.stats) :
+            rosterModel.stats ? { ...metaDataModel.stats, ...rosterModel.stats } : metaDataModel.stats,
+    };
+    return resultModel;
+};
+
+const isWeaponReference = (weaponRef: any): weaponRef is WeaponReference => weaponRef.name && typeof (weaponRef.name) === "string" ? weaponRef.amount ? typeof (weaponRef.amount) === "number" ? true : false : true : false;
+export const isMultiProfileWeapon = (weapon: any): weapon is MultiProfileWeapon => weapon && weapon.name && typeof (weapon.name) === "string" && weapon.multiProfiles && typeof (weapon.multiProfiles) === "object";
+export const isSuperBasicWeapon = (weapon: any): weapon is SuperBasicWeapon =>
+    weapon && weapon.name && typeof (weapon.name) === "string" &&
+    weapon.type && typeof (weapon.type) === "string" &&
+    weapon.strength && (typeof (weapon.strength) === "string" || typeof (weapon.strength) === "number") &&
+    weapon.damage && (typeof (weapon.damage) === "string" || typeof (weapon.damage) === "number") &&
+    (typeof (weapon.ap) === "string" || typeof (weapon.ap) === "number");
+export const isBasicWeapon = (weapon: any): weapon is BasicWeapon => typeof (weapon.price) === "number" && typeof (weapon.amount) === "number" && isSuperBasicWeapon(weapon);
+const isRosterWeapon = (weaponRef: any): weaponRef is RosterWeapon => weaponRef.name && typeof (weaponRef.name) === "string" && (weaponRef.type !== undefined || weaponRef.multiProfiles !== undefined);
+export const isMultiProfileRenderWeapon = (weapon: any): weapon is MultiProfileRenderWeapon => typeof (weapon.price) === "number" && typeof (weapon.amount) === "number" && isMultiProfileWeapon(weapon);
+
+const getWeaponProfile = (weaponRef: string | WeaponReference, faction: FactionEnum): RenderWeapon => {
+    if (typeof weaponRef === "string") {
+        const weaponDetails = getWeaponDetails(weaponRef);
+        return { ...weaponDetails, price: getWeaponPrice(weaponDetails.name, faction, 1), amount: 1 };
+    }
+    if (isWeaponReference(weaponRef)) {
+        const weaponDetails = getWeaponDetails(weaponRef.name);
+        return { ...weaponDetails, price: getWeaponPrice(weaponDetails.name, faction, weaponRef.amount || 1), amount: weaponRef.amount || 1 };
+    }
+
+    throw new TypeError("The passed weapon is neither of type string, nor WeaponReference nor RosterWeapon. That should not be...");
+};
 
 export const getFactionSpecifics = (faction: FactionEnum): ArmySpecificStuff => {
     switch (faction) {
@@ -26,61 +150,26 @@ export const getFactionSpecifics = (faction: FactionEnum): ArmySpecificStuff => 
     }
 };
 
-export const getWeaponPrice = (weaponName: string, faction: FactionEnum, amount?: number) => {
-    if (getWeaponDetails(weaponName)?.isLegendary) {
-        return 20;
-    }
-    return (getFactionSpecifics(faction).WeaponPriceList.find((weapon) => weapon.name === weaponName)?.price || 0) * (amount || 1);
+export const getWeaponDetails = (name: string) => ensureWeaponExists(weapons.find((weapon) => weapon.name.toLocaleUpperCase() === name.toLocaleUpperCase()), name);
+export const getWeaponPrice = (weaponName: string, faction: FactionEnum, amount: number) => (getFactionSpecifics(faction).WeaponPriceList.find((weapon) => weapon.name.toLocaleUpperCase() === weaponName.toLocaleUpperCase())?.price || 0) * amount;
+
+export const getOtherEquipmentDetails = (name: string) => otherEquipment.find((equi) => equi.name.toLocaleUpperCase() === name.toLocaleUpperCase()) as OtherEquipment;
+
+export const getTotalUnitPrice = (model: RenderModel, faction: FactionEnum) => {
+    let totalPrice = model.price || getFactionSpecifics(faction).UnitList.find((unit) => unit.name.toLocaleUpperCase() === model.name.toLocaleUpperCase())?.price || 0;
+    totalPrice += model.equipment?.weapons?.reduce((a, weapon) => a + (weapon.price || (weapon.isLegendary ? 20 : 0)), 0) || 0;
+    totalPrice += model.equipment?.otherEquipment?.reduce((a, equipment) => a + (equipment.price || 0), 0) || 0;
+    totalPrice += model.rules.reduce((a, rule) => a + (rule.price || 0), 0) || 0;
+    return totalPrice * (model.amount || 1);
 };
 
-export const getOtherEquipmentDetails = (name: string) =>
-    otherEquipment.find((equi) => equi.name.toLocaleUpperCase() === name.toLocaleUpperCase()) as OtherEquipment;
-export const getDetailedList = (referenceList: EquipmentReferences) => {
-    const detailedList: Equipment = {
-        weapons: [],
-        otherEquipment: [],
-    };
-    detailedList.weapons = referenceList.weapons.map((weapon) => {
-        const detailedWeapon = getWeaponDetails(typeof weapon === "string" ? weapon : weapon.name);
-        if (typeof weapon !== "string" && weapon.amount) {
-            detailedWeapon.amount = weapon.amount;
-        }
-        return detailedWeapon;
-    });
-    detailedList.otherEquipment = referenceList.otherEquipment?.map(getOtherEquipmentDetails);
-    return detailedList;
+export const getRosterPrice = (models: RenderModel[]) => models.reduce((totalCost, model) => totalCost + model.price, 0);
+export const getArmyRules = (faction: FactionEnum, alignment?: string) => {
+    const factionSpecifics = getFactionSpecifics(faction);
+    const factionRules = factionSpecifics.ArmyRules || [];
+    const alignmentRule = factionSpecifics.Alignments?.find((align) => align.name === alignment);
+    return alignmentRule ? [...factionRules, alignmentRule] : factionRules;
 };
-export const getModelPrice = (modelName: string, faction: FactionEnum) =>
-    getFactionSpecifics(faction).UnitList.find((unit) => unit.name === modelName)?.price || 0;
-export const getTotalUnitPrice = (model: Model, faction: FactionEnum) => {
-    let totalPrice = model.price || getModelPrice(model.name, faction) || 0;
-
-    totalPrice = totalPrice + (model.equipment?.weapons.reduce((a, weapon) => a + getWeaponPrice(typeof weapon === "string" ? weapon : weapon.name, faction, typeof weapon === "string" ? undefined : weapon.amount), 0) || 0);
-    if (model.equipment?.otherEquipment) {
-        totalPrice = totalPrice + model.equipment.otherEquipment.reduce((a, equipment) => {
-            const equipmentDetails = getOtherEquipmentDetails(equipment);
-            if (equipmentDetails?.price) {
-                return a + equipmentDetails.price;
-            } return a;
-        }, 0);
-    }
-    const modelRules = getModelRules(model, faction);
-    if (modelRules) {
-        totalPrice = totalPrice + modelRules.reduce((acc, rule) => {
-            const ruleDetails = getRule(rule, faction);
-            if (ruleDetails?.price) {
-                return acc + ruleDetails.price;
-            } return acc;
-        }, 0);
-    }
-    if (model.amount) {
-        totalPrice = totalPrice * model.amount;
-    }
-    return totalPrice;
-};
-
-export const getRosterPrice = (models: Model[], faction: FactionEnum) => models.reduce((totalCost, model) => totalCost + getTotalUnitPrice(model, faction), 0);
-export const getGlobalRule = (ruleName: string) => armyRules.find((rule) => rule.name === ruleName) as Rule;
 export const getRule = (ruleName: string, faction: FactionEnum, alignment?: string): Rule => {
     let actualRule = rules.find((rule) => rule.name.toLocaleUpperCase() === ruleName.toLocaleUpperCase());
     if (!actualRule) {
@@ -88,7 +177,8 @@ export const getRule = (ruleName: string, faction: FactionEnum, alignment?: stri
     }
     return actualRule.alignmentParameter && alignment ? actualRule = { ...actualRule, effect: actualRule.effect.replace(getFactionSpecifics(faction).AlignmentPlaceholder || "", alignment) } : actualRule;
 };
-export const getAllKeywords = (models: Model[], faction: FactionEnum) => models.reduce((keywords: string[], model) => [...keywords, ...getModelKeywords(model, faction)], []).filter((item, idx, array) => array.indexOf(item) === idx).sort();
+
+export const getAllKeywords = (models: RenderModel[]) => models.reduce((keywords: string[], model) => [...keywords, ...model.keywords], []).filter((item, idx, array) => array.indexOf(item) === idx).sort();
 export const getPhilosophy = (name: string, faction: FactionEnum) => {
     let phil = philosophies.find((philosophy) => philosophy.name.toLocaleUpperCase() === name?.toLocaleUpperCase());
     if (!phil) {
@@ -100,34 +190,13 @@ export const getPhilosophy = (name: string, faction: FactionEnum) => {
     return phil;
 };
 
-export const getBaseModel = (model: Model, faction: FactionEnum) => getFactionSpecifics(faction).UnitList.find((unit) => unit.name.toLocaleUpperCase() === model.name.toLocaleUpperCase());
-export const getModelKeywords = (model: Model, faction: FactionEnum) => {
-    const baseKeywords = getBaseModel(model, faction)?.keywords || [];
-    return model.keywords ? [...baseKeywords, ...model.keywords].filter((keyword, idx, array) => array.indexOf(keyword) === idx) : baseKeywords;
+export const isWarband = (json: any): json is Warband => {
+    const titleExistsAndIsString = json.Title && typeof json.Title === "string";
+    const factionExistsAndIsString = json.Faction && typeof json.Faction === "string";
+    const scenarioExistsAndIsNumber = json.ScenariosPlayed && typeof json.ScenariosPlayed === "number";
+    return titleExistsAndIsString && factionExistsAndIsString && scenarioExistsAndIsNumber;
+    // Philosophy?: string;
+    // Alignment?: string;
+    // Roster: Model[];
+    // ArmyRules?: string[];
 };
-export const getModelRules = (model: Model, faction: FactionEnum) => {
-    const baseRules = getBaseModel(model, faction)?.rules || [];
-    return model.rules ? [...baseRules, ...(model.rules || [])].filter((rule, idx, array) => array.indexOf(rule) === idx) : baseRules;
-};
-export const getModelStats = (model: Model, faction: FactionEnum) => {
-    const stats = getBaseModel(model, faction)?.stats || [];
-    if (Array.isArray(stats) && Array.isArray(model.stats)) {
-        return model.stats ? [...stats, ...model.stats] : stats;
-    } else {
-        return model.stats ? { ...stats, ...model.stats } : stats;
-    }
-
-};
-export const getModelType = (model: Model, faction: FactionEnum) => model.type || getBaseModel(model, faction)?.type;
-
-export const getRealModel = (model: Model, faction: FactionEnum, alignment?: string): Model => alignment ? {
-    ...model,
-    stats: getModelStats(model, faction),
-    keywords: getModelKeywords(model, faction).map((keyword) => keyword === getFactionSpecifics(faction).AlignmentPlaceholder ? alignment : keyword),
-    rules: getModelRules(model, faction).map((rule) => rule === getFactionSpecifics(faction).AlignmentPlaceholder ? alignment : rule),
-} : {
-        ...model,
-        stats: getModelStats(model, faction),
-        keywords: getModelKeywords(model, faction),
-        rules: getModelRules(model, faction),
-    };

@@ -5,6 +5,22 @@
             "Adeptus Astartes",
             "<CHAPTER>"
         ],
+        "ArmyRules": [
+            {
+                "name": "Defenders of Humanity",
+                "effect": "If a model is in range of an objective marker it controls the marker even if there are more enemy models within range."
+            },
+            {
+                "name": "And They Shall Know No Fear",
+                "effect": "Re-roll failed Morale tests for this model."
+            }
+        ],
+        "Alignments": [
+            {
+                "name": "Novamarines",
+                "effect": "Re-roll failed wound rolls of 1 when attacking a model that does not have the IMPERIUM or CHAOS keyword."
+            }
+        ],
         "AlignmentPlaceholder": "<CHAPTER>",
         "ModelAllowance": {
             "Core": 20,
@@ -74,6 +90,14 @@
                     "Save": "3+",
                     "InvulnerableSave": "-"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Plasma Incinerator",
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
+                },
                 "keywords": [
                     "Imperium",
                     "Adeptus Astartes",
@@ -100,6 +124,14 @@
                     "Save": "3+",
                     "InvulnerableSave": "-"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Bolt Rifle",
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
+                },
                 "keywords": [
                     "Imperium",
                     "Adeptus Astartes",
@@ -124,6 +156,14 @@
                     "Leadership": 8,
                     "Save": "3+",
                     "InvulnerableSave": "-"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Bolt Sniper Rifle",
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
                 },
                 "keywords": [
                     "Imperium",
@@ -155,6 +195,14 @@
                     "Save": "3+",
                     "InvulnerableSave": "-"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Chainsword",
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
+                },
                 "keywords": [
                     "Imperium",
                     "Adeptus Astartes",
@@ -181,6 +229,19 @@
                     "Leadership": 7,
                     "Save": "3+",
                     "InvulnerableSave": "-"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Heavy Bolter",
+                        "Bike with Twin Boltgun",
+                        {
+                            "name": "Bolt Pistol",
+                            "amount": 2
+                        },
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades"
+                    ]
                 },
                 "keywords": [
                     "Imperium",
@@ -209,6 +270,14 @@
                     "Save": "3+",
                     "InvulnerableSave": "-"
                 },
+                "equipment": {
+                    "weapons": [
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades",
+                        "Plasma Incinerator"
+                    ]
+                },
                 "keywords": [
                     "Imperium",
                     "Adeptus Astartes",
@@ -233,6 +302,12 @@
                     "Leadership": 7,
                     "Save": "3+",
                     "InvulnerableSave": "-"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Fragstorm Grenade Launcher",
+                        "Auto Boltstorm Gauntlets"
+                    ]
                 },
                 "keywords": [
                     "Imperium",
@@ -263,6 +338,14 @@
                     "Leadership": 7,
                     "Save": "3+",
                     "InvulnerableSave": "-"
+                },
+                "equipment": {
+                    "weapons": [
+                        "Bolt Pistol",
+                        "Frag Grenades",
+                        "Krag Grenades",
+                        "Marksman Bolt Carbine"
+                    ]
                 },
                 "keywords": [
                     "Imperium",

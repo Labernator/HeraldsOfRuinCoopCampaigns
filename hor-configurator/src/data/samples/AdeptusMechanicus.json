@@ -6,7 +6,7 @@
         "Soldiers of the Machine God"
     ],
     "Philosophy": "A More Subtle Touch",
-    "NthScenario": 1,
+    "ScenariosPlayed": 0,
     "Roster": [
         {
             "name": "Tech Priest Procurator",
@@ -16,8 +16,7 @@
                     {
                         "name": "Combi-Plasma",
                         "amount": 2
-                    },
-                    "Omnissian Axe"
+                    }
                 ],
                 "otherEquipment": [
                     "Medicae Mechadendrite",
@@ -33,23 +32,10 @@
         },
         {
             "name": "Kataphron Battle Servitor",
-            "amount": 2,
-            "equipment": {
-                "weapons": [
-                    "Heavy Arc Rifle",
-                    "Arc Claw"
-                ]
-            }
+            "amount": 2
         },
         {
-            "name": "Tech Priest Auctoris",
-            "equipment": {
-                "weapons": [
-                    "Laspistol",
-                    "Omnissian Axe",
-                    "Servo-Arm"
-                ]
-            }
+            "name": "Tech Priest Auctoris"
         }
     ]
 }

@@ -3,7 +3,7 @@
     "Faction": "Adepta Sororitas",
     "Philosophy": "World on Fire",
     "Alignment": "Order of the Valorous Heart",
-    "NthScenario": 1,
+    "ScenariosPlayed": 0,
     "Roster": [
         {
             "name": "Canoness Regular",
@@ -13,10 +13,31 @@
             },
             "equipment": {
                 "weapons": [
-                    "Inferno Pistol",
-                    "Blessed Blade",
-                    "Frag Grenades",
-                    "Krag Grenades"
+                    {
+                        "name": "Boondock Machinegun",
+                        "isLegendary": true,
+                        "price": 20,
+                        "replacing": "Bolt Pistol",
+                        "range": 18,
+                        "type": "Assault 1",
+                        "strength": 8,
+                        "ap": 4,
+                        "damage": "D6",
+                        "rule": [
+                            {
+                                "name": "Seeking",
+                                "effect": "Add 1 to hit rolls for this weapon while targeting a unit that is in cover."
+                            },
+                            {
+                                "name": "Skykiller",
+                                "effect": "Add 1 to all hit rolls made for this weapon against targets that can Fly."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Blessed Blade",
+                        "replacing": "Chainsword"
+                    }
                 ],
                 "otherEquipment": [
                     "Jump Pack"
@@ -29,41 +50,25 @@
         },
         {
             "name": "Celestian",
-            "amount": 2,
-            "equipment": {
-                "weapons": [
-                    "Boltgun",
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "amount": 2
         },
         {
             "name": "Celestian",
             "amount": 2,
             "equipment": {
                 "weapons": [
-                    "Flamer",
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
+                    {
+                        "name": "Flamer",
+                        "replacing": [
+                            "Boltgun"
+                        ]
+                    }
                 ]
             }
         },
         {
             "name": "Seraphim",
-            "amount": 2,
-            "equipment": {
-                "weapons": [
-                    {
-                        "name": "Bolt Pistol",
-                        "amount": 2
-                    },
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "amount": 2
         },
         {
             "name": "Seraphim",
@@ -72,33 +77,17 @@
                 "weapons": [
                     {
                         "name": "Hand Flamer",
-                        "amount": 2
-                    },
-                    "Frag Grenades",
-                    "Krag Grenades"
+                        "amount": 2,
+                        "replacing": "Bolt Pistol"
+                    }
                 ]
             }
         },
         {
-            "name": "Ministorum Crusader",
-            "equipment": {
-                "weapons": [
-                    "Power Sword"
-                ],
-                "otherEquipment": [
-                    "Storm Shield"
-                ]
-            }
+            "name": "Ministorum Crusader"
         },
         {
-            "name": "Imagifier",
-            "equipment": {
-                "weapons": [
-                    "Bolt Pistol",
-                    "Frag Grenades",
-                    "Krag Grenades"
-                ]
-            }
+            "name": "Imagifier"
         }
     ]
 }

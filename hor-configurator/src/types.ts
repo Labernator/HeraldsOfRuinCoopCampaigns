@@ -3,11 +3,19 @@
 export interface Warband {
     Title: string;
     Faction: string;
-    NthScenario: number;
+    ScenariosPlayed?: number;
     Philosophy?: string;
     Alignment?: string;
-    Roster: Model[];
-    ArmyRules?: string[];
+    Roster: RosterModel[];
+}
+
+export interface RenderWarband {
+    Title: string;
+    Faction: string;
+    ScenariosPlayed?: number;
+    Philosophy?: string;
+    Alignment?: string;
+    Roster: RenderModel[];
 }
 export enum FactionEnum {
     PrimarisSpaceMarines = "Primaris Space Marines",
@@ -17,18 +25,6 @@ export enum FactionEnum {
     AdeptaSororitas = "Adepta Sororitas",
     Deathwatch = "Deathwatch",
     AstraMilitarum = "Astra Militarum",
-}
-
-export interface Model {
-    name: string;
-    amount?: number;
-    price?: number;
-    type?: string;
-    stats?: ModelStats | ModelStats[];
-    armyRules?: string[];
-    rules?: string[];
-    keywords?: string[];
-    equipment?: EquipmentReferences;
 }
 
 export interface ModelStats {
@@ -44,30 +40,12 @@ export interface ModelStats {
     InvulnerableSave: string;
 }
 
-export interface EquipmentReferences {
-    weapons: Array<WeaponReference | string>;
-    otherEquipment?: string[];
-}
 export interface WeaponReference {
     name: string;
-    amount?: number;
+    amount: number;
 }
-
-// Weapons interface
-
-export interface Weapon {
-    name: string;
-    type?: string;
-    strength?: string | number;
-    damage?: string | number;
-    ap?: string | number;
-    range?: number;
-    rule?: string;
-    isArmouryItem?: boolean;
-    price?: number;
-    amount?: number;
-    multiProfiles?: Weapon[];
-    isLegendary?: boolean;
+export interface RosterWeaponReference extends WeaponReference {
+    replacing: string | string[];
 }
 // Rule interface
 export interface Rule {
@@ -89,13 +67,9 @@ export interface Enemy {
     stats: ModelStats;
     rules?: Rule[];
     keywords: string[];
-    equipment: Equipment;
+    equipment: any;
 }
 
-export interface Equipment {
-    weapons: Weapon[];
-    otherEquipment?: OtherEquipment[];
-}
 export interface OtherEquipment {
     name: string;
     effect: string;
@@ -128,25 +102,98 @@ export interface PageMap {
     page: number;
 }
 
+export interface UnifiedModel {
+    name: string;
+    type?: string;
+    stats?: ModelStats | ModelStats[];
+    keywords?: string[];
+}
+
+export interface RosterModel extends UnifiedModel {
+    amount?: number;
+    equipment?: RosterEquipment;
+    rules?: string[];
+}
+export interface RosterEquipment {
+    weapons?: Array<RosterWeaponReference | RosterWeapon | string>;
+    otherEquipment?: Array<OtherEquipment | string>;
+}
+export interface MetadataModel extends UnifiedModel {
+    price: number;
+    type: string;
+    stats: ModelStats | ModelStats[];
+    keywords: string[];
+    rules?: string[];
+    equipment?: MetadataModelEquipment;
+}
+export interface MetadataModelEquipment {
+    weapons?: Array<string | WeaponReference>;
+    otherEquipment?: string[];
+}
+
+export type MetadataWeapon = SuperBasicWeapon | MultiProfileWeapon;
+
+export interface RenderModel extends UnifiedModel {
+    type: string;
+    price: number;
+    amount?: number;
+    stats: ModelStats | ModelStats[];
+    rules: Rule[];
+    keywords: string[];
+    equipment?: RenderEquipment;
+}
+
+export interface RenderEquipment {
+    weapons?: RenderWeapon[];
+    otherEquipment?: OtherEquipment[];
+}
+
+export type RenderWeapon = BasicWeapon | MultiProfileRenderWeapon;
+export interface MultiProfileRenderWeapon extends MultiProfileWeapon {
+    price: number;
+    amount: number;
+}
+export interface MultiProfileWeapon {
+    name: string;
+    multiProfiles: Array<MultiProfileWeapon | SuperBasicWeapon>;
+    rule?: string | Array<string | Rule>;
+    isLegendary?: boolean;
+    isArmouryItem?: boolean;
+}
+export interface BasicWeapon extends SuperBasicWeapon {
+    price: number;
+    amount: number;
+    isLegendary?: boolean;
+}
+
+export interface SuperBasicWeapon {
+    name: string;
+    type: string;
+    strength: string | number;
+    damage: string | number;
+    ap: string | number;
+    range?: number;
+    rule?: string | Array<string | Rule>;
+    isArmouryItem?: boolean;
+    isLegendary?: boolean;
+}
+
 export interface ArmySpecificStuff {
-    Keywords: string[];
+    ArmyRules?: Rule[];
+    Alignments?: Rule[];
     AlignmentPlaceholder?: string;
-    Philosophies: Philosophy[];
+    Keywords: string[];
     ModelAllowance: {
         Core: number;
         Special: number;
         Leader: number;
     };
+    Philosophies: Philosophy[];
     WeaponPriceList: Array<{
         name: string;
         price: number;
     }>;
-    UnitList: Array<{
-        name: string;
-        type: string;
-        price: number;
-        stats: ModelStats | ModelStats[];
-        keywords: string[];
-        rules?: string[];
-    }>;
+    UnitList: MetadataModel[];
 }
+
+export type RosterWeapon = RenderWeapon;
