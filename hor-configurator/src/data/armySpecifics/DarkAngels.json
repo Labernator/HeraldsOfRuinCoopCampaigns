@@ -14,6 +14,10 @@
             {
                 "name": "Grim Resolve",
                 "effect": "Re-roll hit rolls of 1 for this model whenever it shoots (including Overwatch) as long as it remains stationary."
+            },
+            {
+                "name": "And They Shall Know No Fear",
+                "effect": "Re-roll failed Morale tests for this model."
             }
         ],
         "Philosophies": [

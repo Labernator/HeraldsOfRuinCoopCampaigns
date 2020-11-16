@@ -1,10 +1,6 @@
 {
     "Title": "Hunters of the Fallen",
     "Faction": "Dark Angels",
-    "ArmyRules": [
-        "Grim Resolve",
-        "And They Shall Know No Fear"
-    ],
     "Philosophy": "Unwavering Zeal",
     "ScenariosPlayed": 1,
     "Roster": [
